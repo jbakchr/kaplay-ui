@@ -1,5 +1,13 @@
 import "kaplay/global";
 
+/**
+ * Adds a clickable button with custom text
+ * @param {number} x - The x postion to set.
+ * @param {y} y - The y position to set.
+ * @param {string} txt - Button text to display
+ * @param {Function} [f] - Click event handler (default is () => {})) 
+ * @returns {GameObj} 
+ */
 export const addTextButton = (x, y, txt, f = () => {}) => {
   const btn = add([
     rect(240, 80, { radius: 8 }),
