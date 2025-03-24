@@ -1,8 +1,8 @@
 import "kaplay/global";
 
-export const addTextButton = (w, h, x, y, txt, f = () => {}) => {
+export const addTextButton = (x, y, txt, f = () => {}) => {
   const btn = add([
-    rect(w, h, { radius: 8 }),
+    rect(240, 80, { radius: 8 }),
     pos(x, y),
     area(),
     anchor("center"),
