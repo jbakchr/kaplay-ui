@@ -14,7 +14,7 @@ Kaplay UI is a component library designed specifically for KAPLAY. It will provi
 - [Usage](#usage)
 - [License](#license)
 
-## 📦 Installation
+## Installation
 
 You can install Kaplay UI via npm:
 
