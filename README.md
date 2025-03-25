@@ -26,7 +26,7 @@ npm install kaplay-ui
 
 ### Buttons
 
-### Text Button
+#### Text Button
 
 Here's some quick examples of how to add text buttons using Kaplay UI:
 
