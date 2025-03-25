@@ -22,6 +22,17 @@ export const addTextButton = (
   txtSize = 15,
   hoverFx = true
 ) => {
+  // Shadow effect
+  const shadow = add([
+    rect(w, h, { radius: 8 }),
+    pos(x + 2, y + 2),
+    area(),
+    scale(1),
+    anchor("center"),
+    outline(1),
+    color(128, 128, 128),
+  ]);
+
   // Button
   const btn = add([
     rect(w, h, { radius: 8 }),
@@ -43,6 +54,7 @@ export const addTextButton = (
     setCursor("pointer");
     if (hoverFx) {
       btn.scale = vec2(1.03);
+      shadow.scale = vec2(1.03);
     }
   });
 
@@ -50,6 +62,7 @@ export const addTextButton = (
     setCursor("default");
     if (hoverFx) {
       btn.scale = vec2(1);
+      shadow.scale = vec2(1);
     }
   });
 
