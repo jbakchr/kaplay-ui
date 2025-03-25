@@ -3,15 +3,28 @@ import "kaplay/global";
 /**
  * Adds a clickable button with custom text
  * @param {string} txt - Button text to display
- * @param {number} x - The x postion to set.
- * @param {y} y - The y position to set.
- * @param {Function} [f] - Click event handler (default is () => {}))
+ * @param {Function} [onClick] - Click event handler (default is () => {}))
+ * @param {number} x - The x postion to set (default is center().x).
+ * @param {y} y - The x postion to set (default is center().y)
+ * @param {w} w - Width of button (default is 120)
+ * @param {h} h - Height of button (default is 50)
+ * @param {txtSize} txtSize - Text size of button (default is 15)
  * @param {boolean} [hover] - Add hover effect (default is true)
  * @returns {GameObj}
  */
-export const addTextButton = (txt, x, y, f = () => {}, hover = true) => {
+export const addTextButton = (
+  txt,
+  onClick = () => {},
+  x = center().x,
+  y = center().y,
+  w = 120,
+  h = 50,
+  txtSize = 15,
+  hover = true
+) => {
+  // Button
   const btn = add([
-    rect(240, 80, { radius: 8 }),
+    rect(w, h, { radius: 8 }),
     pos(x, y),
     area(),
     anchor("center"),
@@ -19,10 +32,11 @@ export const addTextButton = (txt, x, y, f = () => {}, hover = true) => {
     color(255, 255, 255),
   ]);
 
-  // button text
-  btn.add([text(txt), anchor("center"), color(0, 0, 0)]);
+  // Button text
+  btn.add([text(txt, { size: txtSize }), anchor("center"), color(0, 0, 0)]);
 
-  btn.onClick(f);
+  // On click handler
+  btn.onClick(onClick);
 
   btn.onHoverUpdate(() => {
     setCursor("pointer");
