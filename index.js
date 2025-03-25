@@ -53,7 +53,7 @@ export const addTextButton = (
     onClick();
   });
 
-  btn.onHoverUpdate(() => {
+  btn.onHover(() => {
     setCursor("pointer");
     if (hoverFx) {
       btn.scale = vec2(1.03);
