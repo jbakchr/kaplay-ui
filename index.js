@@ -5,11 +5,11 @@ import "kaplay/global";
  * @param {string} txt - Button text to display
  * @param {Function} [onClick] - Click event handler (default is () => {}))
  * @param {number} x - The x postion to set (default is center().x).
- * @param {y} y - The x postion to set (default is center().y)
- * @param {w} w - Width of button (default is 120)
- * @param {h} h - Height of button (default is 50)
- * @param {txtSize} txtSize - Text size of button (default is 15)
- * @param {boolean} [hover] - Add hover effect (default is true)
+ * @param {number} y - The x postion to set (default is center().y)
+ * @param {number} w - Width of button (default is 120)
+ * @param {number} h - Height of button (default is 50)
+ * @param {number} txtSize - Text size of button (default is 15)
+ * @param {boolean} [hoverFx] - Add hover effect (default is true)
  * @returns {GameObj}
  */
 export const addTextButton = (
@@ -20,15 +20,16 @@ export const addTextButton = (
   w = 120,
   h = 50,
   txtSize = 15,
-  hover = true
+  hoverFx = true
 ) => {
   // Button
   const btn = add([
     rect(w, h, { radius: 8 }),
     pos(x, y),
     area(),
+    scale(1),
     anchor("center"),
-    outline(4),
+    outline(1),
     color(255, 255, 255),
   ]);
 
@@ -40,14 +41,14 @@ export const addTextButton = (
 
   btn.onHoverUpdate(() => {
     setCursor("pointer");
-    if (hover) {
-      btn.scale = vec2(1.1);
+    if (hoverFx) {
+      btn.scale = vec2(1.03);
     }
   });
 
   btn.onHoverEnd(() => {
     setCursor("default");
-    if (hover) {
+    if (hoverFx) {
       btn.scale = vec2(1);
     }
   });
