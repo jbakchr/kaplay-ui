@@ -22,7 +22,7 @@ You can install Kaplay UI via npm:
 npm install kaplay-ui
 ```
 
-## 🛠️ Usage
+## Usage
 
 Here’s a quick example of how to add a simple clickable and hoverable text button using Kaplay UI:
 
@@ -38,11 +38,11 @@ kaplay();
 addTextButton("Start", () => go("main"));
 ```
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 📞 Contact
+## Contact
 
 Have questions or suggestions? Reach out via:
 
