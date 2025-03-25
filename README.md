@@ -12,7 +12,7 @@ Kaplay UI is a component library designed specifically for KAPLAY. It will provi
 
 ## 📦 Installation
 
-You can install Kaboom UI via npm:
+You can install Kaplay UI via npm:
 
 ```bash
 npm install kaplay-ui
@@ -31,7 +31,7 @@ import { addTextButton } from "kaplay-ui";
 kaplay();
 
 // Add a UI button
-addTextButton(center().x, center().y, "start");
+addTextButton("Start", () => go("main"));
 ```
 
 ## 📄 License

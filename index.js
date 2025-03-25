@@ -48,7 +48,10 @@ export const addTextButton = (
   btn.add([text(txt, { size: txtSize }), anchor("center"), color(0, 0, 0)]);
 
   // On click handler
-  btn.onClick(onClick);
+  btn.onClick(() => {
+    setCursor("default");
+    onClick();
+  });
 
   btn.onHover(() => {
     setCursor("pointer");
