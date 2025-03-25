@@ -4,11 +4,15 @@ _Expect breaking changes and incomplete features._
 
 # KAPLAY UI - A UI Component Library for KAPLAY
 
-_A simple and customizable UI library for [KAPLAY](https://kaplayjs.com/)._
+_A simple and customizable component UI library for [KAPLAY](https://kaplayjs.com/)._
 
 ## 🚀 Introduction
 
 Kaplay UI is a component library designed specifically for KAPLAY. It will provide ready-made UI components to help you build better user interfaces for your KAPLAY games with minimal effort.
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
 
 ## 📦 Installation
 
