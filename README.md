@@ -24,18 +24,37 @@ npm install kaplay-ui
 
 ## Usage
 
-Here’s a quick example of how to add a simple clickable and hoverable text button using Kaplay UI:
+### Buttons
+
+### Text Button
+
+Here's some quick examples of how to add text buttons using Kaplay UI:
 
 ```javascript
 import kaplay from "kaplay";
 import "kaplay/global";
 
-import { addTextButton } from "kaplay-ui";
+import { addTextButton } from "kaplay-ui/buttons";
 
 kaplay();
 
-// Add a UI button
-addTextButton("Start", () => go("main"));
+// Add a text button
+addTextButton("Start");
+
+// Add a text button with an onClick handler
+addTextButton("Start", () => go("game"));
+
+// Add a text button with x and y position
+addTextButton("Start", () => go("game"), 200, 200);
+
+// Add a text button with width and height
+addTextButton("Start", () => go("game"), 200, 200, 200, 70);
+
+// Add a text button with text size
+addTextButton("Start", () => go("game"), 200, 200, 200, 70, 20);
+
+// Add a text button with disabled hover effect
+addTextButton("Start", () => go("game"), 200, 200, 200, 70, 20, false);
 ```
 
 ## License
