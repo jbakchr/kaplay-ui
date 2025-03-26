@@ -3,7 +3,6 @@ import "kaplay/global";
 /**
  * Adds a clickable button with custom text
  * @param {string} txt - Button text to display
- * @param {Function} [onClick] - Click event handler (default is () => {}))
  * @param {number} x - The x postion to set (default is center().x).
  * @param {number} y - The x postion to set (default is center().y)
  * @param {number} w - Width of button (default is 120)
@@ -14,7 +13,6 @@ import "kaplay/global";
  */
 export const addTextButton = (
   txt,
-  onClick = () => {},
   x = center().x,
   y = center().y,
   w = 120,
@@ -46,12 +44,6 @@ export const addTextButton = (
 
   // Button text
   btn.add([text(txt, { size: txtSize }), anchor("center"), color(0, 0, 0)]);
-
-  // On click handler
-  btn.onClick(() => {
-    setCursor("default");
-    onClick();
-  });
 
   btn.onHover(() => {
     setCursor("pointer");
