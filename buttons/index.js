@@ -8,7 +8,7 @@ import "kaplay/global";
  * @param {number} width - Width of button (default is 100)
  * @param {number} height - Height of button (default is 50)
  * @param {number} btnRadius - Border radius of button (default is 8)
- * @param {number} outline - Button radius (default is 1)
+ * @param {number} btnOutline - Button outline (default is 1)
  * @param {number} txtSize - Text size of button (default is 15)
  * @returns {GameObj}
  */
