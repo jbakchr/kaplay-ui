@@ -19,7 +19,7 @@ export const makeTextButton = (
   width = 100,
   height = 50,
   btnRadius = 8,
-  outline = 1,
+  btnOutline = 1,
   txtSize = 15
 ) => {
   // Make button
@@ -28,7 +28,7 @@ export const makeTextButton = (
     pos(x, y),
     area(),
     scale(1),
-    outline(outline),
+    outline(btnOutline),
     color(255, 255, 255),
   ]);
 
