@@ -26,22 +26,6 @@ npm install kaplay-ui
 
 ### Buttons
 
-#### Icon Button
-
-```javascript
-import kaplay from "kaplay";
-import "kaplay/global";
-
-import { addIconButton } from "kaplay-ui/buttons";
-
-kaplay();
-
-loadSprite("arrow", "sprites/arrow.png");
-
-// Add a text button with an onClick handler
-addIconButton("arrow", () => go("game"));
-```
-
 #### Text Button
 
 Here's some quick examples of how to add text buttons using Kaplay UI:
