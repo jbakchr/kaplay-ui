@@ -1,12 +1,13 @@
 import "kaplay/global";
 
 /**
- * Adds a clickable button with custom text
+ * Adds a text button with shadow and hover effect
  * @param {string} txt - Button text to display
  * @param {number} x - The x postion to set (default is center().x).
  * @param {number} y - The x postion to set (default is center().y)
- * @param {number} w - Width of button (default is 120)
- * @param {number} h - Height of button (default is 50)
+ * @param {number} width - Width of button (default is 120)
+ * @param {number} height - Height of button (default is 50)
+ * @param {number} btnRadius - Border radius of button (default is 8)
  * @param {number} txtSize - Text size of button (default is 15)
  * @param {boolean} [hoverFx] - Add hover effect (default is true)
  * @returns {GameObj}
@@ -15,14 +16,15 @@ export const addTextButton = (
   txt,
   x = center().x,
   y = center().y,
-  w = 120,
-  h = 50,
+  width = 120,
+  height = 50,
+  btnRadius = 8,
   txtSize = 15,
   hoverFx = true
 ) => {
   // Shadow effect
   const shadow = add([
-    rect(w, h, { radius: 8 }),
+    rect(width, height, { radius: btnRadius }),
     pos(x + 2, y + 2),
     area(),
     scale(1),
@@ -33,7 +35,7 @@ export const addTextButton = (
 
   // Button
   const btn = add([
-    rect(w, h, { radius: 8 }),
+    rect(width, height, { radius: btnRadius }),
     pos(x, y),
     area(),
     scale(1),
