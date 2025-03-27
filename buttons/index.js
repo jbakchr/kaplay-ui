@@ -8,6 +8,7 @@ import "kaplay/global";
  * @param {number} width - Width of button (default is 100)
  * @param {number} height - Height of button (default is 50)
  * @param {number} btnRadius - Border radius of button (default is 8)
+ * @param {number} outline - Button radius (default is 1)
  * @param {number} txtSize - Text size of button (default is 15)
  * @returns {GameObj}
  */
@@ -18,6 +19,7 @@ export const makeTextButton = (
   width = 100,
   height = 50,
   btnRadius = 8,
+  outline = 1,
   txtSize = 15
 ) => {
   // Make button
@@ -26,7 +28,7 @@ export const makeTextButton = (
     pos(x, y),
     area(),
     scale(1),
-    outline(1),
+    outline(outline),
     color(255, 255, 255),
   ]);
 
