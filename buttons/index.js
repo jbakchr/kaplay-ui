@@ -38,7 +38,7 @@ export const makeTextButton = (
     color(0, 0, 0),
   ]);
 
-  // Button text
+  // Add text to button
   btn.add(btnText);
 
   return btn;
