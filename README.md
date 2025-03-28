@@ -28,34 +28,18 @@ npm install kaplay-ui
 
 #### Text Button
 
-Here's some quick examples of how to add text buttons using Kaplay UI:
+Makes a button with centered text that takes the following parameters:
 
-```javascript
-import kaplay from "kaplay";
-import "kaplay/global";
-
-import { addTextButton } from "kaplay-ui/buttons";
-
-kaplay();
-
-// Add a text button
-addTextButton("Start");
-
-// Add a text button with an onClick handler
-addTextButton("Start", () => go("game"));
-
-// Add a text button with x and y position
-addTextButton("Start", () => go("game"), 200, 200);
-
-// Add a text button with width and height
-addTextButton("Start", () => go("game"), 200, 200, 200, 70);
-
-// Add a text button with text size
-addTextButton("Start", () => go("game"), 200, 200, 200, 70, 20);
-
-// Add a text button with disabled hover effect
-addTextButton("Start", () => go("game"), 200, 200, 200, 70, 20, false);
-```
+| Parameter    | Type     | Default | Required | Description                        |
+| ------------ | -------- | ------- | -------- | ---------------------------------- |
+| `text`       | `string` | N/A     | ✅ Yes   | The text to display on the button. |
+| `x`          | `number` | 0       | ❌ No    | Button x position                  |
+| `y`          | `number` | 0       | ❌ No    | Button y position                  |
+| `width`      | `number` | 100     | ❌ No    | Button width                       |
+| `height`     | `number` | 50      | ❌ No    | Button height                      |
+| `btnRadius`  | `number` | 8       | ❌ No    | Button radius                      |
+| `btnOutline` | `number` | 1       | ❌ No    | Button outline                     |
+| `txtSize`    | `number` | 15      | ❌ No    | Text size                          |
 
 ## License
 
