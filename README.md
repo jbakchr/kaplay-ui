@@ -24,7 +24,7 @@ npm install kaplay-ui
 
 ## Usage
 
-### Buttons
+### Inputs
 
 #### Text Button
 
@@ -40,6 +40,15 @@ Makes a button with centered text that takes the following parameters:
 | `btnRadius`  | `number` | 8       | ❌ No    | Button radius                      |
 | `btnOutline` | `number` | 1       | ❌ No    | Button outline                     |
 | `txtSize`    | `number` | 15      | ❌ No    | Text size                          |
+
+#### Toggle
+
+Makes a toggle that takes the following parameters:
+
+| Parameter | Type     | Default | Required | Description       |
+| --------- | -------- | ------- | -------- | ----------------- |
+| `x`       | `number` | 0       | ❌ No    | Toggle x position |
+| `y`       | `number` | 0       | ❌ No    | Toggle y position |
 
 ## License
 
