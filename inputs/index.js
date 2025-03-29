@@ -97,11 +97,11 @@ export const makeToggle = (x = 0, y = 0, width = 50, height = 25) => {
  * Makes checkbox
  * @param {number} x - The x postion to set (default is 0)
  * @param {number} y - The x postion to set (default is 0)
- * @param {number} width - Checkbox width (default is 50)
- * @param {number} height - Checkbox height (default is 50)
+ * @param {number} width - Checkbox width (default is 25)
+ * @param {number} height - Checkbox height (default is 25)
  * @returns {GameObj}
  */
-export const makeCheckbox = (x = 0, y = 0, width = 50, height = 50) => {
+export const makeCheckbox = (x = 0, y = 0, width = 25, height = 25) => {
   loadSprite("cb", cbIcon);
 
   const checkbox = make([
