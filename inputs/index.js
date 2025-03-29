@@ -131,3 +131,56 @@ export const makeCheckbox = (x = 0, y = 0, width = 25, height = 25) => {
 
   return checkbox;
 };
+
+/**
+ * Makes checkbox
+ * @param {number} x - Switch x postion (default is 0)
+ * @param {number} y - Switch y postion (default is 0)
+ * @param {number} width - Switch width (default is 50)
+ * @param {number} height - Switch height (default is 25)
+ * @returns {GameObj}
+ */
+export const makeSwitch = (x = 0, y = 0, width = 50, height = 25) => {
+  // Make switch base
+  const switchBase = make([
+    rect(width, height),
+    pos(x, y),
+    opacity(0),
+    area(),
+    {
+      switched: false,
+    },
+  ]);
+
+  // Make switch line
+  const switchLine = make([
+    rect(width, height / 2, { radius: height / 4 }),
+    color(169, 169, 169),
+    pos(0, height / 2 - height / 4),
+    area(),
+  ]);
+
+  // Make switch circle
+  const switchCircle = make([circle(height / 2), pos(height / 2, height / 2)]);
+
+  // On click
+  switchBase.onClick(() => {
+    if (switchBase.switched) {
+      switchLine.use(color(169, 169, 169));
+      switchCircle.use(color(255, 255, 255));
+      switchCircle.use(pos(height / 2, height / 2));
+      switchBase.switched = false;
+    } else {
+      switchLine.use(color(148, 188, 236));
+      switchCircle.use(color(24, 118, 210));
+      switchCircle.use(pos(width - switchCircle.radius, height / 2));
+      switchBase.switched = true;
+    }
+  });
+
+  // Add line and circle
+  switchBase.add(switchLine);
+  switchBase.add(switchCircle);
+
+  return switchBase;
+};

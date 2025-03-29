@@ -57,9 +57,9 @@ add(checkBox);
 
 A cehckbox has the following state:
 
-| state | Type | Default | State change by |
-| --------- | -------- | ------- | ------------------- |
-| `checked` | `boolean` | false | Click on checkbox |
+| state     | Type      | Default | State change by   |
+| --------- | --------- | ------- | ----------------- |
+| `checked` | `boolean` | false   | Click on checkbox |
 
 ##### Parameters
 
@@ -73,6 +73,46 @@ A checkbox can take the following parameters:
 | `height`  | `number` | 25      | ❌ No    | Checkbox height     |
 
 <br>
+
+#### Switch
+
+To make a text button, one must use the exported <code>makeSwitch()</code> function.
+
+##### Example
+
+An example usage of a text button.
+
+```javascript
+import kaplay from "kaplay";
+import "kaplay/global";
+
+import { makeSwitch } from "kaplay-ui/inputs";
+
+kaplay();
+
+const switchBtn = makeSwitch();
+
+add(switchBtn);
+```
+
+##### State
+
+A cehckbox has the following state:
+
+| state      | Type      | Default | State change by |
+| ---------- | --------- | ------- | --------------- |
+| `switched` | `boolean` | false   | Click on switch |
+
+##### Parameters
+
+A switch can take the following parameters:
+
+| Parameter | Type     | Default | Required | Description       |
+| --------- | -------- | ------- | -------- | ----------------- |
+| `x`       | `number` | 0       | ❌ No    | Switch x position |
+| `y`       | `number` | 0       | ❌ No    | Switch x position |
+| `width`   | `number` | 50      | ❌ No    | Switch width      |
+| `height`  | `number` | 25      | ❌ No    | Switch height     |
 
 #### Text Button
 
@@ -137,9 +177,9 @@ add(toggle);
 
 A cehckbox has the following state:
 
-| state | Type | Default | State change by |
-| --------- | -------- | ------- | ------------------- |
-| `toggled` | `boolean` | false | Click on toggle |
+| state     | Type      | Default | State change by |
+| --------- | --------- | ------- | --------------- |
+| `toggled` | `boolean` | false   | Click on toggle |
 
 ##### Parameters
 
