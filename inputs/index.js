@@ -84,7 +84,7 @@ export const makeToggle = (x = 0, y = 0, width = 50, height = 25) => {
       toggleBtn.use(pos(height / 2, height / 2));
       toggle.toggled = false;
     } else {
-      toggle.use(color(171, 221, 100));
+      toggle.use(color(148, 188, 236));
       toggleBtn.use(pos(width - height / 2, height / 2));
       toggle.toggled = true;
     }
