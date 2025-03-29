@@ -26,6 +26,17 @@ npm install kaplay-ui
 
 ### Inputs
 
+#### Checkbox
+
+Makes a checkbow that takes the following parameters:
+
+| Parameter | Type     | Default | Required | Description         |
+| --------- | -------- | ------- | -------- | ------------------- |
+| `x`       | `number` | 0       | ❌ No    | Checkbox x position |
+| `y`       | `number` | 0       | ❌ No    | Checkbox x position |
+| `width`   | `number` | 25      | ❌ No    | Checkbox width      |
+| `height`  | `number` | 25      | ❌ No    | Checkbox height     |
+
 #### Text Button
 
 Makes a button with centered text that takes the following parameters:
