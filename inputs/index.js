@@ -48,14 +48,16 @@ export const makeTextButton = (
 
 /**
  * Makes toggle
- * @param {number} x - The x postion to set (default is 0).
+ * @param {number} x - The x postion to set (default is 0)
  * @param {number} y - The x postion to set (default is 0)
+ * @param {number} width - Toggle width (default is 50)
+ * @param {number} height - Toggle height (default is 25)
  * @returns {GameObj}
  */
-export const makeToggle = (x = 0, y = 0) => {
+export const makeToggle = (x = 0, y = 0, width = 50, height = 25) => {
   // Toggle base
   const toggle = make([
-    rect(50, 25, { radius: 25 }),
+    rect(width, height, { radius: height / 2 }),
     pos(x, y),
     color(169, 169, 169),
     area(),
@@ -65,7 +67,11 @@ export const makeToggle = (x = 0, y = 0) => {
   ]);
 
   // Toggle button
-  const toggleBtn = make([circle(10), color(WHITE), pos(12.5, 12.5)]);
+  const toggleBtn = make([
+    circle(height * 0.4),
+    color(WHITE),
+    pos(height / 2, height / 2),
+  ]);
 
   // Add button to toggleBase
   toggle.add(toggleBtn);
@@ -73,11 +79,11 @@ export const makeToggle = (x = 0, y = 0) => {
   toggle.onClick(() => {
     if (toggle.toggled) {
       toggle.use(color(169, 169, 169));
-      toggleBtn.use(pos(12.5, 12.5));
+      toggleBtn.use(pos(height / 2, height / 2));
       toggle.toggled = false;
     } else {
       toggle.use(color(171, 221, 100));
-      toggleBtn.use(pos(37.5, 12.5));
+      toggleBtn.use(pos(width - height / 2, height / 2));
       toggle.toggled = true;
     }
   });

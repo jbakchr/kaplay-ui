@@ -49,6 +49,8 @@ Makes a toggle that takes the following parameters:
 | --------- | -------- | ------- | -------- | ----------------- |
 | `x`       | `number` | 0       | ❌ No    | Toggle x position |
 | `y`       | `number` | 0       | ❌ No    | Toggle y position |
+| `width`   | `number` | 50      | ❌ No    | Toggle width      |
+| `height`  | `number` | 25      | ❌ No    | Toggle height     |
 
 ## License
 
