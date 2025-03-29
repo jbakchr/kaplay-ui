@@ -26,9 +26,44 @@ npm install kaplay-ui
 
 ### Inputs
 
+All inputs are imported from the <code>/inputs</code> folder.
+
+```javascript
+import {} from "kaplay-ui/inputs";
+```
+
 #### Checkbox
 
-Makes a checkbow that takes the following parameters:
+To make a checkbox, one must use the exported <code>makeCheckbox()</code> function.
+
+##### Example
+
+An example usage of a checkbox.
+
+```javascript
+import kaplay from "kaplay";
+import "kaplay/global";
+
+import { makeCheckbox } from "kaplay-ui/inputs";
+
+kaplay();
+
+const checkBox = makeCheckbox();
+
+add(checkBox);
+```
+
+##### State
+
+A cehckbox has the following state:
+
+| state | Type | Default | State change by |
+| --------- | -------- | ------- | ------------------- |
+| `checked` | `boolean` | false | Click on checkbox |
+
+##### Parameters
+
+A checkbox can take the following parameters:
 
 | Parameter | Type     | Default | Required | Description         |
 | --------- | -------- | ------- | -------- | ------------------- |
@@ -37,9 +72,32 @@ Makes a checkbow that takes the following parameters:
 | `width`   | `number` | 25      | ❌ No    | Checkbox width      |
 | `height`  | `number` | 25      | ❌ No    | Checkbox height     |
 
+<br>
+
 #### Text Button
 
-Makes a button with centered text that takes the following parameters:
+To make a text button, one must use the exported <code>makeTextButton()</code> function.
+
+##### Example
+
+An example usage of a text button.
+
+```javascript
+import kaplay from "kaplay";
+import "kaplay/global";
+
+import { makeTextButton } from "kaplay-ui/inputs";
+
+kaplay();
+
+const txtBtn = makeTextButton("Start");
+
+add(txtBtn);
+```
+
+##### Parameters
+
+A text button can take the following parameters:
 
 | Parameter    | Type     | Default | Required | Description                        |
 | ------------ | -------- | ------- | -------- | ---------------------------------- |
@@ -52,9 +110,40 @@ Makes a button with centered text that takes the following parameters:
 | `btnOutline` | `number` | 1       | ❌ No    | Button outline                     |
 | `txtSize`    | `number` | 15      | ❌ No    | Text size                          |
 
+<br>
+
 #### Toggle
 
-Makes a toggle that takes the following parameters:
+To make a toggle, one must use the exported <code>makeToggle()</code> function.
+
+##### Example
+
+An example usage of a toggle.
+
+```javascript
+import kaplay from "kaplay";
+import "kaplay/global";
+
+import { makeToggle } from "kaplay-ui/inputs";
+
+kaplay();
+
+const toggle = makeToggle();
+
+add(toggle);
+```
+
+##### State
+
+A cehckbox has the following state:
+
+| state | Type | Default | State change by |
+| --------- | -------- | ------- | ------------------- |
+| `toggled` | `boolean` | false | Click on toggle |
+
+##### Parameters
+
+A toggle can take the following parameters:
 
 | Parameter | Type     | Default | Required | Description       |
 | --------- | -------- | ------- | -------- | ----------------- |
@@ -63,9 +152,13 @@ Makes a toggle that takes the following parameters:
 | `width`   | `number` | 50      | ❌ No    | Toggle width      |
 | `height`  | `number` | 25      | ❌ No    | Toggle height     |
 
+<br>
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+<br>
 
 ## Contact
 
