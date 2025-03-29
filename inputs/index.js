@@ -1,5 +1,7 @@
 import "kaplay/global";
 
+import cbIcon from "../assets/cb-icon.png";
+
 /**
  * Makes button with centered text
  * @param {string} txt - Button text to display
@@ -89,4 +91,43 @@ export const makeToggle = (x = 0, y = 0, width = 50, height = 25) => {
   });
 
   return toggle;
+};
+
+/**
+ * Makes checkbox
+ * @param {number} x - The x postion to set (default is 0)
+ * @param {number} y - The x postion to set (default is 0)
+ * @param {number} width - Checkbox width (default is 50)
+ * @param {number} height - Checkbox height (default is 50)
+ * @returns {GameObj}
+ */
+export const makeCheckbox = (x = 0, y = 0, width = 50, height = 50) => {
+  loadSprite("cb", cbIcon);
+
+  const checkbox = make([
+    rect(width, height, { radius: 4 }),
+    pos(x, y),
+    color(255, 255, 255),
+    outline(1),
+    area(),
+    {
+      checked: false,
+    },
+  ]);
+
+  const checkedIcon = make([sprite("cb", { width, height }), area()]);
+
+  checkbox.onClick(() => {
+    if (checkbox.checked) {
+      checkbox.use(color(255, 255, 255));
+      checkbox.remove(checkedIcon);
+      checkbox.checked = false;
+    } else {
+      checkbox.use(color(148, 188, 236));
+      checkbox.add(checkedIcon);
+      checkbox.checked = true;
+    }
+  });
+
+  return checkbox;
 };
