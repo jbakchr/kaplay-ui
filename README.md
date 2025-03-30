@@ -114,6 +114,8 @@ A switch can take the following parameters:
 | `width`   | `number` | 50      | ❌ No    | Switch width      |
 | `height`  | `number` | 25      | ❌ No    | Switch height     |
 
+<br>
+
 #### Text Button
 
 To make a text button, one must use the exported <code>makeTextButton()</code> function.
@@ -149,6 +151,42 @@ A text button can take the following parameters:
 | `btnRadius`  | `number` | 8       | ❌ No    | Button radius                      |
 | `btnOutline` | `number` | 1       | ❌ No    | Button outline                     |
 | `txtSize`    | `number` | 15      | ❌ No    | Text size                          |
+
+<br>
+
+#### Text input
+
+To make a toggle, one must use the exported <code>makeTextInput()</code> function.
+
+##### Example
+
+An example usage of a toggle.
+
+```javascript
+import kaplay from "kaplay";
+import "kaplay/global";
+
+import { makeTextInput } from "kaplay-ui/inputs";
+
+kaplay();
+
+const txtInput = makeTextInput();
+
+add(txtInput);
+```
+
+##### Parameters
+
+A text input can take the following parameters:
+
+| Parameter  | Type      | Default | Required | Description                    |
+| ---------- | --------- | ------- | -------- | ------------------------------ |
+| `x`        | `number`  | 0       | ❌ No    | x position                     |
+| `y`        | `number`  | 0       | ❌ No    | y position                     |
+| `width`    | `number`  | 400     | ❌ No    | width                          |
+| `txtSize`  | `number`  | 15      | ❌ No    | Input text size                |
+| `pad`      | `number`  | 10      | ❌ No    | Padding                        |
+| `hasFocus` | `boolean` | true    | ❌ No    | If text input has focus or not |
 
 <br>
 
