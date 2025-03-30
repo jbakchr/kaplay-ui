@@ -133,7 +133,7 @@ export const makeCheckbox = (x = 0, y = 0, width = 25, height = 25) => {
 };
 
 /**
- * Makes checkbox
+ * Makes switch
  * @param {number} x - Switch x postion (default is 0)
  * @param {number} y - Switch y postion (default is 0)
  * @param {number} width - Switch width (default is 50)
@@ -183,4 +183,44 @@ export const makeSwitch = (x = 0, y = 0, width = 50, height = 25) => {
   switchBase.add(switchCircle);
 
   return switchBase;
+};
+
+/**
+ * Makes text input
+ * @param {number} x - Text input x postion (default is 0)
+ * @param {number} y - Text input y postion (default is 0)
+ * @param {number} width - Text input width (default is 400)
+ * @param {number} txtSize - Text input text size (default is 15)
+ * @param {number} pad - Text input padding (default is 10)
+ * @param {boolean} hasFocus - Text input focus (default is true)
+ * @returns {GameObj}
+ */
+export const makeTextInput = (
+  x = 0,
+  y = 0,
+  width = 400,
+  txtSize = 15,
+  pad = 10,
+  hasFocus = true
+) => {
+  // Text input container
+  const inputBase = make([
+    rect(width, txtSize + pad * 2),
+    pos(x, y),
+    area(),
+    outline(1),
+  ]);
+
+  // Text input
+  const input = make([
+    text("", { width: width - pad * 2, size: txtSize }),
+    textInput(hasFocus),
+    color(BLACK),
+    pos(pad, pad),
+    area(),
+  ]);
+
+  inputBase.add(input);
+
+  return inputBase;
 };
