@@ -105,48 +105,48 @@ v2 solves these issues holistically with a fresh start.
 
 ### **Phase 1 — Foundation**
 
-- TypeScript configuration
-- Vite build setup
-- Repo structure
-- Testing setup
-- CI basics
-- Playground environment
-- semantic-release setup
+- [ ] TypeScript configuration
+- [ ] Vite build setup
+- [ ] Repo structure
+- [ ] Testing setup
+- [ ] CI basics
+- [ ] Playground environment
+- [ ] semantic-release setup
 
 ### **Phase 2 — Core Component Architecture**
 
-- Component base class / creation pattern
-- Shared behaviors (hover, press, disabled)
-- Event system
+- [ ] Component base class / creation pattern
+- [ ] Shared behaviors (hover, press, disabled)
+- [ ] Event system
 
 ### **Phase 3 — Primitive Components**
 
-- Implement Button, Label, Panel, Slider, Checkbox, Progress Bar
-- Basic examples in the playground
+- [ ] Implement Button, Label, Panel, Slider, Checkbox, Progress Bar
+- [ ] Basic examples in the playground
 
 ### **Phase 4 — Layout & Theming**
 
-- Layout primitives
-- Theming foundations
-- Styling documentation
+- [ ] Layout primitives
+- [ ] Theming foundations
+- [ ] Styling documentation
 
 ### **Phase 5 — Documentation Site**
 
-- Component catalog
-- Interactive examples
-- Getting started + API docs
+- [ ] Component catalog
+- [ ] Interactive examples
+- [ ] Getting started + API docs
 
 ### **Phase 6 — Pre‑Release (`v2-beta`)**
 
-- Testing
-- Real-world usage validation
-- Fixes and polish
+- [ ] Testing
+- [ ] Real-world usage validation
+- [ ] Fixes and polish
 
 ### **Phase 7 — Final Release**
 
-- Publish `2.0.0`
-- Announce release
-- Move v1 into maintenance mode
+- [ ] Publish `2.0.0`
+- [ ] Announce release
+- [ ] Move v1 into maintenance mode
 
 ---
 
