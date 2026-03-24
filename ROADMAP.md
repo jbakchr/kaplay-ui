@@ -103,9 +103,9 @@ v2 solves these issues holistically with a fresh start.
 
 ## 🚀 Development Phases
 
-### **Phase 1 — Foundation**
+### **Phase 1 — Foundation** (_in progress_)
 
-- [ ] TypeScript configuration
+- [x] TypeScript configuration
 - [ ] Vite build setup
 - [ ] Repo structure
 - [ ] Testing setup
