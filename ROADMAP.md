@@ -103,10 +103,10 @@ v2 solves these issues holistically with a fresh start.
 
 ## 🚀 Development Phases
 
-### **Phase 1 — Foundation** (_in progress_)
+### **Phase 1 — Foundation** (_in progress: 28 % done_)
 
 - [x] TypeScript configuration
-- [ ] Vite build setup
+- [x] Vite build setup
 - [ ] Repo structure
 - [ ] Testing setup
 - [ ] CI basics
