@@ -1,13 +1,14 @@
 import { defineConfig } from "vite";
+import path from "path";
 
 export default defineConfig({
-  root: ".",
+  root: __dirname,
   server: {
     open: true,
   },
   resolve: {
     alias: {
-      "kaplay-ui": "../src",
+      "kaplay-ui": path.resolve(__dirname, "../src"),
     },
   },
 });

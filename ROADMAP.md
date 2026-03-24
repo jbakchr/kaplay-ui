@@ -110,7 +110,7 @@ v2 solves these issues holistically with a fresh start.
 - [x] Repo structure
 - [x] Testing setup
 - [x] CI basics
-- [ ] Playground environment
+- [x] Playground environment
 - [ ] semantic-release setup
 
 ### **Phase 2 — Core Component Architecture**
