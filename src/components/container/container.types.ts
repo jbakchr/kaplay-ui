@@ -40,4 +40,6 @@ export interface UIContainerReturn {
   uiWidth: number;
   uiHeight: number;
   addChild(child: any): void;
+  anchor: string;
+  setAnchor(anchor: string): void;
 }

@@ -32,8 +32,9 @@ export function createContainer(k: KAPLAYCtx, opts: UIContainerOptions) {
     // NEW: store anchor
     anchor: opts.anchor ?? "topleft",
 
-    // NEW: placeholder anchor setter
-    setAnchor(_anchor: string) {
+    // NEW: runtime anchor setter
+    setAnchor(newAnchor: string) {
+      this.anchor = newAnchor;
       console.warn("setAnchor() not implemented yet.");
     },
   };
