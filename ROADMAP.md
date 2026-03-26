@@ -1,12 +1,12 @@
-# KAPLAY‑UI v1 Roadmap — Essential UI Components
+# KAPLAY‑UI v1 Roadmap — Essential UI Game Objects
 
-This roadmap outlines the essential UI components planned for the
-KAPLAY‑UI v1 plugin. These components represent the fundamental building
+This roadmap outlines the essential UI game objects planned for the
+KAPLAY‑UI v1 plugin. These game objects represent the fundamental building
 blocks expected in a lightweight game‑UI library.
 
 ---
 
-## 1. Core Components (Initial Essentials)
+## 1. Core Game Objects (Initial Essentials)
 
 ### 1.1 Panel / Container
 
@@ -14,7 +14,7 @@ Basic rectangular UI element used as a background or grouping container.
 
 ### 1.2 Label / Text Block
 
-Simple text display component for UI titles, labels, and descriptions.
+Simple text display game object for UI titles, labels, and descriptions.
 
 ### 1.3 Image / Icon Element
 
@@ -34,7 +34,7 @@ Horizontal or vertical slider with draggable knob for numeric values.
 
 ---
 
-## 2. Additional Essential Components
+## 2. Additional Essential Game Objects
 
 ### 2.1 Progress Bar
 
@@ -68,10 +68,10 @@ Small text bubble that appears on hover, providing additional information.
 
 ## Version Targets (Optional)
 
-These are rough milestones focused only on UI components.
+These are rough milestones focused only on UI game objects.
 
 - **v0.1.0** — Panel, Label, Image, Button
 - **v0.2.0** — Checkbox, Toggle Switch, Slider
 - **v0.3.0** — Progress Bar, Icon Button, Divider, Tooltip
 - **v0.4.0** — Radio Buttons, Scrollable Panel
-- **v1.0.0** — Polish, consistency, documentation for all components
+- **v1.0.0** — Polish, consistency, documentation for all game objects
