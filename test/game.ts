@@ -1,9 +1,18 @@
 import kaplay from "kaplay";
-
-import uiPlugin from "../src/index";
+import kaplayUI from "../src/index";
 
 const k = kaplay({
-  plugins: [uiPlugin],
+  width: 800,
+  height: 600,
+  plugins: [kaplayUI],
 });
 
-k.hi();
+// TEST: Can we call k.addContainer()?
+const panel = k.addContainer({
+  width: 300,
+  height: 200,
+});
+
+// For now, nothing should break even if panel is undefined or empty.
+// We're only testing TypeScript + plugin integration.
+console.log("Container created:", panel);
