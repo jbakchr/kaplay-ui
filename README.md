@@ -1,3 +1,10 @@
+<div style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;">
+  <img src="assets/kaplay-ui-logo.png" alt="kaplay-ui logo" width="400" >
+</div>
+
 # KAPLAY UI Plugin
 
 A lightweight UI helper plugin for the https://kaplayjs.com/ game library, providing ready‑to‑use UI components such as text‑based buttons.
