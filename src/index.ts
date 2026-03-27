@@ -1,6 +1,15 @@
-import type { KAPLAYCtx, GameObj } from "kaplay";
+import type {
+  KAPLAYCtx,
+  GameObj,
+  RectComp,
+  OutlineComp,
+  PosComp,
+  AnchorComp,
+  AreaComp,
+} from "kaplay";
 
-import { createTextButton } from "./components";
+// import { createTextButton } from "./components";
+import { createTextButton } from "./elements";
 
 /**
  * # KAPLAY UI Plugin
@@ -54,6 +63,7 @@ export default function kaplayUI(k: KAPLAYCtx) {
       txt: string = "Button",
       width: number = 200,
       height: number = 100,
-    ): GameObj => createTextButton(k, txt, width, height),
+    ): GameObj<RectComp | OutlineComp | PosComp | AnchorComp | AreaComp> =>
+      createTextButton(k, txt, width, height),
   };
 }
