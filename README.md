@@ -1,9 +1,6 @@
-<div style="display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;">
+<p align="center">
   <img src="assets/kaplay-ui-logo.png" alt="kaplay-ui logo" width="400" >
-</div>
+</p>
 
 # KAPLAY UI Plugin
 
