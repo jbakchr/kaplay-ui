@@ -4,9 +4,9 @@
 
 # KAPLAY UI Plugin
 
-A lightweight UI helper plugin for the https://kaplayjs.com/ game library, providing ready‑to‑use UI components such as text‑based buttons.
+A lightweight UI helper plugin for the [KAPLAY](https://kaplayjs.com/) game library, providing ready‑to‑use UI Game Objects such as text‑based buttons.
 
-This plugin simplifies the creation of UI elements using familiar KAPLAY primitives, offering sensible defaults while remaining flexible and composable.
+This plugin simplifies the creation of UI Game Object elements using familiar KAPLAY primitives, offering sensible defaults while remaining flexible and composable.
 
 ---
 
@@ -35,23 +35,24 @@ pnpm add kaplay-ui
 
 or:
 
+```sh
 yarn add kaplay-ui
-
-````
+```
 
 ---
 
 ## 🚀 Usage
+
 Import and register the plugin when initializing your KAPLAY game:
 
-```js
+```ts
 import kaplay from "kaplay";
 import kaplayUI from "kaplay-ui";
 
 const k = kaplay({
   plugins: [kaplayUI],
 });
-````
+```
 
 You now have access to the UI helpers via your `k` instance:
 
