@@ -59,7 +59,17 @@ const k = kaplay({
 Text-based button with centered text:
 
 ```ts
-const txtBtn = addTextButton("Play!", 200, 100);
+// Button with default centered "Button" text, width of 200, height of 100
+const txtBtn = addTextButton();
+
+// Button with centered "Play!" text, default width of 200, height of 100
+const txtBtn = addTextButton("Play!");
+
+// Button with default centered "Play!" text, width of 250, default height of 100
+const txtBtn = addTextButton("Play!", 250);
+
+// Button with default centered "Play!" text, width of 250, height of 150
+const txtBtn = addTextButton("Play!", 250, 150);
 ```
 
 ---
