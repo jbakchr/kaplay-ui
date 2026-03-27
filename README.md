@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/kaplay-ui-logo.png" alt="kaplay-ui logo" width="400" >
+</p>
+
 # KAPLAY UI
 
 _A simple and customizable UI plugin library for building interfaces in https://kaplayjs.com/._
@@ -75,5 +79,3 @@ Have questions or suggestions?
 Open an issue on GitHub:
 
 👉 <https://github.com/jbakchr/kaplay-ui>
-
-
