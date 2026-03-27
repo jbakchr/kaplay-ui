@@ -1,162 +1,125 @@
-# 📘 **KAPLAY‑UI — Updated Development Roadmap (v1)**
+# KAPLAY-UI Roadmap
 
-_(Reflecting current progress as of Phase 2 Step 2.4)_
+This roadmap outlines the planned features and development priorities for the
+first stable release of **kaplay-ui v1.0.0**.
 
-This roadmap tracks the incremental development of the **Container** UI element and the overall plugin architecture for `kaplay-ui`.  
-It replaces the old roadmap and reflects the precise, step-based structure we are now following.
-
----
-
-# 🌱 **Phase 0 — Planning & API Definition (Completed)**
-
-### **0.1 – Folder Structure Setup** ✔
-
-- Create `src/components/container/` directory
-- Add `index.ts`, `container.types.ts`, `container.logic.ts`, `container.styles.ts`
-
-### **0.2 – Public API Definition** ✔
-
-- Define developer experience (“DX sentence”)
-- Draft ideal usage examples
-- Decide initial required options (`width`, `height`)
-- Decide return type (GameObj + UI helpers)
-- Write full API Contract
+The goal of v1.0.0 is to establish a solid, minimal, but extensible foundation
+of UI Game Objects that feel native to KAPLAY while providing helpful
+abstractions for common UI patterns in 2D games.
 
 ---
 
-# 🧱 **Phase 1 — Minimal Functional Container (Completed)**
+## 🎯 v1.0.0 — Core UI Foundations
 
-### **1.1 – Type Definitions** ✔
+### ✅ Already Implemented
 
-- Create `UIContainerOptions`
-- Create `UIContainerReturn`
+#### **Text Button**
 
-### **1.2 – Factory Scaffolding** ✔
+- `addTextButton()` is the first core component.
+- Includes centered text, outline, area for clicks/hover, anchors, and sizing.
 
-- Add `createContainer()` factory
-- Export from plugin via `k.addContainer()`
-- Add placeholder logic/style hookups
+##### 🔄 _Planned enhancement: **Automatic Internal Text Centering**_
 
-### **1.3 – Minimal Functional Implementation** ✔
+When a user applies a custom anchor to a Text Button (e.g.  
+`txtBtn.use(k.anchor("center"))`), the _button's own anchor_ should change, but the **text inside the button should remain visually centered**.
 
-- Create Kaplay rect
-- Apply width/height
-- Return real container GameObj
-- Implement minimal `addChild()` (no positioning yet)
+This ensures:
 
----
+- Changing the anchor never breaks the internal layout
+- Buttons remain predictable regardless of user-chosen anchor
+- Layout consistency across UI screens
 
-# 🎨 **Phase 2 — Core Container Functionality (In Progress)**
+The internal implementation will ensure that:
 
-## ✔ Completed Steps
-
-### **2.1 – Add Basic Styling Support** ✔
-
-- Introduce `defaultContainerStyles`
-- Add `container.styles` field
-- Add placeholder `setStyle()` method
-
-### **2.2 – Add Anchor Support (Scaffolding)** ✔
-
-- Add `anchor?: string` to options
-- Add `container.anchor` property
-- Add `setAnchor()` method
-- Add `applyAnchor()` placeholder
-- Call anchor logic in `initContainerLogic()`
-
-## 🔄 **Current Step (Next to Implement)**
-
-### **2.3 – Apply Styles & Anchors Visually (NOT STARTED YET)**
-
-This will include:
-
-- Applying background color to the rect
-- Applying borderWidth, borderColor, radius
-- Applying padding to internal GameObj positioning
-- Applying anchor visually via Kaplay’s `.anchor()` component
-- Ensuring container size + style reflect options
-
-## ⏳ **Upcoming Step (Depends on Step 2.3)**
-
-### **2.4 – Implement Basic Child Positioning & Padding**
-
-- Children positioned relative to container origin
-- Apply padding offsets
-- Children follow container movement
-- Simple update loop to sync child positions
+- The text GameObj follows the button’s dimensions
+- Text position re-centers whenever anchor changes
+- No additional code is required from the user
 
 ---
 
-# 📦 **Phase 3 — Layout Engine (Future)**
+## 📌 Planned for v1.0.0
 
-### **3.1 – Layout Modes: none, vertical, horizontal**
+### 1. **Label**
 
-### **3.2 – Spacing support**
+A simple text-based UI Game Object element (optionally with background).
 
-### **3.3 – Auto-size based on children**
+- Great for HUD text, tooltips, and menu labels.
+- Consistent sizing + anchors.
 
-### **3.4 – Alignment (start, center, end)**
+### 2. **Panel / Box**
 
----
+A rectangle-based UI container.
 
-# ✨ **Phase 4 — Advanced Features (Future)**
+- Useful for menus, dialog backgrounds, overlays.
+- Background fill, outline, radius.
+- _May **possibly** act as an optional parent/container for children._
 
-### **4.1 – Borders, shadows, hover states**
+### 3. **Image Button**
 
-### **4.2 – Themes & preset styles**
+A button variant using a sprite texture.
 
-### **4.3 – z-index / UI layers**
+- Optional text overlay.
+- Keeps same event API as `addTextButton()`.
 
-### **4.4 – Optional clipping / scroll masking**
+### 4. **Checkbox / Toggle**
 
----
+A boolean state UI element.
 
-# 📚 **Phase 5 — Docs & Testing**
+- Click to toggle on/off.
+- Includes label or standalone box.
+- Event: `onToggle(value)`.
 
-### **5.1 – Full README examples**
+### 5. **Progress Bar**
 
-### **5.2 – API documentation**
+A simple loading or status bar.
 
-### **5.3 – Unit tests for container behavior**
+- Supports `value` between `0` and `1`.
+- Customizable bar color and background.
 
-### **5.4 – Interactive demo in `/test/game.ts`**
+### 6. **Layout Helpers**
 
----
+A minimal set of utilities to simplify positioning:
 
-# 🚀 **Phase 6 — v0.1.0 Release**
+- `addVStack({ gap, align })`
+- `addHStack({ gap, align })`
 
-### **6.1 – Code cleanup & final polish**
-
-### **6.2 – Publish `kaplay-ui` to npm**
-
-### **6.3 – Announce first usable Container component**
-
----
-
-# 🧭 **Where We Are Right Now**
-
-As of your last message, you are here:
-
-### ⭐ **Phase 2 → Step 2.4 complete**
-
-Meaning the next step to do together is:
-
-# 👉 **Phase 2 Step 3 — Apply Styles & Anchors Visually**
-
-This is where your container becomes:
-
-- visually styled
-- anchored correctly
-- padded properly
-- a _real_ UI element, not just a rectangle
+These aim to make menu building significantly simpler without trying to become
+a full layout engine.
 
 ---
 
-# If you'd like, I can now:
+## 💡 Stretch Goals (Included _only if time allows_)
 
-- Create a “live” ROADMAP.md file matching this structure
-- Move you into Phase 2 Step 3
-- Review your existing code to ensure everything matches the roadmap
-- Add future sections (Buttons, Sliders, Text, etc.)
+These are considered optional for v1.0.0, but may land if implementation is small:
 
-Just tell me what you'd like to do next.
+- Tooltip helper (`addTooltip(text)`)
+- Basic theme override system (`k.ui.setTheme()`)
+
+---
+
+## 🧭 Not Planned for v1.0.0 (but future candidates)
+
+These components are intentionally postponed for post‑1.0 development:
+
+- Text Input field
+- Dropdown / Select
+- ScrollView / Scrollable panel
+- Tabs
+- Modal dialogs
+- Grid layout
+
+These require more API design and internal architecture than the first release
+should attempt.
+
+---
+
+## 🏁 Goal of v1.0.0
+
+By the final release of v1.0.0, **kaplay-ui** aims to provide:
+
+- A small but powerful set of reusable UI Game Objects
+- Full KAPLAY compatibility (anchors, components, events, scenes)
+- Composability without imposing heavy structure
+- A stable API that developers can rely on for menus, HUDs, and simple game UIs
+
+---
