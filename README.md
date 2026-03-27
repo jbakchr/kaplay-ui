@@ -1,245 +1,79 @@
-![WIP](https://img.shields.io/badge/status-WIP-yellow)
-<br>_🚧 This package is a work in progress! 🚧_  
-_Expect breaking changes and incomplete features._
+# KAPLAY UI
 
-# KAPLAY UI - A UI Component Library for KAPLAY
+_A simple and customizable UI plugin library for building interfaces in https://kaplayjs.com/._
 
-_A simple and customizable component UI library for [KAPLAY](https://kaplayjs.com/)._
+Kaplay UI provides a game‑oriented **UI plugin** designed specifically for KAPLAY.
 
-## 🚀 Introduction
+It helps you build buttons, menus, controls, HUD elements, input fields, and more—without reinventing the wheel.
 
-Kaplay UI is a component library designed specifically for KAPLAY. It will provide ready-made UI components to help you build better user interfaces for your KAPLAY games with minimal effort.
+> ⚠️ **Note**  
+> The currently published stable version (`0.20.1`) is being replaced by a complete redesign.  
+> A new **v1** version is under active development and can be installed in prerelease form (see below).
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
+---
 
-## Installation
+## 📦 Installation
 
-You can install Kaplay UI via npm:
+### Stable release
 
 ```bash
 npm install kaplay-ui
 ```
 
-## Usage
+### Prerelease (new v1 work)
 
-### Inputs
-
-All inputs are imported from the <code>/inputs</code> folder.
-
-```javascript
-import {} from "kaplay-ui/inputs";
+```bash
+npm install kaplay-ui@next
 ```
 
-#### Checkbox
+This gives you the latest `1.0.0‑alpha.*` builds.
 
-To make a checkbox, one must use the exported <code>makeCheckbox()</code> function.
+---
 
-##### Example
+## 🚀 Usage
 
-An example usage of a checkbox.
+Kaplay UI exports a plugin for adding UI elements.
 
-```javascript
-import kaplay from "kaplay";
-import "kaplay/global";
+The plugin is exported from the package root:
 
-import { makeCheckbox } from "kaplay-ui/inputs";
-
-kaplay();
-
-const checkBox = makeCheckbox();
-
-add(checkBox);
+```ts
+import kaplayUI from "kaplay-ui";
 ```
 
-##### State
+---
 
-A cehckbox has the following state:
+## 🧩 Game Object (_**will evolve over time**_)
 
-| state     | Type      | Default | State change by   |
-| --------- | --------- | ------- | ----------------- |
-| `checked` | `boolean` | false   | Click on checkbox |
+### **Switch**
 
-##### Parameters
+### **Text Button**
 
-A checkbox can take the following parameters:
+Clickable text-based button:
 
-| Parameter | Type     | Default | Required | Description         |
-| --------- | -------- | ------- | -------- | ------------------- |
-| `x`       | `number` | 0       | ❌ No    | Checkbox x position |
-| `y`       | `number` | 0       | ❌ No    | Checkbox x position |
-| `width`   | `number` | 25      | ❌ No    | Checkbox width      |
-| `height`  | `number` | 25      | ❌ No    | Checkbox height     |
-
-<br>
-
-#### Switch
-
-To make a text button, one must use the exported <code>makeSwitch()</code> function.
-
-##### Example
-
-An example usage of a text button.
-
-```javascript
-import kaplay from "kaplay";
-import "kaplay/global";
-
-import { makeSwitch } from "kaplay-ui/inputs";
-
-kaplay();
-
-const switchBtn = makeSwitch();
-
-add(switchBtn);
+```ts
+const txtBtn = addTextButton("Play!", 200, 100);
 ```
 
-##### State
+---
 
-A cehckbox has the following state:
+## 🛣️ Roadmap
 
-| state      | Type      | Default | State change by |
-| ---------- | --------- | ------- | --------------- |
-| `switched` | `boolean` | false   | Click on switch |
+_to be added shortly .._
 
-##### Parameters
+---
 
-A switch can take the following parameters:
+## 📚 License
 
-| Parameter | Type     | Default | Required | Description       |
-| --------- | -------- | ------- | -------- | ----------------- |
-| `x`       | `number` | 0       | ❌ No    | Switch x position |
-| `y`       | `number` | 0       | ❌ No    | Switch x position |
-| `width`   | `number` | 50      | ❌ No    | Switch width      |
-| `height`  | `number` | 25      | ❌ No    | Switch height     |
+This project is licensed under the **MIT License**.  
+See the `LICENSE` file for details.
 
-<br>
+---
 
-#### Text Button
+## 💬 Contact
 
-To make a text button, one must use the exported <code>makeTextButton()</code> function.
+Have questions or suggestions?  
+Open an issue on GitHub:
 
-##### Example
+👉 <https://github.com/jbakchr/kaplay-ui>
 
-An example usage of a text button.
 
-```javascript
-import kaplay from "kaplay";
-import "kaplay/global";
-
-import { makeTextButton } from "kaplay-ui/inputs";
-
-kaplay();
-
-const txtBtn = makeTextButton("Start");
-
-add(txtBtn);
-```
-
-##### Parameters
-
-A text button can take the following parameters:
-
-| Parameter    | Type     | Default | Required | Description                        |
-| ------------ | -------- | ------- | -------- | ---------------------------------- |
-| `text`       | `string` | N/A     | ✅ Yes   | The text to display on the button. |
-| `x`          | `number` | 0       | ❌ No    | Button x position                  |
-| `y`          | `number` | 0       | ❌ No    | Button y position                  |
-| `width`      | `number` | 100     | ❌ No    | Button width                       |
-| `height`     | `number` | 50      | ❌ No    | Button height                      |
-| `btnRadius`  | `number` | 8       | ❌ No    | Button radius                      |
-| `btnOutline` | `number` | 1       | ❌ No    | Button outline                     |
-| `txtSize`    | `number` | 15      | ❌ No    | Text size                          |
-
-<br>
-
-#### Text input
-
-To make a toggle, one must use the exported <code>makeTextInput()</code> function.
-
-##### Example
-
-An example usage of a toggle.
-
-```javascript
-import kaplay from "kaplay";
-import "kaplay/global";
-
-import { makeTextInput } from "kaplay-ui/inputs";
-
-kaplay();
-
-const txtInput = makeTextInput();
-
-add(txtInput);
-```
-
-##### Parameters
-
-A text input can take the following parameters:
-
-| Parameter  | Type      | Default | Required | Description                    |
-| ---------- | --------- | ------- | -------- | ------------------------------ |
-| `x`        | `number`  | 0       | ❌ No    | x position                     |
-| `y`        | `number`  | 0       | ❌ No    | y position                     |
-| `width`    | `number`  | 400     | ❌ No    | width                          |
-| `txtSize`  | `number`  | 15      | ❌ No    | Input text size                |
-| `pad`      | `number`  | 10      | ❌ No    | Padding                        |
-| `hasFocus` | `boolean` | true    | ❌ No    | If text input has focus or not |
-
-<br>
-
-#### Toggle
-
-To make a toggle, one must use the exported <code>makeToggle()</code> function.
-
-##### Example
-
-An example usage of a toggle.
-
-```javascript
-import kaplay from "kaplay";
-import "kaplay/global";
-
-import { makeToggle } from "kaplay-ui/inputs";
-
-kaplay();
-
-const toggle = makeToggle();
-
-add(toggle);
-```
-
-##### State
-
-A cehckbox has the following state:
-
-| state     | Type      | Default | State change by |
-| --------- | --------- | ------- | --------------- |
-| `toggled` | `boolean` | false   | Click on toggle |
-
-##### Parameters
-
-A toggle can take the following parameters:
-
-| Parameter | Type     | Default | Required | Description       |
-| --------- | -------- | ------- | -------- | ----------------- |
-| `x`       | `number` | 0       | ❌ No    | Toggle x position |
-| `y`       | `number` | 0       | ❌ No    | Toggle y position |
-| `width`   | `number` | 50      | ❌ No    | Toggle width      |
-| `height`  | `number` | 25      | ❌ No    | Toggle height     |
-
-<br>
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-<br>
-
-## Contact
-
-Have questions or suggestions? Reach out via:
-
-- GitHub Issues
