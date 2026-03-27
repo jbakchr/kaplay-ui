@@ -1,5 +1,7 @@
 import type { KAPLAYCtx } from "kaplay";
 
+import { centerPos } from "../../helpers";
+
 export function createTextButton(
   k: KAPLAYCtx,
   txt: string,
@@ -15,11 +17,14 @@ export function createTextButton(
     k.area(),
   ]);
 
+  // Get center position of button to be used for the button text
+  const { x, y } = centerPos(btn.width, btn.height);
+
   // Make button text
   const btnTxt = k.make([
     k.text(txt),
     k.color(0, 0, 0),
-    k.pos(btn.width / 2, btn.height / 2),
+    k.pos(x, y),
     k.anchor("center"),
   ]);
 
