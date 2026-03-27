@@ -153,7 +153,7 @@ function uiScale() {
   return Math.min(k.width() / 400, 1.4);
 }
 
-function centerX(width) {
+function centerX(width: number) {
   return k.center().x - width / 2;
 }
 
