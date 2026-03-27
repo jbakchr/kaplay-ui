@@ -8,7 +8,7 @@ _A simple and customizable UI plugin library for building interfaces in https://
 
 Kaplay UI provides a game‑oriented **UI plugin** designed specifically for KAPLAY.
 
-It helps you build buttons, menus, controls, HUD elements, input fields, and more—without reinventing the wheel.
+It helps you build Game Objects like buttons, menus, controls, HUD elements, input fields, and more—without reinventing the wheel.
 
 > ⚠️ **Note**  
 > The currently published stable version (`0.20.1`) is being replaced by a complete redesign.  
@@ -36,23 +36,27 @@ This gives you the latest `1.0.0‑alpha.*` builds.
 
 ## 🚀 Usage
 
-Kaplay UI exports a plugin for adding UI elements.
+Kaplay UI exports a plugin for adding UI Game Objects.
 
 The plugin is exported from the package root:
 
 ```ts
+import kaplay from "kaplay";
 import kaplayUI from "kaplay-ui";
+
+const k = kaplay({
+  plugins: [kaplayUI],
+});
+
 ```
 
 ---
 
-## 🧩 Game Object (_**will evolve over time**_)
-
-### **Switch**
+## 🧩 Game Objects (_**will evolve over time**_)
 
 ### **Text Button**
 
-Clickable text-based button:
+Text-based button with centered text:
 
 ```ts
 const txtBtn = addTextButton("Play!", 200, 100);
