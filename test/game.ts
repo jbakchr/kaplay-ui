@@ -9,3 +9,7 @@ const k = kaplay({
 
 // Add text button
 const txtBtn = k.addTextButton("Hello");
+
+k.wait(3, () => {
+  txtBtn.use(k.anchor("center"));
+});
