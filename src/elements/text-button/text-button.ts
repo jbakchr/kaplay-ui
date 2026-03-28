@@ -35,5 +35,13 @@ export function createTextButton(
     }
   });
 
+  btn.onHover(() => {
+    k.setCursor("pointer");
+  });
+
+  btn.onHoverEnd(() => {
+    k.setCursor("default");
+  });
+
   return btn;
 }
