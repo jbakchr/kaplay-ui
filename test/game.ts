@@ -5,11 +5,12 @@ import kaplayUI from "../src/index";
 const k = kaplay({
   plugins: [kaplayUI],
   debugKey: "d",
+  background: [124, 124, 0],
 });
 
 // Add text button
 const txtBtn = k.addTextButton("Hello");
 
-k.wait(3, () => {
-  txtBtn.use(k.anchor("center"));
+txtBtn.onClick(() => {
+  console.log("clicked!");
 });
