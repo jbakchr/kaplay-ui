@@ -1,14 +1,9 @@
-import type {
-  KAPLAYCtx,
-  GameObj,
-  RectComp,
-  OutlineComp,
-  PosComp,
-  AnchorComp,
-  AreaComp,
-} from "kaplay";
+import type { KAPLAYCtx } from "kaplay";
 
-// import { createTextButton } from "./components";
+// Types
+import { TextButton } from "./types";
+
+// Text Button
 import { createTextButton } from "./elements";
 
 /**
@@ -50,7 +45,7 @@ export default function kaplayUI(k: KAPLAYCtx) {
      * @param {number} [height=100]
      *   Height of the button in pixels.
      *
-     * @returns {GameObj}
+     * @returns {TextButton}
      *   A KAPLAY Game Object representing the button with centered text.
      *
      * @example
@@ -63,7 +58,6 @@ export default function kaplayUI(k: KAPLAYCtx) {
       txt: string = "Button",
       width: number = 200,
       height: number = 100,
-    ): GameObj<RectComp | OutlineComp | PosComp | AnchorComp | AreaComp> =>
-      createTextButton(k, txt, width, height),
+    ): TextButton => createTextButton(k, txt, width, height),
   };
 }
