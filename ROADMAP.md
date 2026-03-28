@@ -18,22 +18,23 @@ abstractions for common UI patterns in 2D games.
 - `addTextButton()` is the first core component.
 - Includes centered text, outline, area for clicks/hover, anchors, and sizing.
 
-##### 🔄 _Planned enhancement: **Automatic Internal Text Centering**_
+**✨ Update: Automatic Internal Text Centering (Implemented)**
 
-When a user applies a custom anchor to a Text Button (e.g.  
-`txtBtn.use(k.anchor("center"))`), the _button's own anchor_ should change, but the **text inside the button should remain visually centered**.
+The Text Button now **automatically keeps its internal text centered**, even when the **button’s anchor is changed by the user** (e.g. `txtBtn.use(k.anchor("center"))`).
 
-This ensures:
+**This is now fully implemented and works transparently**, providing:
 
-- Changing the anchor never breaks the internal layout
-- Buttons remain predictable regardless of user-chosen anchor
-- Layout consistency across UI screens
+- The **button’s own anchor** updates normally
+- The **text object detects anchor changes** and re-centers itself automatically
+- No layout shifting or misalignment when users change anchors
+- Zero additional user code needed
 
-The internal implementation will ensure that:
+Internally:
 
-- The text GameObj follows the button’s dimensions
-- Text position re-centers whenever anchor changes
-- No additional code is required from the user
+- The text GameObj listens for anchor modifications
+- On any detected anchor change, its position is recalculated to remain visually centered
+
+This makes the Text Button predictable and robust across all UI layouts and anchoring strategies.
 
 ---
 
