@@ -8,6 +8,7 @@ import { makeButton, makeText } from "../../components/";
 
 // Helpers
 import { getCenterPos, setChildPosition } from "../../helpers";
+import { isLayoutChange } from "../../helpers/layout-utils";
 
 export function createTextButton(
   k: KAPLAYCtx,
@@ -16,23 +17,20 @@ export function createTextButton(
   height: number,
 ): TextButton {
   // Make button
-  const btn = makeButton(k, width, height);
+  const btn = makeButton(k, width, height, "topleft");
 
-  // Get center position of button to be used for positioning the button text in the center
+  // Make centered text
   const { cX, cY } = getCenterPos(btn);
+  const btnTxt = makeText(k, txt, cX, cY, "center");
 
-  // Make centered button text
-  const btnTxt = makeText(k, txt, cX, cY);
-
-  // Create Text Button
-  k.add(btn);
+  // Add text button
   btn.add(btnTxt);
+  k.add(btn);
 
-  // Register button changes
+  // Re-position text on layout-related changes
   btn.onUse((id) => {
-    // Button Anchor changes
-    if (id === "anchor") {
-      // Set new postion of Button Text (child)
+    if (isLayoutChange(id)) {
+      const { cX, cY } = getCenterPos(btn);
       setChildPosition(k, btn, btnTxt, cX, cY);
     }
   });
