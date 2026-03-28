@@ -1,6 +1,6 @@
 {
   "name": "kaplay-ui",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "description": "UI components for KAPLAY",
   "type": "module",
   "main": "src/index.ts",
