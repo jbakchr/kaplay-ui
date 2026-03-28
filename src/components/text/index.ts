@@ -8,7 +8,7 @@ export function makeText(
   anchor: Anchor,
 ) {
   const text = k.make([
-    k.text(txt),
+    k.text(txt, { size: 22 }),
     k.color(0, 0, 0),
     k.pos(posX, posY),
     k.anchor(anchor),

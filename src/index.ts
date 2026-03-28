@@ -55,9 +55,9 @@ export default function kaplayUI(k: KAPLAYCtx) {
      * const smallBtn = addTextButton("Play", 150, 75);
      */
     addTextButton: (
-      txt: string = "Button",
-      width: number = 200,
-      height: number = 100,
+      txt: string = "Settings",
+      width: number = 150,
+      height: number = 60,
     ): TextButton => createTextButton(k, txt, width, height),
   };
 }
