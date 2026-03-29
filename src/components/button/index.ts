@@ -1,11 +1,13 @@
 import { Anchor, KAPLAYCtx } from "kaplay";
 
+import { Button } from "../../types/components";
+
 export function makeButton(
   k: KAPLAYCtx,
   width: number,
   height: number,
   anchor: Anchor,
-) {
+): Button {
   const button = k.make([
     k.rect(width, height, { radius: 15 }),
     k.color(200, 200, 200),
