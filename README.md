@@ -8,21 +8,16 @@ _A simple and customizable UI plugin library for building interfaces in https://
 
 Kaplay UI provides a game‑oriented **UI plugin** designed specifically for KAPLAY.
 
-It helps you build Game Objects like buttons, menus, controls, HUD elements, input fields, and more—without reinventing the wheel.
+For now it helps you build Game Objects like text buttons and labels — without reinventing the wheel.
 
 > ⚠️ **Note**  
-> The currently published stable version (`0.20.1`) is being replaced by a complete redesign.  
+> The currently published stable version (`0.20.8`) is being replaced by a complete redesign.
+>
 > A new **v1** version is under active development and can be installed in prerelease form (see below).
 
 ---
 
 ## 📦 Installation
-
-### Stable release
-
-```bash
-npm install kaplay-ui
-```
 
 ### Prerelease (new v1 work)
 
@@ -36,9 +31,9 @@ This gives you the latest `1.0.0‑alpha.*` builds.
 
 ## 🚀 Usage
 
-Kaplay UI exports a plugin for adding UI Game Objects.
+**Kaplay UI** exports a plugin for adding UI Game Objects.
 
-The plugin is exported from the package root:
+The `kaplayUI` plugin is exported from the package root:
 
 ```ts
 import kaplay from "kaplay";
@@ -47,36 +42,127 @@ import kaplayUI from "kaplay-ui";
 const k = kaplay({
   plugins: [kaplayUI],
 });
+```
 
+You now have access to the UI helpers via your `k` instance:
+
+```ts
+const btn = k.addTextButton("Play", 200, 100);
+const label = k.addLabel("Score: 0");
 ```
 
 ---
 
-## 🧩 Game Objects (_**will evolve over time**_)
+## 🧩 Game Objects (_**1.0.0‑alpha.\* version**_)
 
-### **Text Button**
+### 🔤 **Text Button** (`addTextButton()`)
 
-Text-based button with centered text:
+Creates a button-like GameObj with centered text and some convenient defaults.
+
+#### _**Signature**_
 
 ```ts
-// Button with default centered "Button" text, width of 200, height of 100
-const txtBtn = addTextButton();
-
-// Button with centered "Play!" text, default width of 200, height of 100
-const txtBtn = addTextButton("Play!");
-
-// Button with default centered "Play!" text, width of 250, default height of 100
-const txtBtn = addTextButton("Play!", 250);
-
-// Button with default centered "Play!" text, width of 250, height of 150
-const txtBtn = addTextButton("Play!", 250, 150);
+addTextButton(
+  txt?: string,
+  width?: number,
+  height?: number
+): GameObj
 ```
+
+#### _**Default values**_
+
+| Parameter | Default    |
+| --------- | ---------- |
+| `txt`     | `"Button"` |
+| `width`   | `200`      |
+| `height`  | `100`      |
+
+#### _**Default styling**_
+
+When created, the button includes:
+
+- k.outline(3)
+- k.pos(0, 0)
+- k.anchor("topleft")
+- k.area() — for click/hover detection
+
+#### _**Examples**_
+
+```ts
+// Default button
+const btn1 = k.addTextButton();
+
+// Custom label
+const btn2 = k.addTextButton("Start");
+
+// Custom size
+const btn3 = k.addTextButton("Start", 150, 75);
+
+// Add interactivity
+btn2.onClick(() => {
+  console.log("Button clicked!");
+});
+```
+
+---
+
+### 🏷️ **Label** (`addLabel()`)
+
+A lightweight text-based UI element — ideal for HUD counters, tooltips, status text, or titles.
+
+#### _**Signature**_
+
+```ts
+addLabel(
+    txt: string,
+    width: number
+    height: number
+)
+```
+
+#### _**Default values**_
+
+| Parameter | Default |
+| --------- | ------- |
+| `txt`     | `""`    |
+| `width`   | `160`   |
+| `height`  | `96`    |
+
+#### _**Examples**_
+
+```js
+// Default button
+const lbl1 = k.addLabel();
+
+// Basic label
+const lbl2 = k.addLabel("Score: 0");
+
+// Custom size
+const lbl3 = k.addLabel("Start", 100, 50);
+
+// Update label text example
+let score = 0;
+const scoreLabel = k.addLabel(`Score: ${score}`);
+
+k.wait(2, () => {
+  score++;
+  scoreLabel.children[0].text = `Score: ${score}`;
+});
+```
+
+#### _**Common use cases**_
+
+- HUD overlays
+- Score counters
+- Time and health displays
+- UI section headings
+- Tooltips and indicators
 
 ---
 
 ## 🛣️ Roadmap
 
-_to be added shortly .._
+_See evolving roadmap at: https://github.com/jbakchr/kaplay-ui/blob/v1/ROADMAP.md_
 
 ---
 
