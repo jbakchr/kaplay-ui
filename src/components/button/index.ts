@@ -1,6 +1,6 @@
 import { Anchor, KAPLAYCtx } from "kaplay";
 
-import { Button } from "../../types/components";
+import { Button } from "../../types";
 
 export function makeButton(
   k: KAPLAYCtx,
