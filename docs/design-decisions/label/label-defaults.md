@@ -211,3 +211,11 @@ If you want to provide sensible defaults for your Label component:
   - **48px** for background panels
 
 This keeps things aligned with the pixel-art norms and avoids awkward scaling.
+
+---
+
+<br>
+
+_**See next decisions about `Text Button` here:**_
+
+- [Text Button](https://github.com/jbakchr/kaplay-ui/blob/v1/docs/design-decisions/text-button/text-button-defaults.md)
