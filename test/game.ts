@@ -8,5 +8,5 @@ const k = kaplay({
   background: [200, 213, 107],
 });
 
-// Add text button
-const txtBtn = k.addTextButton();
+// Add label
+const lbl = k.addLabel();
