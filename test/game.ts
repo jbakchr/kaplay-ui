@@ -8,4 +8,6 @@ const k = kaplay({
   background: [200, 213, 107],
 });
 
-k.addLabel("Score:");
+const lbl = k.addLabel("Score:");
+
+k.addTextButton()

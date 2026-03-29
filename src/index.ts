@@ -8,11 +8,35 @@ import { createLabel, createTextButton } from "./elements";
 
 /**
  * # KAPLAY UI Plugin
- * _Add UI Game Objects to your game._
  *
- * ## Features
- * - Text Button (`addTextButton()`)
+ * A small UI helper plugin that adds convenience functions for creating
+ * common UI components such as buttons and labels within a KAPLAY game.
+ *
+ * The returned object extends your KAPLAY context with UI creation helpers.
+ *
+ * ## Available Helpers
+ * - `addTextButton(txt?, width?, height?)`
+ * - `addLabel(txt?, width?, height?)`
+ *
+ * @returns {{
+ *   addTextButton: (txt?: string, width?: number, height?: number) => TextButtonElement,
+ *   addLabel:      (txt?: string, width?: number, height?: number) => LabelElement
+ * }}
+ *   An object exposing helper functions for creating UI elements.
+ *
+ * @example
+ * // Inside a KAPLAY scene:
+ * import kaplay from "kaplay";
+ * import kaplayUI from "kaplay-ui"
+ *
+ * const k = kaplay({
+ *    plugins: [kaplayUI]
+ * })
+ *
+ * const label = k.addLabel("Hello!");
+ * const button = k.addTextButton("Start");
  */
+
 export default function kaplayUI(k: KAPLAYCtx) {
   return {
     /**
@@ -23,11 +47,9 @@ export default function kaplayUI(k: KAPLAYCtx) {
      * quickly add UI buttons to your KAPLAY game.
      *
      * ## Default Parameter Values
-     * | Name     | Default      |
-     * |:---------|:-------------|
-     * | `txt`    | `"Button"`   |
-     * | `width`  | `200`        |
-     * | `height` | `100`        |
+     * - `txt`: `"Button"`
+     * - `width`: `200`
+     * - `height`: `100`
      *
      * ## Default Styling
      * The button object is created with:
@@ -49,10 +71,8 @@ export default function kaplayUI(k: KAPLAYCtx) {
      *   A KAPLAY Game Object representing the button with centered text.
      *
      * @example
-     * const btn = addTextButton();
      * const playBtn = addTextButton("Play");
-     * const wideBtn = addTextButton("Play", 150);
-     * const smallBtn = addTextButton("Play", 150, 75);
+     * playBtn.onClick(() => console.log("Play clicked!"));
      */
     addTextButton: (
       txt: string = "Settings",
@@ -61,9 +81,36 @@ export default function kaplayUI(k: KAPLAYCtx) {
     ): TextButtonElement => createTextButton(k, txt, width, height),
     /**
      * # Label
+     * Creates a simple text container with a background and layout box.
      *
-     * @param {number} width
-     * @param {number} height
+     * Labels are lightweight UI elements used to display non-interactive text
+     * such as titles, descriptions, or dynamic info (scores, status, etc.).
+     * 
+     * ## Default Parameter Values
+     * - `txt`: `""`
+     * - `width`: `160`
+     * - `height`: `96`
+     *
+     * ## Default Styling
+     * A label includes:
+     * - `k.color(0, 0, 0)`
+     * - `k.opacity(0.7)`
+     * - `k.anchor("topleft")`
+     *
+     * @param {string} [txt=""]
+     *   The text content shown inside the label.
+     *
+     * @param {number} [width=160]
+     *   Width of the label container in pixels.
+     *
+     * @param {number} [height=96]
+     *   Height of the label container in pixels.
+     *
+     * @returns {LabelElement}
+     *   A KAPLAY game object representing a text label.
+     *
+     * @example
+     * const scoreLabel = addLabel("Score: 0");
      */
     addLabel: (
       txt: string = "",
