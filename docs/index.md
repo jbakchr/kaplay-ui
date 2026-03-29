@@ -6,4 +6,5 @@
 
 See KAPLAY UI documentation about:
 
+- [FAQ](https://github.com/jbakchr/kaplay-ui/blob/v1/docs/faq.md)
 - [Design Decisions](https://github.com/jbakchr/kaplay-ui/blob/v1/docs/design-decisions/design-decisions.md)
