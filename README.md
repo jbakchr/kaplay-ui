@@ -226,6 +226,12 @@ k.go("mobile-menu");
 
 ---
 
+## 📚 Documentation
+
+_**Evolving**_ documentation is available in the [docs](./docs/) folder.
+
+---
+
 ## 📄 License
 
 MIT — free for personal and commercial use.
