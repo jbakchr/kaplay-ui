@@ -1,7 +1,7 @@
 import type { KAPLAYCtx } from "kaplay";
 
 // Types
-import { LabelElement, TextButtonElement } from "./types";
+import { LabelComponent, TextButtonElement } from "./types";
 
 // Text Button
 import { createLabel, createTextButton } from "./elements";
@@ -85,7 +85,7 @@ export default function kaplayUI(k: KAPLAYCtx) {
      *
      * Labels are lightweight UI elements used to display non-interactive text
      * such as titles, descriptions, or dynamic info (scores, status, etc.).
-     * 
+     *
      * ## Default Parameter Values
      * - `txt`: `""`
      * - `width`: `160`
@@ -110,12 +110,18 @@ export default function kaplayUI(k: KAPLAYCtx) {
      *   A KAPLAY game object representing a text label.
      *
      * @example
-     * const scoreLabel = addLabel("Score: 0");
+     * let score = 0
+     * const scoreLabel = addLabel(`Score: ${score}`);
+     * 
+     * k.wait(2, () => {
+     *   score++:
+     *   scoreLabel.children[0].text = `Score: ${score}`
+     * })
      */
     addLabel: (
       txt: string = "",
       width: number = 160,
       height: number = 96,
-    ): LabelElement => createLabel(k, txt, width, height),
+    ): LabelComponent => createLabel(k, txt, width, height),
   };
 }
