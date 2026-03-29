@@ -65,7 +65,10 @@ export default function kaplayUI(k: KAPLAYCtx) {
      * @param {number} width
      * @param {number} height
      */
-    addLabel: (width: number = 160, height: number = 96): LabelElement =>
-      createLabel(k, width, height),
+    addLabel: (
+      txt: string = "",
+      width: number = 160,
+      height: number = 96,
+    ): LabelElement => createLabel(k, txt, width, height),
   };
 }

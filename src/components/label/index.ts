@@ -12,6 +12,7 @@ export function makeLabel(
     k.pos(200, 200),
     k.color(0, 0, 0),
     k.opacity(0.7),
+    k.anchor("topleft"),
   ]);
 
   return label;

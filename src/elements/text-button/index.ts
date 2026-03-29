@@ -21,7 +21,7 @@ export function createTextButton(
 
   // Make centered text
   const { cX, cY } = getCenterPos(btn);
-  const btnTxt = makeText(k, txt, cX, cY, "center");
+  const btnTxt = makeText(k, txt, 22, cX, cY, "center");
 
   // Add text button
   btn.add(btnTxt);
