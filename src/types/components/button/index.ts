@@ -8,6 +8,6 @@ import {
   AreaComp,
 } from "kaplay";
 
-export type Button = GameObj<
+export type ButtonComponent = GameObj<
   RectComp | ColorComp | OutlineComp | PosComp | AnchorComp | AreaComp
 >;
