@@ -1,6 +1,8 @@
 import { KAPLAYCtx } from "kaplay";
 
-export function makeLabel(k: KAPLAYCtx, width: number, height: number) {
+import { Label } from "../../types";
+
+export function makeLabel(k: KAPLAYCtx, width: number, height: number): Label {
   const label = k.make([
     k.rect(width, height),
     k.pos(200, 200),
