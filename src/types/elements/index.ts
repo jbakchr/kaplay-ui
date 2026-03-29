@@ -7,6 +7,6 @@ import {
   AreaComp,
 } from "kaplay";
 
-export type TextButton = GameObj<
+export type TextButtonElement = GameObj<
   RectComp | OutlineComp | PosComp | AnchorComp | AreaComp
 >;

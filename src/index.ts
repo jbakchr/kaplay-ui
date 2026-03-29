@@ -1,7 +1,7 @@
 import type { KAPLAYCtx } from "kaplay";
 
 // Types
-import { TextButton } from "./types";
+import { TextButtonElement } from "./types";
 
 // Text Button
 import { createLabel, createTextButton } from "./elements";
@@ -58,7 +58,7 @@ export default function kaplayUI(k: KAPLAYCtx) {
       txt: string = "Settings",
       width: number = 150,
       height: number = 60,
-    ): TextButton => createTextButton(k, txt, width, height),
+    ): TextButtonElement => createTextButton(k, txt, width, height),
     /**
      * # Label
      *
