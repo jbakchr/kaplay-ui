@@ -5,8 +5,16 @@ import {
   OpacityComp,
   PosComp,
   RectComp,
+  TextComp,
+  TextCompOpt,
 } from "kaplay";
 
 export type LabelElement = GameObj<
-  RectComp | PosComp | ColorComp | OpacityComp | AnchorComp
+  | RectComp
+  | PosComp
+  | ColorComp
+  | OpacityComp
+  | AnchorComp
+  | TextComp
+  | TextCompOpt
 >;
