@@ -148,6 +148,15 @@ const lbl2 = k.addLabel("Score: 0");
 
 // Custom size
 const lbl3 = k.addLabel("Start", 100, 50);
+
+// Update label text example
+let score = 0;
+const scoreLabel = k.addLabel(`Score: ${score}`);
+
+k.wait(2, () => {
+  score++;
+  scoreLabel.children[0].text = `Score: ${score}`
+})
 ```
 
 ### Common use cases
