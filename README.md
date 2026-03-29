@@ -228,7 +228,7 @@ k.go("mobile-menu");
 
 ## 📚 Documentation
 
-_**Evolving**_ documentation is available in the [docs](./docs/) folder.
+_**Evolving**_ documentation is available in the [docs](./docs/index.md) folder.
 
 ---
 
