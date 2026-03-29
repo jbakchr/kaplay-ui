@@ -4,7 +4,7 @@
 
 # KAPLAY UI Plugin
 
-A lightweight UI helper plugin for the [KAPLAY](https://kaplayjs.com/) game library, providing ready‑to‑use UI Game Objects such as text‑based buttons.
+A lightweight UI helper plugin for the [KAPLAY](https://kaplayjs.com/) game library, providing ready‑to‑use UI Game Objects such as text‑based buttons **and labels**.
 
 This plugin simplifies the creation of UI Game Object elements using familiar KAPLAY primitives, offering sensible defaults while remaining flexible and composable.
 
@@ -13,6 +13,7 @@ This plugin simplifies the creation of UI Game Object elements using familiar KA
 ## ✨ Features
 
 - 🎛️ **Text Button** — easily create a button with centered text
+- 🏷️ **Label** — a lightweight text-based UI element for HUDs, counters, tooltips, and more
 - 🧩 Designed to feel like native KAPLAY components
 - 🎨 Comes with built‑in sizing, positioning, and outline defaults
 - 🔧 Fully customizable through the normal KAPLAY component system
@@ -21,7 +22,7 @@ This plugin simplifies the creation of UI Game Object elements using familiar KA
 
 ## 📦 Installation
 
-You can install the plugin using your preferred package manager:
+Install the plugin using your preferred package manager:
 
 ```sh
 npm install kaplay-ui
@@ -58,6 +59,7 @@ You now have access to the UI helpers via your `k` instance:
 
 ```js
 const btn = k.addTextButton("Play", 200, 100);
+const label = k.addLabel("Score: 0");
 ```
 
 ---
@@ -113,20 +115,48 @@ btn2.onClick(() => {
 
 ---
 
-## 🧱 How It Works
+## 🏷️ `addLabel()`
 
-Internally, the plugin creates a GameObj composed of:
+A lightweight text-based UI element — ideal for HUD counters, tooltips, status text, or titles.
 
-- A rectangle-like button base
-- Centered text using KAPLAY's built‑in text component
-- A combined area for input events
+### **Signature**
 
-This keeps your UI elements fully compatible with:
+```ts
+addLabel(
+    txt: string,
+    width: number
+    height: number
+)
+```
 
-- `onClick()`
-- `onHover()`
-- `color()`, `scale()`, etc.
-- Layout within scenes or parent objects
+### **Default values**
+
+| Parameter | Default |
+| --------- | ------- |
+| `txt`     | `""`    |
+| `width`   | `160`   |
+| `height`  | `96`    |
+
+### **Example**
+
+```js
+// Default button
+const lbl1 = k.addLabel();
+
+// Basic label
+const lbl2 = k.addLabel("Score: 0");
+
+// Custom size
+const lbl3 = k.addLabel("Start", 100, 50);
+```
+
+### Common use cases
+
+- HUD overlays
+- Score counters
+- Time and health displays
+- UI section headings
+- Tooltips and indicators
 
 ---
 
