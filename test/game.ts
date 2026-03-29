@@ -10,3 +10,5 @@ const k = kaplay({
 
 // Add label
 const lbl = k.addLabel();
+
+const txt = k.add([k.text("Label")]);

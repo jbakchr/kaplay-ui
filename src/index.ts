@@ -59,8 +59,14 @@ export default function kaplayUI(k: KAPLAYCtx) {
       width: number = 150,
       height: number = 60,
     ): TextButton => createTextButton(k, txt, width, height),
-    addLabel: () => {
-      createLabel(k);
+    /**
+     * # Label
+     *
+     * @param {number} width
+     * @param {number} height
+     */
+    addLabel: (width: number = 160, height: number = 96) => {
+      createLabel(k, width, height);
     },
   };
 }
