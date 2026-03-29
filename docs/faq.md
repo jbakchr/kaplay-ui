@@ -2,7 +2,7 @@
   <img src="../assets/kaplay-ui-logo-faq.png" alt="kaplay-ui faq logo" width="400" >
 </p>
 
-# <p style="color:#9dbc60;font-weight: bold;">KAPLY-UI FAQ</p>
+<h1 style="color:#9dbc60;font-weight: bold;">KAPLY-UI FAQ</h1>
 
 ## Table of Contents
 
