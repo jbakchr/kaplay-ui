@@ -8,9 +8,5 @@ const k = kaplay({
   background: [200, 213, 107],
 });
 
-// Add text button
-const txtBtn = k.addTextButton("Play!");
-
-txtBtn.onClick(() => {
-  console.log("clicked!");
-});
+// Add label
+const lbl = k.addLabel();
