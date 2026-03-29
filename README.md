@@ -228,7 +228,7 @@ k.go("mobile-menu");
 
 ## 📚 Documentation
 
-_**Evolving**_ documentation is available in the [docs](./docs/index.md) folder.
+_**Evolving**_ documentation is available in the [docs](https://github.com/jbakchr/kaplay-ui/blob/v1/docs/index.md) folder.
 
 ---
 
