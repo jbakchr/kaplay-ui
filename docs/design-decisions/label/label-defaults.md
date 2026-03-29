@@ -214,8 +214,6 @@ This keeps things aligned with the pixel-art norms and avoids awkward scaling.
 
 ---
 
-<br>
-
 _**See next decisions about `Text Button` here:**_
 
 - [Text Button](https://github.com/jbakchr/kaplay-ui/blob/v1/docs/design-decisions/text-button/text-button-defaults.md)
