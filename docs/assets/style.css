@@ -126,9 +126,9 @@ a:hover {
 }
 
 /* --------------------------------------------------
-   Mobile Improvements
+   Mobile Improvements - old
 -------------------------------------------------- */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   h1 {
     font-size: 2.2rem;
   }
@@ -140,5 +140,73 @@ a:hover {
 
   pre {
     padding: 0.8rem;
+  }
+} */
+
+/* --------------------------------------------------
+   Improved Mobile Layout - NEW
+   For devices narrower than ~650px
+-------------------------------------------------- */
+@media (max-width: 650px) {
+  /* Reduce global padding so content fits comfortably */
+  .page-content {
+    padding: 0.75rem 1rem;
+  }
+
+  /* Make H1 + H2 more compact and mobile-friendly */
+  h1 {
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  /* Reduce paragraph and list spacing */
+  p,
+  li {
+    line-height: 1.55;
+    font-size: 1rem;
+  }
+
+  /* KAPLAY header styling */
+  .kaplay-header {
+    padding: 1.5rem 0 1.25rem 0;
+  }
+
+  /* Better phone-sized logo */
+  .kaplay-logo {
+    width: 200px; /* smaller default */
+    max-width: 70vw; /* allow it to shrink on narrow screens */
+    margin-bottom: 0.5rem;
+  }
+
+  /* Code blocks: tighter and more readable */
+  pre {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.35;
+    margin: 1.25rem 0;
+    border-radius: 8px;
+  }
+
+  code {
+    font-size: 0.9rem;
+  }
+
+  /* Improve .block container spacing */
+  .block {
+    padding: 1.25rem 1.25rem;
+    margin: 1.5rem 0;
+    border-radius: 12px;
+  }
+
+  /* Make links easier to tap */
+  a {
+    padding: 0.2rem 0;
   }
 }
