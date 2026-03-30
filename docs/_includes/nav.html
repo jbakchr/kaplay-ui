@@ -1,12 +1,17 @@
 <!-- Reusable Navigation Block -->
 <style>
   .nav-container {
+    position: sticky;
+    top: 0;
+    z-index: 999; /* ensures it stays above content */
     display: flex;
     gap: 1rem;
     padding: 0.75rem 1rem;
     background: #262626;
     /* border-bottom: 1px solid #d0d7de; */
     margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--kaplay-yellow);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   }
 
   .nav-container a {
