@@ -23,12 +23,133 @@
   .nav-container a:hover {
     text-decoration: underline;
   }
+
+  /* --------------------------------------------------
+   Sticky Navbar Base Styles
+-------------------------------------------------- */
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--bg-box);
+    padding: 0.75rem 1.25rem;
+    border-bottom: 2px solid var(--kaplay-purple);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Brand */
+  .nav-brand {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--kaplay-cyan);
+  }
+
+  /* Desktop menu */
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .nav-menu a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--text-light);
+  }
+
+  .nav-menu a:hover {
+    color: var(--kaplay-cyan);
+  }
+
+  /* --------------------------------------------------
+   Mobile Styles
+-------------------------------------------------- */
+
+  /* Hide checkbox */
+  .nav-toggle {
+    display: none;
+  }
+
+  /* Hamburger icon */
+  .nav-toggle-label {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+
+  .nav-toggle-label span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background: var(--kaplay-cyan);
+    border-radius: 3px;
+    transition: 0.3s;
+  }
+
+  @media (max-width: 650px) {
+    /* Show hamburger */
+    .nav-toggle-label {
+      display: flex;
+    }
+
+    /* Hide desktop menu */
+    .nav-menu {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: var(--bg-box);
+      width: 100%;
+      flex-direction: column;
+      padding: 1rem;
+      display: none;
+      border-bottom: 2px solid var(--kaplay-purple);
+    }
+
+    .nav-menu li {
+      margin: 0.75rem 0;
+    }
+
+    /* Show menu when checkbox is checked */
+    .nav-toggle:checked ~ .nav-menu {
+      display: flex;
+    }
+  }
 </style>
 
-<nav class="nav-container">
+<!-- <nav class="nav-container">
   <a href="https://jbakchr.github.io/kaplay-ui/index.html">Home</a>
   <a href="https://jbakchr.github.io/kaplay-ui/faq">FAQ</a>
-  <!-- <a href="/kaplay-ui/design-decisions/design-decisions">Design Decisions</a> -->
-  <!-- <a href="/kaplay-ui/components">Components</a> -->
-  <!-- <a href="/kaplay-ui/examples">Examples</a> -->
+  <a href="/kaplay-ui/design-decisions/design-decisions">Design Decisions</a>
+  <a href="/kaplay-ui/components">Components</a>
+  <a href="/kaplay-ui/examples">Examples</a>
+</nav> -->
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <!-- Logo / Title -->
+    <a class="nav-brand" href="./index.html">K‑UI</a>
+
+    <!-- Hamburger -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <!-- Menu -->
+    <ul class="nav-menu">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./faq.html">FAQ</a></li>
+      <li><a href="./design-decisions/">Design Decisions</a></li>
+    </ul>
+  </div>
 </nav>
