@@ -121,7 +121,7 @@ MIT © 2026 [Jonas Bak Phillipson](https://github.com/jbakchr)
 
 ---
 
-<div class="block" style="text-align: center;font-weight:bold;">
+<div class="block" style="text-align:center;font-weight:bold;">
   <p>Made with 💚 + 🦖 by:<p>
-  <p style="font-style:italic;"><span style="color:#ffde86;">The</span> <span style="color:#f2ae99;">KAPLAY</span> <span style="color:#CF9FFF;">Community</span></p>
+  <p style="font-style:italic;"><span style="color:#ffde86;">The</span> <span style="color:#f2ae99;">KAPLAY </span><span style="color:#CF9FFF;">Community</span></p>
 </div>
