@@ -1,55 +1,72 @@
-<p align="center">
-  <img src="../assets/kaplay-ui-logo-faq.png" alt="kaplay-ui faq logo" width="400" >
-</p>
+# ❓ KAPLAY UI — FAQ
 
-# <h1 style="color:#9dbc60; font-weight: bold;">KAPLY-UI FAQ</h1>
-
-## Table of Contents
-
-- [General](#general)
-- [Installation](#installation)
+_Frequently asked questions about the KAPLAY UI plugin._
 
 ---
 
-## General
+## 📚 Table of Contents
 
-<span style="color:#ce6360;font-weight: bold;">Question:</span> _**What is this plugin for?**_
-
-<span style="color:#9dbc60;font-weight: bold;">Answer:</span> The plugin provides simple, composable UI helpers—such as text‑based buttons—using native KAPLAY primitives. It reduces boilerplate and keeps UI elements consistent and easy to create.
+- [General](#-general)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Licensing](#-licensing)
 
 ---
 
-## Installation
+## 🧠 General
 
-<span style="color:#ce6360;font-weight: bold;">Question:</span> _**How do I install kaplay-ui?**_
+**Q:** _**What is this plugin for?**_
 
-<span style="color:#9dbc60;font-weight: bold;">Answer:</span> Install `kaplay-ui` from your project root by running:
+**A:** KAPLAY UI provides lightweight, composable UI helpers — such as text‑based buttons and labels — built using familiar **KAPLAY primitives**.
+
+<div class="block">
+It reduces boilerplate, keeps UI consistent, and helps you build menus, HUDs, overlays, and interactive UI faster.
+</div>
+
+---
+
+## 📦 Installation
+
+### **Q:** _**How do I install KAPLAY UI?**_
+
+**A:** Install from your project root using your preferred package manager:
 
 ```sh
-npm i kaplay-ui@next
+npm install kaplay-ui@next
 ```
 
 ---
 
-## Usage
+## 🚀 Usage
 
-**<span style="color:#ce6360;font-weight: bold;">Question:</span> _How do I use the kaplau-ui plugin?_**
+### **Q:** _**How do I use the `kaplay-ui` plugin?**_
 
-<span style="color:#9dbc60;font-weight: bold;">Answer:</span> You use the `kaplay-ui` plugin do this:
+**A:** Import and enable the plugin when creating your KAPLAY instance:
 
 ```ts
 import kaplay from "kaplay";
-import kaplayUI from "kaplay-ui"; // imports the plugin
+import kaplayUI from "kaplay-ui";
 
 const k = kaplay({
-  plugins: [kaplayUI], // use the plugin
+  plugins: [kaplayUI],
 });
+```
+
+Now you can create UI components such as:
+
+```ts
+k.addTextButton("Play");
+k.addLabel("Score: 0");
 ```
 
 ---
 
-## Licensing
+## 📄 Licensing
 
-**<span style="color:#ce6360;font-weight: bold;">Question:</span> _Can I use `kaplay-ui` for personal and commercial use?_**
+### **Q:** _**How may I use `kaplay-ui` ?**_
 
-<span style="color:#9dbc60;font-weight: bold;">Answer:</span> Yes. `kaplay-ui` is licenced as a **MIT License**.
+The **MIT License** allows full personal and commercial use with virtually no restrictions.
+
+<div class="block">
+🔓 **In short:** You can use, modify, distribute, and even sell projects using KAPLAY UI.
+</div>
