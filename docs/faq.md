@@ -74,5 +74,5 @@ k.addLabel("Score: 0");
 ---
 
 <p align="center">
-  <a href="https://jbakchr.github.io/kaplay-ui/">⬅️ Back to Home</a>
+  <a href="https://jbakchr.github.io/kaplay-ui/" class="btn">⬅️ Back to Home</a>
 </p>
