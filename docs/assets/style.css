@@ -13,6 +13,7 @@
   --text-light: #eaeaea;
   --text-purple: #b291ff;
   --text-dark-green: #6bc96c;
+  --text-box-black: #262626;
 }
 
 /* --------------------------------------------------
@@ -213,6 +214,6 @@ a:hover {
 
 .btn:hover {
   background: var(--kaplay-salmon);
-  color: var(--text-dark-green);
+  color: var(--text-box-black);
   transform: translateY(-2px);
 }
