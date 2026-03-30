@@ -5,20 +5,21 @@ _A lightweight and flexible **UI plugin for KAPLAY**, built to feel like a natur
 Create UI elements quickly using familiar KAPLAY primitives — buttons, labels, HUD elements, menus, and more.
 
 <div class="block">
-✨ KAPLAY UI helps you build game-ready user interfaces with almost no setup.  
+
+✨ KAPLAY UI helps you build game-ready user interfaces with almost no setup.
+
 Perfect for menus, HUDs, mobile UI, prototypes, and small-to-medium games.
+
 </div>
 
 ---
 
 ## 🚀 Why KAPLAY UI?
 
-- 🧩 Works exactly like native KAPLAY components
-- 🎛️ Easy, declarative API (**addTextButton**, **addLabel**, etc.)
-- ✨ Sensible styling defaults out of the box
-- 🎨 Fully customizable using standard KAPLAY component modifiers
-- 📱 Designed for both desktop & mobile gameplay
-- ⚡ Zero dependencies — just plug in and play
+- 🧩 Works exactly like native KAPLAY
+- 🎛️ Easy, declarative API
+- ✨ Sensible styling defaults
+- 🎨 Fully customizable
 
 ---
 
@@ -50,7 +51,7 @@ const tb = k.addTextButton("Play");
 const sl = k.addLabel("Score: 0");
 ```
 
-That’s it — you’re ready to build UI.
+_**That’s it** — you’re ready to build UI!_
 
 ---
 
@@ -82,22 +83,28 @@ _More components are being added soon as the plugin grows._ 🎉
 
 ## 📚 Documentation
 
-You can find more details here:
+_Soon_ .. you can find more details here:
 
-- 📄 **faq.md** — Common questions and answers
-- 🧠 **design-decisions/** — Why this plugin works the way it does
-- 🔘 Component API Pages (coming soon)
-- 🧪 Examples & Demos (coming soon)
+- 📄 **faq.md** — _Questions and answers_
+- 🧠 **design-decisions** — _The Whys?_
+- 🔘 **API Pages** — _The What & How_
+- 🧪 **Examples** — _Learn by doing_
+- 🪧 **Demos** — _See it in action_
 
----
 
 ## 🗺️ Roadmap (WIP)
 
-- ⏳ More component types (sliders, toggles, panels)
-- 🎨 Theme presets (built-in light/dark UI packs)
-- 🎛️ Complex layout helpers (stacks, grids)
-- ♿ Accessibility improvements
-- 📘 Full documentation site
+- **⏳ More component types**  
+   _(sliders, toggles, panels)_
+
+- **🎨 Theme presets**  
+  _(built-in light/dark UI packs)_
+
+- 🎛️ Complex layout helpers  
+  _(stacks, grids)_
+
+- **📘 Full documentation site**  
+  _(getting started, faq and .. more)_
 
 ---
 
@@ -115,6 +122,7 @@ MIT © 2026 [Jonas Bak Phillipson](https://github.com/jbakchr)
 
 ---
 
-<div class="block" style="text-align: center;">
-with ❤️ from the KAPLAY community
+<div class="block" style="text-align: center;font-weight:bold;">
+<br>
+Made with 💚 by the KAPLAY community
 </div>
