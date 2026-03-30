@@ -79,12 +79,23 @@ h3 {
 /* ---------------------------
    Code Blocks
 --------------------------- */
-code,
-pre {
-  background: #2b2b2b;
+/* Add spacing above/below code blocks */
+pre,
+code {
+  display: block;
+  margin: 1.25rem 0; /* Add vertical spacing */
+  padding: 1rem; /* Extra padding inside */
+  background: #2b2b2b; /* Your current background */
   border-radius: 6px;
-  padding: 0.25rem 0.5rem;
+  overflow-x: auto; /* Prevent horizontal overflow issues */
 }
+
+/* Ensure inline code looks normal */
+code {
+  padding: 0.2rem 0.4rem;
+  display: inline-block;
+}
+
 
 /* ---------------------------
    Links
