@@ -1,4 +1,4 @@
-# ❓ KAPLAY UI — FAQ
+# ❓ KAPLAY-UI — FAQ
 
 _**Frequently asked questions** about the KAPLAY UI plugin._
 
