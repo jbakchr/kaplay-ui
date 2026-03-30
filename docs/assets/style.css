@@ -103,19 +103,25 @@ h3 {
   margin: 1rem 0;
 } */
 
-/* Fix spacing in fenced code blocks */
+/* --------------------------------------------------
+   Beautiful, padded, non-indented code blocks
+-------------------------------------------------- */
 pre {
   margin: 1.5rem 0;
-  padding: 1rem;
+  padding: 1rem;              /* Adds pretty padding */
   background: #2b2b2b;
   border-radius: 6px;
   overflow-x: auto;
+  white-space: pre;           /* Prevents weird line wrapping */
 }
 
 pre code {
-  padding: 0; /* Remove double padding */
-  margin: 0; /* Remove phantom indentation */
-  display: block; /* Helps correct line layout */
+  display: block;
+  padding: 0;                 /* Prevents double padding */
+  margin: 0;                  /* Prevents extra indent */
+  background: transparent;    /* Let <pre> handle background */
+  line-height: 1.45;          /* Better readability */
+  font-size: 0.95rem;         /* Looks cleaner on mobile + desktop */
 }
 
 /* Inline code */
