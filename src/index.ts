@@ -25,7 +25,6 @@ import { createLabel, createTextButton } from "./elements";
  *   An object exposing helper functions for creating UI elements.
  *
  * @example
- * // Inside a KAPLAY scene:
  * import kaplay from "kaplay";
  * import kaplayUI from "kaplay-ui"
  *
@@ -37,7 +36,14 @@ import { createLabel, createTextButton } from "./elements";
  * const button = k.addTextButton("Start");
  */
 
-export default function kaplayUI(k: KAPLAYCtx) {
+export default function kaplayUI(k: KAPLAYCtx): {
+  addTextButton: (
+    txt?: string,
+    width?: number,
+    height?: number,
+  ) => TextButtonElement;
+  addLabel: (txt?: string, width?: number, height?: number) => LabelComponent;
+} {
   return {
     /**
      * # Text button
@@ -112,7 +118,7 @@ export default function kaplayUI(k: KAPLAYCtx) {
      * @example
      * let score = 0
      * const scoreLabel = addLabel(`Score: ${score}`);
-     * 
+     *
      * k.wait(2, () => {
      *   score++:
      *   scoreLabel.children[0].text = `Score: ${score}`
