@@ -35,19 +35,25 @@ npm install kaplay-ui@next
 Add the plugin when creating your KAPLAY instance:
 
 ```ts
+
 import kaplay from "kaplay";
+
 import kaplayUI from "kaplay-ui";
 
 const k = kaplay({
   plugins: [kaplayUI],
 });
+
 ```
 
 Now create a UI element:
 
 ```ts
+
 const btn = k.addTextButton("Play");
+
 const score = k.addLabel("Score: 0");
+
 ```
 
 That’s it — you’re ready to build UI.
@@ -61,8 +67,11 @@ That’s it — you’re ready to build UI.
 Create an interactive button with centered text and built‑in outline & area detection.
 
 ```ts
+
 const playBtn = k.addTextButton("Play", 200, 100);
+
 playBtn.onClick(() => console.log("Clicked!"));
+
 ```
 
 ### 🏷️ Label
@@ -70,7 +79,9 @@ playBtn.onClick(() => console.log("Clicked!"));
 A small, flexible text element — perfect for HUDs.
 
 ```ts
+
 const lbl = k.addLabel("Score: 0");
+
 ```
 
 More components are being added soon as the plugin grows.
@@ -113,4 +124,3 @@ MIT © 2026 [Jonas Bak Phillipson](https://github.com/jbakchr)
 ---
 
 _with ❤️ from the KAPLAY community_
-
