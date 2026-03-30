@@ -1,4 +1,4 @@
-# KAPLAY UI
+# 🦖 KAPLAY-UI 🧩
 
 _A lightweight and flexible **UI plugin for KAPLAY**, built to feel like a natural extension of the engine._
 
@@ -91,7 +91,6 @@ _Soon_ .. you can find more details here:
 - 🧪 **Examples** — _Learn by doing_
 - 🪧 **Demos** — _See it in action_
 
-
 ## 🗺️ Roadmap (WIP)
 
 - **⏳ More component types**  
@@ -100,7 +99,7 @@ _Soon_ .. you can find more details here:
 - **🎨 Theme presets**  
   _(built-in light/dark UI packs)_
 
-- 🎛️ Complex layout helpers  
+- **🎛️ Complex layout helpers**  
   _(stacks, grids)_
 
 - **📘 Full documentation site**  
@@ -124,5 +123,7 @@ MIT © 2026 [Jonas Bak Phillipson](https://github.com/jbakchr)
 
 <div class="block" style="text-align: center;font-weight:bold;">
 <br>
-Made with 💚 by the KAPLAY community
+<p>Made with 💚 + 🦖 by:<p>
+<p style="font-style:italic;"><span style="color:#ffde86;">The</span> <span style="color:#f2ae99;">KAPLAY</span> <span style="color:#CF9FFF;">Community</span></p>
+<br>
 </div>
