@@ -82,25 +82,47 @@ h3 {
 -------------------------------------------------- */
 
 /* Block-level code (```) */
-pre {
+/* pre {
   margin: 1.5rem 0;
   padding: 1rem;
   background: #2b2b2b;
   border-radius: 6px;
   overflow-x: auto;
   white-space: pre-wrap; /* Helps prevent overlap inside containers */
-}
+*/
 
 /* Inline code (`like this`) */
-code {
+/* code {
   background: #2b2b2b;
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
-}
+} */
 
 /* Inside .block sections */
-.block pre {
+/* .block pre {
   margin: 1rem 0;
+} */
+
+/* Fix spacing in fenced code blocks */
+pre {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #2b2b2b;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+pre code {
+  padding: 0; /* Remove double padding */
+  margin: 0; /* Remove phantom indentation */
+  display: block; /* Helps correct line layout */
+}
+
+/* Inline code */
+code {
+  background: #2b2b2b;
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
 }
 
 /* --------------------------------------------------
@@ -124,24 +146,6 @@ a:hover {
   border-radius: 14px;
   margin: 2rem 0;
 }
-
-/* --------------------------------------------------
-   Mobile Improvements - old
--------------------------------------------------- */
-/* @media (max-width: 600px) {
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  .kaplay-logo {
-    width: 260px;
-    max-width: 75vw;
-  }
-
-  pre {
-    padding: 0.8rem;
-  }
-} */
 
 /* --------------------------------------------------
    Improved Mobile Layout - NEW

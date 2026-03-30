@@ -36,7 +36,6 @@ Add the plugin when creating your KAPLAY instance:
 
 ```ts
 import kaplay from "kaplay";
-
 import kaplayUI from "kaplay-ui";
 
 const k = kaplay({
@@ -47,9 +46,8 @@ const k = kaplay({
 Now create a UI element:
 
 ```ts
-const btn = k.addTextButton("Play");
-
-const score = k.addLabel("Score: 0");
+const tb = k.addTextButton("Play");
+const sl = k.addLabel("Score: 0");
 ```
 
 That’s it — you’re ready to build UI.
@@ -63,9 +61,11 @@ That’s it — you’re ready to build UI.
 Create an interactive button with centered text and built‑in outline & area detection.
 
 ```ts
-const playBtn = k.addTextButton("Play", 200, 100);
+const tb = k.addTextButton("Play");
 
-playBtn.onClick(() => console.log("Clicked!"));
+tb.onClick(() => {
+  console.log("Let's play!");
+});
 ```
 
 ### 🏷️ Label
