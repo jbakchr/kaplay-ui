@@ -1,5 +1,3 @@
-{% include_relative nav.html %}
-
 # 🦖 KAPLAY-UI 🧩
 
 _A lightweight and flexible **UI plugin for KAPLAY**, built to feel like a natural extension of the engine._
