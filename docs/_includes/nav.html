@@ -1,14 +1,13 @@
 <!-- Reusable Navigation Block -->
 <style>
-  .nav-container {
+  /* .nav-container {
     position: sticky;
     top: 0;
-    z-index: 999; /* ensures it stays above content */
+    z-index: 999;
     display: flex;
     gap: 1rem;
     padding: 0.75rem 1rem;
     background: #262626;
-    /* border-bottom: 1px solid #d0d7de; */
     margin-bottom: 1.5rem;
     border-bottom: 1px solid var(--kaplay-yellow);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
@@ -22,7 +21,7 @@
 
   .nav-container a:hover {
     text-decoration: underline;
-  }
+  } */
 
   /* --------------------------------------------------
    Sticky Navbar Base Styles
@@ -33,7 +32,7 @@
     z-index: 1000;
     background: var(--bg-box);
     padding: 0.75rem 1.25rem;
-    border-bottom: 2px solid var(--kaplay-purple);
+    border-bottom: 2px solid var(--kaplay-yellow);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   }
 
@@ -48,7 +47,7 @@
     font-size: 1.3rem;
     font-weight: 700;
     text-decoration: none;
-    color: var(--kaplay-cyan);
+    color: var(--text-dark-green);
   }
 
   /* Desktop menu */
@@ -61,11 +60,11 @@
   .nav-menu a {
     text-decoration: none;
     font-weight: 600;
-    color: var(--text-light);
+    color: var(--text-purple);
   }
 
   .nav-menu a:hover {
-    color: var(--kaplay-cyan);
+    color: var(--kaplay-salmon);
   }
 
   /* --------------------------------------------------
@@ -89,7 +88,7 @@
     display: block;
     width: 26px;
     height: 3px;
-    background: var(--kaplay-cyan);
+    background: var(--kaplay-purple);
     border-radius: 3px;
     transition: 0.3s;
   }
@@ -110,7 +109,7 @@
       flex-direction: column;
       padding: 1rem;
       display: none;
-      border-bottom: 2px solid var(--kaplay-purple);
+      border-bottom: 2px solid var(--kaplay-yellow);
     }
 
     .nav-menu li {
@@ -124,18 +123,10 @@
   }
 </style>
 
-<!-- <nav class="nav-container">
-  <a href="https://jbakchr.github.io/kaplay-ui/index.html">Home</a>
-  <a href="https://jbakchr.github.io/kaplay-ui/faq">FAQ</a>
-  <a href="/kaplay-ui/design-decisions/design-decisions">Design Decisions</a>
-  <a href="/kaplay-ui/components">Components</a>
-  <a href="/kaplay-ui/examples">Examples</a>
-</nav> -->
-
 <nav class="navbar">
   <div class="nav-inner">
     <!-- Logo / Title -->
-    <a class="nav-brand" href="./index.html">K‑UI</a>
+    <a class="nav-brand" href="./index.html">kaplay‑ui</a>
 
     <!-- Hamburger -->
     <input type="checkbox" id="nav-toggle" class="nav-toggle" />
