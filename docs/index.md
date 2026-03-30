@@ -1,23 +1,28 @@
 # KAPLAY UI
 
-A lightweight **UI helper plugin** for the [KAPLAY](https://kaplayjs.com/) game library, providing ready‑to‑use UI Game Objects such as **text buttons** and **labels**.  
-KAPLAY UI makes it easy to build clean, flexible UI elements using familiar KAPLAY primitives — with smart defaults while remaining fully composable.
+A lightweight and flexible **UI plugin for KAPLAY**, built to feel like a natural extension of the engine.
+
+Create UI elements quickly using familiar KAPLAY primitives — buttons, labels, HUD elements, menus, and more.
+
+<div class="block">
+✨ **KAPLAY UI helps you build game-ready user interfaces with almost no setup.**  
+Perfect for menus, HUDs, mobile UI, prototypes, and small-to-medium games.
+</div>
 
 ---
 
-## ✨ Features
+## 🚀 Why KAPLAY UI?
 
-- 🎛️ **Text Button** — simple centered‑text buttons with outline, hit‑area, and hover/click support
-- 🏷️ **Label** — lightweight text‑based UI element for HUDs, counters, and tooltips
-- 🧩 Designed to feel native to the KAPLAY component system
-- 🎨 Built‑in sensible defaults (positioning, sizing, outline)
-- 🔧 Fully customizable with standard KAPLAY components
+- 🧩 Works exactly like native KAPLAY components
+- 🎛️ Easy, declarative API (`addTextButton`, `addLabel`, etc.)
+- ✨ Sensible styling defaults out of the box
+- 🎨 Fully customizable using standard KAPLAY component modifiers
+- 📱 Designed for both desktop & mobile gameplay
+- ⚡ Zero dependencies — just plug in and play
 
 ---
 
-## 📦 Installation
-
-Install using a package manager:
+## 📦 Installation _(v1.0.0-alpha\*)_
 
 ```sh
 npm install kaplay-ui@next
@@ -25,9 +30,9 @@ npm install kaplay-ui@next
 
 ---
 
-## 🚀 Getting Started
+## 🧰 Getting Started
 
-Register the plugin when creating your KAPLAY instance:
+Add the plugin when creating your KAPLAY instance:
 
 ```ts
 import kaplay from "kaplay";
@@ -38,185 +43,74 @@ const k = kaplay({
 });
 ```
 
-Once registered, the UI helpers become available on your `k` instance:
-
-```js
-const btn = k.addTextButton("Play", 200, 100);
-const label = k.addLabel("Score: 0");
-```
-
----
-
-## 🔤 **Text Button** `addTextButton()`
-
-Creates a button‑like GameObj with centered text and sensible defaults.
-
-### **Signature**
+Now create a UI element:
 
 ```ts
-addTextButton(
-  txt?: string,
-  width?: number,
-  height?: number
-): GameObj
+const btn = k.addTextButton("Play");
+const score = k.addLabel("Score: 0");
 ```
 
-### **Default Values**
-
-| Parameter | Default    |
-| --------- | ---------- |
-| `txt`     | `"Button"` |
-| `width`   | `200`      |
-| `height`  | `100`      |
-
-### **Default Styling**
-
-When created, the button includes:
-
-- `k.outline(3)`
-- `k.pos(0, 0)`
-- `k.anchor("topleft")`
-- `k.area()` — enables click / hover detection
-
-### **Example**
-
-```js
-// Default button
-const btn1 = k.addTextButton();
-
-// Custom label
-const btn2 = k.addTextButton("Start");
-
-// Custom size
-const btn3 = k.addTextButton("Start", 150, 75);
-
-// Add interactivity
-btn2.onClick(() => {
-  console.log("Button clicked!");
-});
-```
+That’s it — you’re ready to build UI.
 
 ---
 
-## 🏷️ **Label** (`addLabel()`)
+## 🧱 Core Components
 
-A small, flexible text‑based UI element — perfect for HUDs, counters, titles, and tooltips.
+### 🔤 Text Button
 
-### **Signature**
+Create an interactive button with centered text and built‑in outline & area detection.
 
 ```ts
-addLabel(
-  txt?: string,
-  width?: number,
-  height?: number
-)
+const playBtn = k.addTextButton("Play", 200, 100);
+playBtn.onClick(() => console.log("Clicked!"));
 ```
 
-### **Default Values**
+### 🏷️ Label
 
-| Parameter | Default |
-| --------- | ------- |
-| `txt`     | `""`    |
-| `width`   | `160`   |
-| `height`  | `96`    |
+A small, flexible text element — perfect for HUDs.
 
-### **Example**
-
-```js
-// Default label
-const lbl1 = k.addLabel();
-
-// Basic label
-const lbl2 = k.addLabel("Score: 0");
-
-// Custom size
-const lbl3 = k.addLabel("Start", 100, 50);
-
-// Updating label text dynamically
-let score = 0;
-const scoreLabel = k.addLabel(`Score: ${score}`);
-
-k.wait(2, () => {
-  score++;
-  scoreLabel.children[0].text = `Score: ${score}`;
-});
+```ts
+const lbl = k.addLabel("Score: 0");
 ```
 
-### **Common Use Cases**
-
-- HUD overlays
-- Score counters
-- Time / health displays
-- Section headers
-- Tooltips and indicators
+More components are being added soon as the plugin grows.
 
 ---
 
-## 📱 Mobile‑Friendly UI Demo
+## 📚 Documentation
 
-KAPLAY UI works great for mobile layouts.
-Below is an example using responsive scaling and KAPLAY’s `stretch` + `letterbox` features:
+You can find more details here:
 
-```js
-import kaplay from "kaplay";
-import kaplayUI from "kaplay-ui";
+📄 faq.md — Common questions and answers
+🧠 design-decisions/ — Why this plugin works the way it does
+🔘 Component API Pages (coming soon)
+🧪 Examples & Demos (coming soon)
 
-const k = kaplay({
-  width: 480,
-  height: 270,
-  background: [25, 25, 25],
-  plugins: [kaplayUI],
-  stretch: true,
-  letterbox: true,
-});
+---
 
-// Scaling helpers
-function uiScale() {
-  return Math.min(k.width() / 400, 1.4);
-}
+## 🗺️ Roadmap (WIP)
 
-function centerX(width) {
-  return k.center().x - width / 2;
-}
+- ⏳ More component types (sliders, toggles, panels)
+- 🎨 Theme presets (built-in light/dark UI packs)
+- 🎛️ Complex layout helpers (stacks, grids)
+- ♿ Accessibility improvements
+- 📘 Full documentation site
 
-k.scene("mobile-menu", () => {
-  const scale = uiScale();
+---
 
-  k.add([
-    k.text("Mobile Menu", { size: 36 * scale }),
-    k.anchor("center"),
-    k.pos(k.center().x, 70 * scale),
-  ]);
+## 🤝 Contributing
 
-  const btnWidth = 260 * scale;
-  const btnHeight = 90 * scale;
+Contributions and feature ideas are warmly welcome!
 
-  const startBtn = k.addTextButton("Start", btnWidth, btnHeight);
-  startBtn.pos = k.vec2(centerX(btnWidth), 150 * scale);
-  startBtn.onClick(() => k.go("mobile-game"));
-  startBtn.onHover(() => (startBtn.color = k.rgb(140, 220, 140)));
-  startBtn.onHoverEnd(() => (startBtn.color = k.WHITE));
-
-  const settingsBtn = k.addTextButton("Settings", btnWidth, btnHeight);
-  settingsBtn.pos = k.vec2(centerX(btnWidth), 280 * scale);
-  settingsBtn.onClick(() => k.go("settings"));
-  settingsBtn.onHover(() => (settingsBtn.color = k.rgb(140, 160, 240)));
-  settingsBtn.onHoverEnd(() => (settingsBtn.color = k.WHITE));
-});
-
-k.go("mobile-menu");
-```
-
-### ✔ Demonstrated
-
-- Responsive UI scaling
-- Touch‑friendly hit areas
-- Hover animations
-- Mobile‑optimized layout
-- Scene navigation
+Feel free to submit issues or PRs on GitHub — or share ideas in the discussions tab.
 
 ---
 
 ## 📜 License
 
 MIT © 2026 [Jonas Bak Phillipson](https://github.com/jbakchr)
+
+---
+
+_with ❤️ from the KAPLAY community_
+
