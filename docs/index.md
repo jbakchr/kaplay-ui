@@ -85,11 +85,11 @@ _More components are being added soon as the plugin grows._ 🎉
 
 _Soon_ .. you can find more details here:
 
-- 📄 **faq.md** — _Questions and answers_
-- 🧠 **design-decisions** — _The Whys?_
-- 🔘 **API Pages** — _The What & How_
-- 🧪 **Examples** — _Learn by doing_
-- 🪧 **Demos** — _See it in action_
+- [x] 📄 **[faq.md](https://jbakchr.github.io/kaplay-ui/faq)** — _Questions and answers_
+- [ ] 🧠 **design-decisions** — _The Whys?_
+- [ ] 🔘 **API Pages** — _The What & How_
+- [ ] 🧪 **Examples** — _Learn by doing_
+- [ ] 🪧 **Demos** — _See it in action_
 
 ## 🗺️ Roadmap (WIP)
 
