@@ -78,50 +78,25 @@ h3 {
 }
 
 /* --------------------------------------------------
-   Code Blocks (Fixed overlap issue)
--------------------------------------------------- */
-
-/* Block-level code (```) */
-/* pre {
-  margin: 1.5rem 0;
-  padding: 1rem;
-  background: #2b2b2b;
-  border-radius: 6px;
-  overflow-x: auto;
-  white-space: pre-wrap; /* Helps prevent overlap inside containers */
-*/
-
-/* Inline code (`like this`) */
-/* code {
-  background: #2b2b2b;
-  padding: 0.2rem 0.4rem;
-  border-radius: 4px;
-} */
-
-/* Inside .block sections */
-/* .block pre {
-  margin: 1rem 0;
-} */
-
-/* --------------------------------------------------
-   Beautiful, padded, non-indented code blocks
+   Beautiful KAPLAY-style code blocks (fixed + pretty)
 -------------------------------------------------- */
 pre {
-  margin: 1.5rem 0;
-  padding: 1rem;              /* Adds pretty padding */
-  background: #2b2b2b;
-  border-radius: 6px;
+  background: var(--bg-box); /* Match the .block color */
+  padding: 1.25rem 1.5rem; /* Similar to .block but slightly tighter */
+  margin: 2rem 0; /* More breathing room */
+  border-radius: 12px; /* Match block radius */
   overflow-x: auto;
-  white-space: pre;           /* Prevents weird line wrapping */
+  white-space: pre; /* Prevent weird wrapping */
+  box-shadow: 0 4px 18px rgba(0,0,0,0.25);
 }
 
+/* Inner <code> should NOT have padding or background */
 pre code {
-  display: block;
-  padding: 0;                 /* Prevents double padding */
-  margin: 0;                  /* Prevents extra indent */
-  background: transparent;    /* Let <pre> handle background */
-  line-height: 1.45;          /* Better readability */
-  font-size: 0.95rem;         /* Looks cleaner on mobile + desktop */
+  background: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.55;
+  font-size: 0.95rem;
 }
 
 /* Inline code */
