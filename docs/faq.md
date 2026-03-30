@@ -70,3 +70,9 @@ k.addLabel("Score: 0");
 <div class="block">
 🔓 **In short:** You can use, modify, distribute, and even sell projects using KAPLAY UI.
 </div>
+
+---
+
+<p align="center">
+  <a href="https://jbakchr.github.io/kaplay-ui/">⬅️ Back to Home</a>
+</p>
