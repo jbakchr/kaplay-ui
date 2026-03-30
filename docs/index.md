@@ -1,11 +1,11 @@
 # KAPLAY UI
 
-A lightweight and flexible **UI plugin for KAPLAY**, built to feel like a natural extension of the engine.
+_A lightweight and flexible **UI plugin for KAPLAY**, built to feel like a natural extension of the engine._
 
 Create UI elements quickly using familiar KAPLAY primitives — buttons, labels, HUD elements, menus, and more.
 
 <div class="block">
-✨ **KAPLAY UI helps you build game-ready user interfaces with almost no setup.**  
+✨ KAPLAY UI helps you build game-ready user interfaces with almost no setup.  
 Perfect for menus, HUDs, mobile UI, prototypes, and small-to-medium games.
 </div>
 
@@ -14,7 +14,7 @@ Perfect for menus, HUDs, mobile UI, prototypes, and small-to-medium games.
 ## 🚀 Why KAPLAY UI?
 
 - 🧩 Works exactly like native KAPLAY components
-- 🎛️ Easy, declarative API (`addTextButton`, `addLabel`, etc.)
+- 🎛️ Easy, declarative API (**addTextButton**, **addLabel**, etc.)
 - ✨ Sensible styling defaults out of the box
 - 🎨 Fully customizable using standard KAPLAY component modifiers
 - 📱 Designed for both desktop & mobile gameplay
@@ -84,7 +84,7 @@ const lbl = k.addLabel("Score: 0");
 
 ```
 
-More components are being added soon as the plugin grows.
+_More components are being added soon as the plugin grows._ 🎉
 
 ---
 
@@ -92,10 +92,10 @@ More components are being added soon as the plugin grows.
 
 You can find more details here:
 
-📄 faq.md — Common questions and answers
-🧠 design-decisions/ — Why this plugin works the way it does
-🔘 Component API Pages (coming soon)
-🧪 Examples & Demos (coming soon)
+- 📄 **faq.md** — Common questions and answers
+- 🧠 **design-decisions/** — Why this plugin works the way it does
+- 🔘 Component API Pages (coming soon)
+- 🧪 Examples & Demos (coming soon)
 
 ---
 
