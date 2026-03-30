@@ -15,7 +15,7 @@ _**Frequently asked questions** about the KAPLAY UI plugin._
 
 ## 🧠 General
 
-**Q:** _**What is this plugin for?**_
+### **Q:** _**What is this plugin for?**_
 
 **A:** KAPLAY UI provides lightweight, composable UI helpers — such as text‑based buttons and labels — built using familiar **KAPLAY primitives**.
 

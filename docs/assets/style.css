@@ -2,7 +2,7 @@
    KAPLAY Color Variables
 -------------------------------------------------- */
 :root {
-  --kaplay-salmon: #ff7a6e;
+  --kaplay-salmon: #f2ae99;
   --kaplay-yellow: #ffde86;
   --kaplay-cyan: #7ffcff;
   --kaplay-purple: #b291ff;
@@ -74,7 +74,7 @@ h2 {
 }
 
 h3 {
-  color: var(--kaplay-cyan);
+  color: var(--kaplay-purple);
 }
 
 /* --------------------------------------------------
@@ -115,7 +115,7 @@ a {
 }
 
 a:hover {
-  color: var(--kaplay-cyan);
+  color: var(--kaplay-salmon);
 }
 
 /* --------------------------------------------------
