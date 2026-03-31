@@ -3,13 +3,14 @@ import { KAPLAYCtx } from "kaplay";
 import { makeLabel } from "../../components/label";
 import { makeText } from "../../components";
 import { getCenterPos } from "../../helpers";
+import { LabelComponent } from "../../types";
 
 export function createLabel(
   k: KAPLAYCtx,
   txt: string,
   width: number,
   height: number,
-) {
+): LabelComponent {
   // Make label
   const lbl = makeLabel(k, width, height);
 
