@@ -7,6 +7,9 @@ examples/
 # Test files (not needed by users)
 tests/
 
+# Docs
+docs/
+
 # Assets
 assets/
 
