@@ -18,14 +18,14 @@ Fast, fun, visual, creative…
 …BUT the UI bits could be even easier.”
 </div>
 
-So I started building **KAPLAY UI** — a tiny helper library that gives young coders simple, friendly tools like buttons, labels, menus, and HUD elements without the usual boilerplate.
+So I started building **KAPLAY UI** — a tiny helper library that gives any coders simple, friendly tools like buttons, labels, menus, and HUD elements without the usual boilerplate.
 
 ## 🎯 The goal?
 
-- Help kids and other build own games
+- Help kids and others build games
 - Keep the creative flow alive
 - Reduce friction
-- Make KAPLAY more magical for beginners
+- Make KAPLAY _**even more**_ magical
 
 <div class="block">
 If KAPLAY makes game creation fun, <b>KAPLAY UI aims to make it feel <i>accessible</i></b> — even for kids and others discovering coding for the first time.
