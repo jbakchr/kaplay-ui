@@ -12,17 +12,13 @@ import { createLabel, createTextButton } from "./elements";
  * A small UI helper plugin that adds convenience functions for creating
  * common UI components such as buttons and labels within a KAPLAY game.
  *
- * The returned object extends your KAPLAY context with UI creation helpers.
+ * ## Available UI Creation Helpers
  *
- * ## Available Helpers
- * - `addTextButton(txt?, width?, height?)`
- * - `addLabel(txt?, width?, height?)`
+ * @returns {object} An object exposing UI creation helpers on `k`:
+ * - `addTextButton(txt?, width?, height?) → TextButtonElement`
+ * - `addLabel(txt?, width?, height?) → LabelComponent`
  *
- * @returns {{
- *   addTextButton: (txt?: string, width?: number, height?: number) => TextButtonElement,
- *   addLabel:      (txt?: string, width?: number, height?: number) => LabelElement
- * }}
- *   An object exposing helper functions for creating UI elements.
+ * ## Examples
  *
  * @example
  * import kaplay from "kaplay";
@@ -37,12 +33,12 @@ import { createLabel, createTextButton } from "./elements";
  */
 
 export default function kaplayUI(k: KAPLAYCtx): {
-  addTextButton: (
+  addTextButton(
     txt?: string,
     width?: number,
     height?: number,
-  ) => TextButtonElement;
-  addLabel: (txt?: string, width?: number, height?: number) => LabelComponent;
+  ): TextButtonElement;
+  addLabel(txt?: string, width?: number, height?: number): LabelComponent;
 } {
   return {
     /**
