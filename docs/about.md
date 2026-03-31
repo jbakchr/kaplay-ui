@@ -5,9 +5,9 @@ title: About
 
 # 🧩 About KAPLAY-UI
 
-<p><span style="color:#6bc96c;font-style:italic;font-weight:bold;">ROAARRR!!</span> .. <span style="font-style:italic">and oh</span> ..Hi! I’m Jonas 👋 — Captain and Board Chairman of <a href="https://codingpirates.dk/what-is-coding-pirates/">Coding Pirates Hillerød</a>, where we help kids (7–17) explore coding, creativity, and technological daring in the most playful way possible.</p>
+<p><span style="color:#6bc96c;font-style:italic;font-weight:bold;">ROAARRR!!</span> .. <span style="font-style:italic">and oh</span> .. Hi! I’m <b>Jonas</b> 👋 — Software Developer 👨‍💻 and the Captain and Board Chairman of <a href="https://codingpirates.dk/what-is-coding-pirates">Coding Pirates Hillerød</a> 🫡🤵‍♂️🏴‍☠️, where we help kids (7–17) explore coding, creativity, and technological daring in the most playful way possible.</p>
 
-## 🦖 KAPLAY + 🧒 kids + 🧑‍💻 coding === 💚
+## Why? Cuz .. 🦖 + 🧒 + 🧑‍💻 === 💚
 
 One evening while preparing activities, I stumbled across **KAPLAY** …  
 and instantly thought:
@@ -22,19 +22,26 @@ So I started building **KAPLAY UI** — a tiny helper library that gives young c
 
 ## 🎯 The goal?
 
-- Help kids build their own games faster
+- Help kids and other build own games
 - Keep the creative flow alive
 - Reduce friction
-- Make KAPLAY even more magical for beginners
+- Make KAPLAY more magical for beginners
 
-If KAPLAY makes game creation fun, **KAPLAY UI aims to make it feel _accessible_** — even for kids discovering coding for the first time.
+<div class="block">
+If KAPLAY makes game creation fun, <b>KAPLAY UI aims to make it feel <i>accessible</i></b> — even for kids and others discovering coding for the first time.
+</div>
+
+## 🙏 Thanks
 
 Thanks for being here — and happy creating! 🦖✨
 
-_— [Jonas Bak Phillipson](https://github.com/jbakchr)_ (2026) 💚 🇩🇰 🏴‍☠️
+_— [Jonas Bak Phillipson](https://github.com/jbakchr) (2026)_ 💚 🇩🇰 🏴‍☠️
+
+
+_(And oh .. "ps": I'm actually **not** a 'gamer' myself - but I'd **love** it if KAPLAY and my KAPLAY-UI plugin could help kids and others code their own games!)_
 
 ---
 
 <p align="center">
-  ./index.html" class="btn">⬅️ Back to Home</a>
+  <a href="./index.html" class="btn">⬅️ Back to Home</a>
 </p>
