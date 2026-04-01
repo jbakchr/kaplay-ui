@@ -29,7 +29,7 @@ This gives you the latest `1.0.0‑alpha.*` builds.
 
 ---
 
-## 🚀 Usage
+## 🚀 Usage (_1.0.0-alpha.\*_)
 
 **Kaplay UI** exports a plugin for adding UI Game Objects.
 
@@ -47,15 +47,15 @@ const k = kaplay({
 You now have access to the UI helpers via your `k` instance:
 
 ```ts
-const btn = k.addTextButton("Play", {width: 200, height: 100});
-const label = k.addLabel("Score: 0", {radius: 10});
+const btn = k.addTextButton("Play");
+const label = k.addLabel("Score: 0");
 ```
 
 ---
 
-## 🧩 Game Objects (_**1.0.0‑alpha.\* version**_)
+## 🧩 Game Objects (_**1.0.0‑alpha.\***_)
 
-### 🔤 **Text Button** (`addTextButton()`)
+### 🔤 **Text Button**
 
 Creates a button-like GameObj with centered text and some convenient defaults.
 
@@ -68,22 +68,12 @@ addTextButton(
 ): GameObj
 ```
 
-#### _**Default values**_
+#### _**Default `opts` values**_
 
-| Parameter | Default    |
-| --------- | ---------- |
-| `txt`     | `"Button"` |
-| `width`   | `200`      |
-| `height`  | `100`      |
-
-#### _**Default styling**_
-
-When created, the button includes:
-
-- k.outline(3)
-- k.pos(0, 0)
-- k.anchor("topleft")
-- k.area() — for click/hover detection
+| Parameter | Default |
+| --------- | ------- |
+| `width`   | `200`   |
+| `height`  | `100`   |
 
 #### _**Examples**_
 
@@ -92,7 +82,7 @@ When created, the button includes:
 const btn2 = k.addTextButton("Play!");
 
 // Custom opts (only posX & posY shown here)
-const btn3 = k.addTextButton("Play!", {posX: 300, posY: 200});
+const btn3 = k.addTextButton("Play!", { posX: 300, posY: 200 });
 
 // Add interactivity
 btn2.onClick(() => {
@@ -115,13 +105,13 @@ addLabel(
 )
 ```
 
-#### _**Default values**_
+#### _**Default `opts` values**_
 
 | Parameter | Default |
 | --------- | ------- |
-| `txt`     | `""`    |
 | `width`   | `160`   |
 | `height`  | `96`    |
+| `txtSize` | `22`    |
 
 #### _**Examples**_
 
@@ -130,7 +120,7 @@ addLabel(
 const lbl2 = k.addLabel("Score: 0");
 
 // Custom size
-const lbl3 = k.addLabel("Start", {width: 100, height: 50});
+const lbl3 = k.addLabel("Start", { width: 100, height: 50 });
 
 // Update label text example
 let score = 0;
