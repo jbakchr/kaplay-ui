@@ -11,3 +11,6 @@ const k = kaplay({
 k.addTextButton("Hello", { posX: 100, posY: 100, txtSize: 30 });
 
 k.addLabel("Score: 0", { width: 400 });
+
+k.addTextButton("Options");
+  
