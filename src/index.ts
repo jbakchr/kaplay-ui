@@ -1,7 +1,7 @@
 import type { KAPLAYCtx } from "kaplay";
 
 // Types
-import { LabelComponent, TextButtonElement } from "./types";
+import { LabelComponent, TextButtonElement, TextButtonOptions } from "./types";
 
 // Text Button
 import { createLabel, createTextButton } from "./elements";
@@ -34,24 +34,23 @@ import { createLabel, createTextButton } from "./elements";
 
 export default function kaplayUI(k: KAPLAYCtx): {
   addTextButton(
-    txt?: string,
-    width?: number,
-    height?: number,
+    txt: string,
+    opts?: { width?: number; height?: number },
   ): TextButtonElement;
   addLabel(txt?: string, width?: number, height?: number): LabelComponent;
 } {
   return {
     /**
-     * # Text button
-     * Creates a clickable game object containing a button with centered text.
+     * # Text Button
+     * Creates a clickable UI button with centered text.
      *
      * This helper provides sensible defaults for size, layout, and styling so you can
-     * quickly add UI buttons to your KAPLAY game.
+     * quickly add text-based buttons to your KAPLAY game or UI.
      *
      * ## Default Parameter Values
      * - `txt`: `"Button"`
-     * - `width`: `200`
-     * - `height`: `100`
+     * - `opts.width`: `150`
+     * - `opts.height`: `60`
      *
      * ## Default Styling
      * The button object is created with:
@@ -63,24 +62,39 @@ export default function kaplayUI(k: KAPLAYCtx): {
      * @param {string} [txt="Button"]
      *   The text label displayed at the center of the button.
      *
-     * @param {number} [width=200]
+     * @param {TextButtonOptions} [opts={}]
+     *   Optional configuration object used to customize the button.
+     *
+     * @param {number} [opts.width=150]
      *   Width of the button in pixels.
      *
-     * @param {number} [height=100]
+     * @param {number} [opts.height=60]
      *   Height of the button in pixels.
      *
-     * @returns {TextButton}
+     * @returns {TextButtonElement}
      *   A KAPLAY Game Object representing the button with centered text.
      *
      * @example
+     * // Basic usage (uses default width/height)
      * const playBtn = addTextButton("Play");
      * playBtn.onClick(() => console.log("Play clicked!"));
+     *
+     * @example
+     * // Custom sizing
+     * const bigBtn = addTextButton("Start", { width: 300, height: 120 });
+     *
+     * @example
+     * // Override only one dimension
+     * const tallBtn = addTextButton("Options", { height: 200 });
      */
     addTextButton: (
-      txt: string = "Settings",
-      width: number = 150,
-      height: number = 60,
-    ): TextButtonElement => createTextButton(k, txt, width, height),
+      txt: string,
+      opts: TextButtonOptions = {},
+    ): TextButtonElement =>
+      createTextButton(k, txt, {
+        width: opts.width ?? 150,
+        height: opts.height ?? 60,
+      }),
     /**
      * # Label
      * Creates a simple text container with a background and layout box.

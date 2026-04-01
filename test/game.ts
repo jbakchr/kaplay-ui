@@ -7,3 +7,5 @@ const k = kaplay({
   debugKey: "d",
   background: [200, 213, 107],
 });
+
+k.addTextButton("Hello");
