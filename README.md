@@ -58,7 +58,7 @@ const k = kaplay({
 You now have access to the UI helpers via your `k` instance:
 
 ```js
-const btn = k.addTextButton("Play", 200, 100);
+const btn = k.addTextButton("Play");
 const label = k.addLabel("Score: 0");
 ```
 
@@ -72,9 +72,8 @@ Creates a button-like GameObj with centered text and some convenient defaults.
 
 ```ts
 addTextButton(
-  txt?: string,
-  width?: number,
-  height?: number
+  txt: string,
+  opts?: object
 ): GameObj
 ```
 
