@@ -1,17 +1,23 @@
 import { Anchor, KAPLAYCtx } from "kaplay";
 
-import { ButtonComponent } from "../../types";
+import { ButtonComponent, TextButtonOptions } from "../../types";
 
 export function makeButton(
   k: KAPLAYCtx,
-  width: number,
-  height: number,
-  radius: number,
-  posX: number,
-  posY: number,
-  outline: number,
+  opts: TextButtonOptions,
   anchor: Anchor,
 ): ButtonComponent {
+  // Extract opts with defaults
+  const { width, height, radius, posX, posY, outline } = {
+    width: 150,
+    height: 60,
+    radius: 10,
+    posX: 0,
+    posY: 0,
+    outline: 3,
+    ...opts,
+  };
+
   const button = k.make([
     k.rect(width, height, { radius }),
     k.pos(posX, posY),
