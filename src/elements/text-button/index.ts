@@ -15,17 +15,28 @@ export function createTextButton(
   txt: string,
   opts: TextButtonOptions,
 ): TextButtonElement {
-  const { width, height, radius, txtSize, outline } = {
+  const { width, height, radius, posX, posY, txtSize, outline } = {
     width: 150,
     height: 60,
-    radius: 15,
+    radius: 10,
+    posX: 0,
+    posY: 0,
     txtSize: 22,
     outline: 3,
     ...opts,
   };
 
   // Make button
-  const btn = makeButton(k, width, height, radius, outline, "topleft");
+  const btn = makeButton(
+    k,
+    width,
+    height,
+    radius,
+    posX,
+    posY,
+    outline,
+    "topleft",
+  );
 
   // Make centered text
   const { cX, cY } = getCenterPos(btn);

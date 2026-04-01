@@ -15,6 +15,8 @@ export interface TextButtonOptions {
   width?: number;
   height?: number;
   radius?: number;
+  posX?: number;
+  posY?: number;
   txtSize?: number;
   outline?: number;
   // Add more options later, for example:
