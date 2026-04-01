@@ -5,8 +5,10 @@
 ### Before release
 Before releasing a new alpha.* version remember to:
 
+- Update v* branch JSDocs
 - Update main branch README.md
-- Update main branch docs
+- Update ROADMAP.md
+- Update main branch docs for website
 
 ### Steps to release alpha version to npm
 
