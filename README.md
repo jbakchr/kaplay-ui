@@ -47,8 +47,8 @@ const k = kaplay({
 You now have access to the UI helpers via your `k` instance:
 
 ```ts
-const btn = k.addTextButton("Play", 200, 100);
-const label = k.addLabel("Score: 0");
+const btn = k.addTextButton("Play", {width: 200, height: 100});
+const label = k.addLabel("Score: 0", {radius: 10});
 ```
 
 ---
@@ -63,9 +63,8 @@ Creates a button-like GameObj with centered text and some convenient defaults.
 
 ```ts
 addTextButton(
-  txt?: string,
-  width?: number,
-  height?: number
+  txt: string,
+  opts?: object
 ): GameObj
 ```
 
@@ -89,14 +88,11 @@ When created, the button includes:
 #### _**Examples**_
 
 ```ts
-// Default button
-const btn1 = k.addTextButton();
+// Button
+const btn2 = k.addTextButton("Play!");
 
-// Custom label
-const btn2 = k.addTextButton("Start");
-
-// Custom size
-const btn3 = k.addTextButton("Start", 150, 75);
+// Custom opts (only posX & posY shown here)
+const btn3 = k.addTextButton("Play!", {posX: 300, posY: 200});
 
 // Add interactivity
 btn2.onClick(() => {
@@ -115,8 +111,7 @@ A lightweight text-based UI element — ideal for HUD counters, tooltips, status
 ```ts
 addLabel(
     txt: string,
-    width: number
-    height: number
+    opts?: object
 )
 ```
 
@@ -131,14 +126,11 @@ addLabel(
 #### _**Examples**_
 
 ```js
-// Default button
-const lbl1 = k.addLabel();
-
 // Basic label
 const lbl2 = k.addLabel("Score: 0");
 
 // Custom size
-const lbl3 = k.addLabel("Start", 100, 50);
+const lbl3 = k.addLabel("Start", {width: 100, height: 50});
 
 // Update label text example
 let score = 0;
