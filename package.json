@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/jbakchr/kaplay-ui/issues"
   },
-  "homepage": "https://github.com/jbakchr/kaplay-ui#readme",
+  "homepage": "https://jbakchr.github.io/kaplay-ui/",
   "dependencies": {
     "kaplay": "^3001.0.10"
   },
