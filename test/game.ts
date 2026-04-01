@@ -8,4 +8,10 @@ const k = kaplay({
   background: [200, 213, 107],
 });
 
-k.addTextButton("Hello", { width: 300, height: 200, radius: 0 });
+k.addTextButton("Hello", {
+  width: 300,
+  height: 200,
+  radius: 10,
+  txtSize: 100,
+  outline: 10,
+});
