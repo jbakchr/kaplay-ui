@@ -14,6 +14,7 @@ export type TextButtonElement = GameObj<
 export interface TextButtonOptions {
   width?: number;
   height?: number;
+  radius?: number;
   // Add more options later, for example:
   // fontSize?: number;
   // textColor?: string;

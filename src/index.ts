@@ -33,10 +33,7 @@ import { createLabel, createTextButton } from "./elements";
  */
 
 export default function kaplayUI(k: KAPLAYCtx): {
-  addTextButton(
-    txt: string,
-    opts?: { width?: number; height?: number },
-  ): TextButtonElement;
+  addTextButton(txt: string, opts?: TextButtonOptions): TextButtonElement;
   addLabel(txt?: string, width?: number, height?: number): LabelComponent;
 } {
   return {
@@ -94,6 +91,7 @@ export default function kaplayUI(k: KAPLAYCtx): {
       createTextButton(k, txt, {
         width: opts.width ?? 150,
         height: opts.height ?? 60,
+        radius: opts.radius ?? 15,
       }),
     /**
      * # Label
