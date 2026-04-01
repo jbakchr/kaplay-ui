@@ -3,20 +3,19 @@ import { KAPLAYCtx } from "kaplay";
 import { makeLabel } from "../../components/label";
 import { makeText } from "../../components";
 import { getCenterPos } from "../../helpers";
-import { LabelComponent } from "../../types";
+import { LabelComponent, TextButtonOptions } from "../../types";
 
 export function createLabel(
   k: KAPLAYCtx,
   txt: string,
-  width: number,
-  height: number,
+  opts: TextButtonOptions,
 ): LabelComponent {
   // Make label
-  const lbl = makeLabel(k, width, height);
+  const lbl = makeLabel(k, opts);
 
   // Make Text - use white text for label text
   const { cX, cY } = getCenterPos(lbl);
-  const lblTxt = makeText(k, txt, 20, cX, cY, "center");
+  const lblTxt = makeText(k, txt, opts, cX, cY, "center");
   lblTxt.use(k.color(255, 255, 255));
 
   // Add label

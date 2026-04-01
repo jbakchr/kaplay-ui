@@ -34,7 +34,7 @@ import { createLabel, createTextButton } from "./elements";
 
 export default function kaplayUI(k: KAPLAYCtx): {
   addTextButton(txt: string, opts?: TextButtonOptions): TextButtonElement;
-  addLabel(txt?: string, width?: number, height?: number): LabelComponent;
+  addLabel(txt: string, opts?: TextButtonOptions): LabelComponent;
 } {
   return {
     /**
@@ -127,10 +127,7 @@ export default function kaplayUI(k: KAPLAYCtx): {
      *   scoreLabel.children[0].text = `Score: ${score}`
      * })
      */
-    addLabel: (
-      txt: string = "",
-      width: number = 160,
-      height: number = 96,
-    ): LabelComponent => createLabel(k, txt, width, height),
+    addLabel: (txt, opts: TextButtonOptions = {}): LabelComponent =>
+      createLabel(k, txt, opts),
   };
 }
