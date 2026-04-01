@@ -15,9 +15,12 @@ export function createTextButton(
   txt: string,
   opts: TextButtonOptions,
 ): TextButtonElement {
-  const width = opts.width ?? 150;
-  const height = opts.height ?? 60;
-  const radius = opts.radius ?? 15;
+  const { width, height, radius } = {
+    width: 150,
+    height: 60,
+    radius: 15,
+    ...opts,
+  };
 
   // Make button
   const btn = makeButton(k, width, height, radius, "topleft");

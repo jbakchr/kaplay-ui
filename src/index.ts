@@ -87,12 +87,7 @@ export default function kaplayUI(k: KAPLAYCtx): {
     addTextButton: (
       txt: string,
       opts: TextButtonOptions = {},
-    ): TextButtonElement =>
-      createTextButton(k, txt, {
-        width: opts.width ?? 150,
-        height: opts.height ?? 60,
-        radius: opts.radius ?? 15,
-      }),
+    ): TextButtonElement => createTextButton(k, txt, opts),
     /**
      * # Label
      * Creates a simple text container with a background and layout box.
