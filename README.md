@@ -77,16 +77,17 @@ addTextButton(
 | `radius`  |    `10` |
 | `posX`    |     `0` |
 | `posY`    |     `0` |
-| `outline` |     `0` |
+| `outline` |     `3` |
+| `txtSize` |    `22` |
 
 #### _**Examples**_
 
 ```ts
-// Button
-const btn2 = k.addTextButton("Play!");
+// Basic button
+const btn1 = k.addTextButton("Play!");
 
-// Custom opts (only posX & posY shown here)
-const btn3 = k.addTextButton("Play!", { posX: 300, posY: 200 });
+// Custom button
+const btn2 = k.addTextButton("Play!", { posX: 300, posY: 200 });
 
 // Add interactivity
 btn2.onClick(() => {
