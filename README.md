@@ -71,9 +71,13 @@ addTextButton(
 #### _**Default `opts` values**_
 
 | Parameter | Default |
-| --------- | ------- |
-| `width`   | `200`   |
-| `height`  | `100`   |
+| --------- | ------: |
+| `width`   |   `200` |
+| `height`  |   `100` |
+| `radius`  |    `10` |
+| `posX`    |     `0` |
+| `posY`    |     `0` |
+| `outline` |     `0` |
 
 #### _**Examples**_
 
