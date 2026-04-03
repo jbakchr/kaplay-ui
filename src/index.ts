@@ -12,31 +12,39 @@ import {
 import { createLabel, createTextButton } from "./elements";
 
 /**
- * # KAPLAY UI Plugin
+ * # KAPLAY-UI Plugin
  *
- * A small UI helper plugin that adds convenience functions for creating
- * common UI components such as buttons and labels within a KAPLAY game.
+ * A small UI helper plugin that augments the KAPLAY context (`k`)
+ * with convenience functions for creating common UI components such
+ * as text buttons and labels.
  *
- * ## Available UI Creation Helpers
+ * ## What this plugin does
+ * When included in `kaplay({ plugins: [...] })`, this plugin attaches
+ * the following helper methods directly onto the `k` instance:
  *
- * @returns {object} An object exposing UI creation helpers on `k`:
- * - `addTextButton(txt, opts?) → TextButtonElement`
- * - `addLabel(txt, opts?) → LabelComponent`
+ * - `k.addTextButton(txt, opts?) → TextButtonElement`
+ * - `k.addLabel(txt, opts?) → LabelComponent`
  *
- * ## Examples
+ * The plugin itself does **not** return a UI object.
+ * Instead, it extends the existing `k` context with new methods.
+ *
+ * ## Example
  *
  * @example
  * import kaplay from "kaplay";
- * import kaplayUI from "kaplay-ui"
+ * import kaplayUI from "kaplay-ui";
  *
  * const k = kaplay({
- *    plugins: [kaplayUI]
- * })
+ *   plugins: [kaplayUI]
+ * });
  *
- * const button = k.addTextButton("Start");
+ * const btn = k.addTextButton("Start");
  * const label = k.addLabel("Hello!");
+ *
+ * @returns {{ addTextButton: Function, addLabel: Function }}
+ * Kaplay merges the returned object into the `k` context.
+ * These functions then become available as `k.addTextButton` and `k.addLabel`.
  */
-
 export default function kaplayUI(k: KAPLAYCtx): {
   /**
    * # Text Button
