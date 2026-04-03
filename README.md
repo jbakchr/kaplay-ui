@@ -82,10 +82,13 @@ addTextButton(
 
 #### _**Default styling**_
 
-| Comps     | Values |
-| --------- | -----: |
-| ``   |  `` |
-
+| Comps                  |          Values |
+| ---------------------- | --------------: |
+| `button anchor`        |     `"topleft"` |
+| `button color`         | `200, 200, 200` |
+| `button outline color` |    `92, 91, 91` |
+| `text anchor`          |      `"center"` |
+| `text color`           |       `0, 0, 0` |
 
 #### _**Examples**_
 
