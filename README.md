@@ -128,6 +128,17 @@ addLabel(
 | `height`  | `96`    |
 | `txtSize` | `22`    |
 
+#### _**Default styling**_
+
+| Comps           | Values          |
+| --------------- | :-------------- |
+| `label pos`     | `0, 0`          |
+| `label color`   | `0, 0,0 `       |
+| `label opacity` | `0.7`           |
+| `label anchor`  | `"topleft"`     |
+| `text color`    | `255, 255, 255` |
+| `text anchor`   | `"center"`      |
+
 #### _**Examples**_
 
 ```ts
