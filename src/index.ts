@@ -20,8 +20,8 @@ import { createLabel, createTextButton } from "./elements";
  * ## Available UI Creation Helpers
  *
  * @returns {object} An object exposing UI creation helpers on `k`:
- * - `addTextButton(txt?, width?, height?) → TextButtonElement`
- * - `addLabel(txt?, width?, height?) → LabelComponent`
+ * - `addTextButton(txt, opts?) → TextButtonElement`
+ * - `addLabel(txt, opts?) → LabelComponent`
  *
  * ## Examples
  *
@@ -33,8 +33,8 @@ import { createLabel, createTextButton } from "./elements";
  *    plugins: [kaplayUI]
  * })
  *
- * const label = k.addLabel("Hello!");
  * const button = k.addTextButton("Start");
+ * const label = k.addLabel("Hello!");
  */
 
 export default function kaplayUI(k: KAPLAYCtx): {
@@ -118,7 +118,7 @@ export default function kaplayUI(k: KAPLAYCtx): {
    * - `k.anchor("center"))
    * - `k.color(255, 255, 255))
    *
-   * @param {TextButtonOptions} [opts={}]
+   * @param {LabelOptions} [opts={}]
    *   Optional configuration object used to customize the button.
    *
    * @returns {LabelElement}
