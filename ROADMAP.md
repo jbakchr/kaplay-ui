@@ -43,9 +43,9 @@ A lightweight text-based UI element for HUDs, tooltips, titles, and more added v
 
 `addLabel()` comes with these default parameters for now (which can all be changed to the users liking):
 
-- **txt** = ""
 - **width** = 160
 - **height** = 96
+- **txtSize** = 22
 
 With these default parameters a dark label of size 160 x 96 with am opacity of `0.7`gets displayed of the screen when adding a label.
 
