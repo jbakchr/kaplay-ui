@@ -68,7 +68,7 @@ addTextButton(
 ): GameObj
 ```
 
-#### _**Default `opts` values**_
+#### _**Default `opts` parameter values**_
 
 | Parameter | Default |
 | --------- | ------: |
@@ -79,6 +79,13 @@ addTextButton(
 | `posY`    |     `0` |
 | `outline` |     `3` |
 | `txtSize` |    `22` |
+
+#### _**Default styling**_
+
+| Comps     | Values |
+| --------- | -----: |
+| ``   |  `` |
+
 
 #### _**Examples**_
 
@@ -120,11 +127,11 @@ addLabel(
 
 #### _**Examples**_
 
-```js
+```ts
 // Basic label
 const lbl2 = k.addLabel("Score: 0");
 
-// Custom size
+// Custom label
 const lbl3 = k.addLabel("Start", { width: 100, height: 50 });
 
 // Update label text example
