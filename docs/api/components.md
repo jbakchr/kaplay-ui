@@ -6,7 +6,7 @@ All components behave like native KAPLAY objects, integrating naturally with sce
 
 ---
 
-# 🟦 TextButton
+## 🟦 TextButton
 
 A clickable button with centered text.
 
@@ -14,7 +14,7 @@ A clickable button with centered text.
 const btn = k.addTextButton("Play");
 ```
 
-## Options
+### Options
 
 All fields are optional. Defaults are shown below.
 
@@ -28,7 +28,7 @@ All fields are optional. Defaults are shown below.
 | outline | number | 3       |
 | txtSize | number | 22      |
 
-## Default Styling
+### Default Styling
 
 These are the built‑in visual defaults applied automatically.
 
@@ -59,7 +59,7 @@ play.onClick(() => {
 
 ---
 
-# 🟨 Label
+## 🟨 Label
 
 A small, fast text element ideal for HUDs, overlays, and lightweight UI.
 
@@ -67,7 +67,7 @@ A small, fast text element ideal for HUDs, overlays, and lightweight UI.
 const score = k.addLabel("Score: 0");
 ```
 
-## Options
+### Options
 
 All fields are optional. Defaults are shown below.
 
@@ -79,7 +79,7 @@ All fields are optional. Defaults are shown below.
 | posY    | number | 0       |
 | opacity | number | 0.7     |
 
-## Default Styling
+### Default Styling
 
 | Style             | Value     |
 | ----------------- | --------- |
@@ -96,7 +96,7 @@ const score = k.addLabel("Score: 0");
 
 ---
 
-# 📦 More Components Coming Soon
+## 📦 More Components Coming Soon
 
 Planned UI components include:
 
