@@ -98,7 +98,6 @@ export default function kaplayUI(k: KAPLAYCtx): {
   addTextButton(txt: string, opts?: TextButtonOptions): TextButtonElement;
   /**
    * # Label
-   *
    * Creates a simple text container with a background and layout box.
    *
    * Labels are lightweight UI elements used to display non-interactive text
@@ -112,14 +111,14 @@ export default function kaplayUI(k: KAPLAYCtx): {
    * ### Default Parameter Values for 'opts'
    * - `opts.width`: `160`
    * - `opts.height`: `96`
+   * - `opts.posX`: `0`
+   * - `opts.posY`: `0`
+   * - `opts.opacity`: `0.7`
    * - `opts.txtSize`: `22`
    *
    * ## Default Styling
-   *
    * A labels base (its 'background' surface) includes:
-   * - `k.pos(0, 0)`
    * - `k.color(0, 0, 0)`
-   * - `k.opacity(0.7)`
    * - `k.anchor("topleft")`
    *
    * A label centered text includes:
