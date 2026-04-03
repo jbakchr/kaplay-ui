@@ -55,7 +55,7 @@ const label = k.addLabel("Score: 0");
 
 ## 🧩 Game Objects (_**1.0.0‑alpha.\***_)
 
-### 🔤 **Text Button**
+### 🔤 **Text Button** (`addTextButton()`)
 
 Creates a button-like GameObj with centered text and some convenient defaults.
 
