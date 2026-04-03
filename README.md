@@ -82,13 +82,13 @@ addTextButton(
 
 #### _**Default styling**_
 
-| Comps                  | Values          |
-| ---------------------- | :-------------- |
-| `button anchor`        | `"topleft"`     |
-| `button color`         | `200, 200, 200` |
-| `button outline color` | `92, 91, 91`    |
-| `text anchor`          | `"center"`      |
-| `text color`           | `0, 0, 0`       |
+| Comps                       | Values          |
+| --------------------------- | :-------------- |
+| `button base anchor`        | `"topleft"`     |
+| `button base color`         | `200, 200, 200` |
+| `button base outline color` | `92, 91, 91`    |
+| `button text anchor`        | `"center"`      |
+| `button text color`         | `0, 0, 0`       |
 
 #### _**Examples**_
 
@@ -96,12 +96,20 @@ addTextButton(
 // Basic button
 const btn1 = k.addTextButton("Play!");
 
-// Custom button
+// Customize button by opts
 const btn2 = k.addTextButton("Play!", { posX: 300, posY: 200 });
 
+// Customize button base by `use()`
+const btn3 = k.addTextButton("Play!");
+btn3.use(k.color(100, 50, 60));
+
+// Customize button text by `use()`
+const btn4 = k.addTextButton("Play!");
+btn4.children[0].text = "Go back";
+
 // Add interactivity
-btn2.onClick(() => {
-  console.log("Button clicked!");
+btn4.onClick(() => {
+  k.go("start");
 });
 ```
 
@@ -126,27 +134,36 @@ addLabel(
 | --------- | ------- |
 | `width`   | `160`   |
 | `height`  | `96`    |
+| `posX`    | `0`     |
+| `posY`    | `0`     |
+| `opacity` | `0.7`   |
 | `txtSize` | `22`    |
 
 #### _**Default styling**_
 
-| Comps           | Values          |
-| --------------- | :-------------- |
-| `label pos`     | `0, 0`          |
-| `label color`   | `0, 0,0 `       |
-| `label opacity` | `0.7`           |
-| `label anchor`  | `"topleft"`     |
-| `text color`    | `255, 255, 255` |
-| `text anchor`   | `"center"`      |
+| Comps               | Values          |
+| ------------------- | :-------------- |
+| `label base color`  | `0, 0,0 `       |
+| `label base anchor` | `"topleft"`     |
+| `label text color`  | `255, 255, 255` |
+| `label text anchor` | `"center"`      |
 
 #### _**Examples**_
 
 ```ts
 // Basic label
-const lbl2 = k.addLabel("Score: 0");
+const lbl1 = k.addLabel("Score: 0");
 
-// Custom label
-const lbl3 = k.addLabel("Start", { width: 100, height: 50 });
+// Customize label by opts
+const lbl2 = k.addLabel("Start", { width: 100, height: 50 });
+
+// Customize label base by `use()`
+const lbl3 = k.addLabel("Start");
+lbl3.use(k.color(120, 120, 120));
+
+// Customize label text by `use()`
+const lbl4 = k.addLabel("Start");
+lbl4.children[0].use(k.color(255, 0, 0));
 
 // Update label text example
 let score = 0;
