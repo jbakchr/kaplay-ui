@@ -55,7 +55,7 @@ const label = k.addLabel("Score: 0");
 
 ## 🧩 Game Objects (_**1.0.0‑alpha.\***_)
 
-### 🔤 **Text Button**
+### 🔤 **Text Button** (`addTextButton()`)
 
 Creates a button-like GameObj with centered text and some convenient defaults.
 
@@ -96,8 +96,11 @@ addTextButton(
 // Basic button
 const btn1 = k.addTextButton("Play!");
 
-// Custom button
+// Custom button by opts parameter
 const btn2 = k.addTextButton("Play!", { posX: 300, posY: 200 });
+
+// Customize the text button yourself
+btn2.use(k.color(150, 150, 150));
 
 // Add interactivity
 btn2.onClick(() => {
@@ -143,10 +146,13 @@ addLabel(
 
 ```ts
 // Basic label
-const lbl2 = k.addLabel("Score: 0");
+const lbl1 = k.addLabel("Score: 0");
 
-// Custom label
-const lbl3 = k.addLabel("Start", { width: 100, height: 50 });
+// Custom label by opts parameter
+const lbl2 = k.addLabel("Start", { width: 100, height: 50 });
+
+// Customize label yourself
+lbl2.use(k.color(150, 150, 150));
 
 // Update label text example
 let score = 0;
