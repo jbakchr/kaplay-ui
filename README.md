@@ -71,24 +71,24 @@ addTextButton(
 #### _**Default `opts` parameter values**_
 
 | Parameter | Default |
-| --------- | ------: |
-| `width`   |   `200` |
-| `height`  |   `100` |
-| `radius`  |    `10` |
-| `posX`    |     `0` |
-| `posY`    |     `0` |
-| `outline` |     `3` |
-| `txtSize` |    `22` |
+| --------- | :------ |
+| `width`   | `200`   |
+| `height`  | `100`   |
+| `radius`  | `10`    |
+| `posX`    | `0`     |
+| `posY`    | `0`     |
+| `outline` | `3`     |
+| `txtSize` | `22`    |
 
 #### _**Default styling**_
 
-| Comps                  |          Values |
-| ---------------------- | --------------: |
-| `button anchor`        |     `"topleft"` |
+| Comps                  | Values          |
+| ---------------------- | :-------------- |
+| `button anchor`        | `"topleft"`     |
 | `button color`         | `200, 200, 200` |
-| `button outline color` |    `92, 91, 91` |
-| `text anchor`          |      `"center"` |
-| `text color`           |       `0, 0, 0` |
+| `button outline color` | `92, 91, 91`    |
+| `text anchor`          | `"center"`      |
+| `text color`           | `0, 0, 0`       |
 
 #### _**Examples**_
 
