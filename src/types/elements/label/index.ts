@@ -18,3 +18,9 @@ export type LabelElement = GameObj<
   | TextComp
   | TextCompOpt
 >;
+
+export interface LabelOptions {
+  width?: number;
+  height?: number;
+  txtSize?: number;
+}

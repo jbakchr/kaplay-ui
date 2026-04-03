@@ -3,12 +3,12 @@ import { KAPLAYCtx } from "kaplay";
 import { makeLabel } from "../../components/label";
 import { makeText } from "../../components";
 import { getCenterPos } from "../../helpers";
-import { LabelComponent, TextButtonOptions } from "../../types";
+import { LabelComponent, LabelOptions } from "../../types";
 
 export function createLabel(
   k: KAPLAYCtx,
   txt: string,
-  opts: TextButtonOptions,
+  opts: LabelOptions,
 ): LabelComponent {
   // Make label
   const lbl = makeLabel(k, opts);

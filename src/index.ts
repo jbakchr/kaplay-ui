@@ -1,7 +1,12 @@
 import type { KAPLAYCtx } from "kaplay";
 
 // Types
-import { LabelComponent, TextButtonElement, TextButtonOptions } from "./types";
+import {
+  LabelComponent,
+  LabelOptions,
+  TextButtonElement,
+  TextButtonOptions,
+} from "./types";
 
 // Text Button
 import { createLabel, createTextButton } from "./elements";
@@ -128,14 +133,14 @@ export default function kaplayUI(k: KAPLAYCtx): {
    *   scoreLabel.children[0].text = `Score: ${score}`;
    * })
    */
-  addLabel(txt: string, opts?: TextButtonOptions): LabelComponent;
+  addLabel(txt: string, opts?: LabelOptions): LabelComponent;
 } {
   return {
     addTextButton: (
       txt: string,
       opts: TextButtonOptions = {},
     ): TextButtonElement => createTextButton(k, txt, opts),
-    addLabel: (txt, opts: TextButtonOptions = {}): LabelComponent =>
+    addLabel: (txt, opts: LabelOptions = {}): LabelComponent =>
       createLabel(k, txt, opts),
   };
 }
