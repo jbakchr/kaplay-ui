@@ -11,7 +11,7 @@ Kaplay UI provides a game‑oriented **UI plugin** designed specifically for KAP
 For now it helps you build Game Objects like text buttons and labels — without reinventing the wheel.
 
 > ⚠️ **Note**  
-> The currently published stable version (`0.20.9`) is being replaced by a complete redesign.
+> The currently published stable version (`0.20.10`) is being replaced by a complete redesign.
 >
 > A new **v1** version is under active development and can be installed in prerelease form (see below).
 
