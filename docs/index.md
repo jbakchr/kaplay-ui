@@ -91,8 +91,6 @@ _Soon_ .. you can find more details here:
 - [ ] 🧪 **Examples** — _Learn by doing!_
 - [ ] 🪧 **Demos** — _See it in action .._
 
-_(And even an [about page](https://jbakchr.github.io/kaplay-ui/about.html) — if anybody would **ever** want to read about why I even started creating `kaply-ui` .. 🤷)_
-
 ---
 
 ## 🗺️ Roadmap (WIP)

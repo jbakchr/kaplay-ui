@@ -37,9 +37,6 @@ Thanks for being here — and happy creating! 🦖✨
 
 _— [Jonas Bak Phillipson](https://github.com/jbakchr) (2026)_ 💚 🇩🇰 🏴‍☠️
 
-
-_(And oh .. "ps": I'm actually **not** a 'gamer' myself - but I'd **love** it if KAPLAY and my KAPLAY-UI plugin could help kids and others code their own games!)_
-
 ---
 
 <p align="center">
