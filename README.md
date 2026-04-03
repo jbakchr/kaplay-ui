@@ -2,49 +2,38 @@
   <img src="assets/kaplay-ui-logo.png" alt="kaplay-ui logo" width="400" >
 </p>
 
-# KAPLAY UI Plugin
+# KAPLAY UI
 
-A lightweight UI helper plugin for the [KAPLAY](https://kaplayjs.com/) game library, providing ready‑to‑use UI Game Objects such as text‑based buttons **and labels**.
+_A simple and customizable UI plugin library for building interfaces in https://kaplayjs.com/._
 
-This plugin simplifies the creation of UI Game Object elements using familiar KAPLAY primitives, offering sensible defaults while remaining flexible and composable.
+Kaplay UI provides a game‑oriented **UI plugin** designed specifically for KAPLAY.
 
----
+For now it helps you build Game Objects like text buttons and labels — without reinventing the wheel.
 
-## ✨ Features
-
-- 🎛️ **Text Button** — easily create a button with centered text
-- 🏷️ **Label** — a lightweight text-based UI element for HUDs, counters, tooltips, and more
-- 🧩 Designed to feel like native KAPLAY components
-- 🎨 Comes with built‑in sizing, positioning, and outline defaults
-- 🔧 Fully customizable through the normal KAPLAY component system
+> ⚠️ **Note**  
+> The currently published stable version (`0.20.11`) is being replaced by a complete redesign.
+>
+> A new **v1** version is under active development and can be installed in prerelease form (see below).
 
 ---
 
 ## 📦 Installation
 
-Install the plugin using your preferred package manager:
+### Prerelease (new v1 work)
 
-```sh
-npm install kaplay-ui
+```bash
+npm install kaplay-ui@next
 ```
 
-or:
-
-```sh
-pnpm add kaplay-ui
-```
-
-or:
-
-```sh
-yarn add kaplay-ui
-```
+This gives you the latest `1.0.0‑alpha.*` builds.
 
 ---
 
-## 🚀 Usage
+## 🚀 Usage (_1.0.0-alpha.\*_)
 
-Import and register the plugin when initializing your KAPLAY game:
+**Kaplay UI** exports a plugin for adding UI Game Objects.
+
+The `kaplayUI` plugin is exported from the package root:
 
 ```ts
 import kaplay from "kaplay";
@@ -57,18 +46,20 @@ const k = kaplay({
 
 You now have access to the UI helpers via your `k` instance:
 
-```js
+```ts
 const btn = k.addTextButton("Play");
 const label = k.addLabel("Score: 0");
 ```
 
 ---
 
-## 🔘 `addTextButton()`
+## 🧩 Game Objects (_**1.0.0‑alpha.\***_)
+
+### 🔤 **Text Button**
 
 Creates a button-like GameObj with centered text and some convenient defaults.
 
-### **Signature**
+#### _**Signature**_
 
 ```ts
 addTextButton(
@@ -77,34 +68,36 @@ addTextButton(
 ): GameObj
 ```
 
-### **Default values**
+#### _**Default `opts` parameter values**_
 
-| Parameter | Default    |
-| --------- | ---------- |
-| `txt`     | `"Button"` |
-| `width`   | `200`      |
-| `height`  | `100`      |
+| Parameter | Default |
+| --------- | :------ |
+| `width`   | `200`   |
+| `height`  | `100`   |
+| `radius`  | `10`    |
+| `posX`    | `0`     |
+| `posY`    | `0`     |
+| `outline` | `3`     |
+| `txtSize` | `22`    |
 
-### **Default styling**
+#### _**Default styling**_
 
-When created, the button includes:
+| Comps                  | Values          |
+| ---------------------- | :-------------- |
+| `button anchor`        | `"topleft"`     |
+| `button color`         | `200, 200, 200` |
+| `button outline color` | `92, 91, 91`    |
+| `text anchor`          | `"center"`      |
+| `text color`           | `0, 0, 0`       |
 
-- `k.outline(3)`
-- `k.pos(0, 0)`
-- `k.anchor("topleft")`
-- `k.area()` — for click/hover detection
+#### _**Examples**_
 
-### **Example**
+```ts
+// Basic button
+const btn1 = k.addTextButton("Play!");
 
-```js
-// Default button
-const btn1 = k.addTextButton();
-
-// Custom label
-const btn2 = k.addTextButton("Start");
-
-// Custom size
-const btn3 = k.addTextButton("Start", 150, 75);
+// Custom button
+const btn2 = k.addTextButton("Play!", { posX: 300, posY: 200 });
 
 // Add interactivity
 btn2.onClick(() => {
@@ -114,39 +107,46 @@ btn2.onClick(() => {
 
 ---
 
-## 🏷️ `addLabel()`
+### 🏷️ **Label** (`addLabel()`)
 
 A lightweight text-based UI element — ideal for HUD counters, tooltips, status text, or titles.
 
-### **Signature**
+#### _**Signature**_
 
 ```ts
 addLabel(
     txt: string,
-    width: number
-    height: number
+    opts?: object
 )
 ```
 
-### **Default values**
+#### _**Default `opts` values**_
 
 | Parameter | Default |
 | --------- | ------- |
-| `txt`     | `""`    |
 | `width`   | `160`   |
 | `height`  | `96`    |
+| `txtSize` | `22`    |
 
-### **Example**
+#### _**Default styling**_
 
-```js
-// Default button
-const lbl1 = k.addLabel();
+| Comps           | Values          |
+| --------------- | :-------------- |
+| `label pos`     | `0, 0`          |
+| `label color`   | `0, 0,0 `       |
+| `label opacity` | `0.7`           |
+| `label anchor`  | `"topleft"`     |
+| `text color`    | `255, 255, 255` |
+| `text anchor`   | `"center"`      |
 
+#### _**Examples**_
+
+```ts
 // Basic label
 const lbl2 = k.addLabel("Score: 0");
 
-// Custom size
-const lbl3 = k.addLabel("Start", 100, 50);
+// Custom label
+const lbl3 = k.addLabel("Start", { width: 100, height: 50 });
 
 // Update label text example
 let score = 0;
@@ -154,11 +154,11 @@ const scoreLabel = k.addLabel(`Score: ${score}`);
 
 k.wait(2, () => {
   score++;
-  scoreLabel.children[0].text = `Score: ${score}`
-})
+  scoreLabel.children[0].text = `Score: ${score}`;
+});
 ```
 
-### Common use cases
+#### _**Common use cases**_
 
 - HUD overlays
 - Score counters
@@ -168,108 +168,22 @@ k.wait(2, () => {
 
 ---
 
-## 📱 Mobile‑Friendly UI Demo
+## 🛣️ Roadmap
 
-This example shows how to build a touch‑friendly UI using `addTextButton()` on mobile devices. It uses responsive scaling and KAPLAY’s `stretch` and `letterbox` features to adapt to different screen sizes.
-
-### **Example**
-
-```js
-import kaplay from "kaplay";
-import kaplayUI from "kaplay-ui";
-
-const k = kaplay({
-  width: 480, // required when using letterbox/stretch
-  height: 270,
-  background: [25, 25, 25],
-  plugins: [kaplayUI],
-
-  stretch: true, // resize canvas on mobile
-  letterbox: true, // preserve aspect ratio
-});
-
-function uiScale() {
-  return Math.min(k.width() / 400, 1.4);
-}
-
-function centerX(width: number) {
-  return k.center().x - width / 2;
-}
-
-k.scene("mobile-menu", () => {
-  const scale = uiScale();
-
-  k.add([
-    k.text("Mobile Menu", { size: 36 * scale }),
-    k.anchor("center"),
-    k.pos(k.center().x, 70 * scale),
-  ]);
-
-  const btnWidth = 260 * scale;
-  const btnHeight = 90 * scale;
-
-  const startBtn = k.addTextButton("Start", btnWidth, btnHeight);
-  startBtn.pos = k.vec2(centerX(btnWidth), 150 * scale);
-  startBtn.onClick(() => k.go("mobile-game"));
-  startBtn.onHover(() => (startBtn.color = k.rgb(140, 220, 140)));
-  startBtn.onHoverEnd(() => (startBtn.color = k.WHITE));
-
-  const settingsBtn = k.addTextButton("Settings", btnWidth, btnHeight);
-  settingsBtn.pos = k.vec2(centerX(btnWidth), 280 * scale);
-  settingsBtn.onClick(() => k.go("settings"));
-  settingsBtn.onHover(() => (settingsBtn.color = k.rgb(140, 160, 240)));
-  settingsBtn.onHoverEnd(() => (settingsBtn.color = k.WHITE));
-});
-
-k.scene("mobile-game", () => {
-  const scale = uiScale();
-
-  k.add([
-    k.text("Game Scene", { size: 28 * scale }),
-    k.anchor("center"),
-    k.pos(k.center().x, 90 * scale),
-  ]);
-
-  const backBtn = k.addTextButton("Back", 200 * scale, 80 * scale);
-  backBtn.pos = k.vec2(centerX(200 * scale), k.height() - 120 * scale);
-  backBtn.onClick(() => k.go("mobile-menu"));
-  backBtn.onHover(() => (backBtn.scale = 1.1 * scale));
-  backBtn.onHoverEnd(() => (backBtn.scale = scale));
-});
-
-k.scene("settings", () => {
-  const scale = uiScale();
-
-  k.add([
-    k.text("Settings", { size: 32 * scale }),
-    k.anchor("center"),
-    k.pos(k.center().x, 70 * scale),
-  ]);
-
-  const backBtn = k.addTextButton("Back", 200 * scale, 80 * scale);
-  backBtn.pos = k.vec2(centerX(200 * scale), k.height() - 140 * scale);
-  backBtn.onClick(() => k.go("mobile-menu"));
-});
-
-k.go("mobile-menu");
-```
-
-### ✔ Features demonstrated
-
-- Responsive UI scaling
-- Touch‑friendly hit areas
-- Hover animations for mobile
-- Auto‑centered vertical layout
-- Scene navigation
+_See evolving roadmap at: https://github.com/jbakchr/kaplay-ui/blob/v1/ROADMAP.md_
 
 ---
 
-## 📚 Documentation
+## 📚 License
 
-_**Evolving**_ documentation is available in the [docs](https://github.com/jbakchr/kaplay-ui/blob/v1/docs/index.md) folder.
+This project is licensed under the **MIT License**.  
+See the `LICENSE` file for details.
 
 ---
 
-## 📄 License
+## 💬 Contact
 
-MIT — free for personal and commercial use.
+Have questions or suggestions?  
+Open an issue on GitHub:
+
+👉 <https://github.com/jbakchr/kaplay-ui>
