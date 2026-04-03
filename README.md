@@ -11,7 +11,7 @@ Kaplay UI provides a game‑oriented **UI plugin** designed specifically for KAP
 For now it helps you build Game Objects like text buttons and labels — without reinventing the wheel.
 
 > ⚠️ **Note**  
-> The currently published stable version (`0.20.14`) is being replaced by a complete redesign.
+> The currently published stable version (`0.20.15`) is being replaced by a complete redesign.
 >
 > A new **v1** version is under active development and can be installed in prerelease form (see below).
 
@@ -82,13 +82,13 @@ addTextButton(
 
 #### _**Default styling**_
 
-| Comps                  | Values          |
-| ---------------------- | :-------------- |
-| `button anchor`        | `"topleft"`     |
-| `button color`         | `200, 200, 200` |
-| `button outline color` | `92, 91, 91`    |
-| `text anchor`          | `"center"`      |
-| `text color`           | `0, 0, 0`       |
+| Comps                       | Values          |
+| --------------------------- | :-------------- |
+| `button base anchor`        | `"topleft"`     |
+| `button base color`         | `200, 200, 200` |
+| `button base outline color` | `92, 91, 91`    |
+| `button text anchor`        | `"center"`      |
+| `buttontext color`          | `0, 0, 0`       |
 
 #### _**Examples**_
 
@@ -99,12 +99,15 @@ const btn1 = k.addTextButton("Play!");
 // Custom button by opts parameter
 const btn2 = k.addTextButton("Play!", { posX: 300, posY: 200 });
 
-// Customize the text button yourself
+// Customize button base by `use()`
 btn2.use(k.color(150, 150, 150));
+
+// Customize button text by `use()`
+btn2.children[0].text = "Go!";
 
 // Add interactivity
 btn2.onClick(() => {
-  console.log("Button clicked!");
+  k.go("game");
 });
 ```
 
@@ -129,18 +132,19 @@ addLabel(
 | --------- | ------- |
 | `width`   | `160`   |
 | `height`  | `96`    |
+| `posX`    | `0`     |
+| `posY`    | `0`     |
+| `opacity` | `0.7`   |
 | `txtSize` | `22`    |
 
 #### _**Default styling**_
 
-| Comps           | Values          |
-| --------------- | :-------------- |
-| `label pos`     | `0, 0`          |
-| `label color`   | `0, 0,0 `       |
-| `label opacity` | `0.7`           |
-| `label anchor`  | `"topleft"`     |
-| `text color`    | `255, 255, 255` |
-| `text anchor`   | `"center"`      |
+| Comps               | Values          |
+| ------------------- | :-------------- |
+| `label base color`  | `0, 0,0 `       |
+| `label base anchor` | `"topleft"`     |
+| `label text color`  | `255, 255, 255` |
+| `label text anchor` | `"center"`      |
 
 #### _**Examples**_
 
@@ -151,8 +155,11 @@ const lbl1 = k.addLabel("Score: 0");
 // Custom label by opts parameter
 const lbl2 = k.addLabel("Start", { width: 100, height: 50 });
 
-// Customize label yourself
+// Customize label base by `use()`
 lbl2.use(k.color(150, 150, 150));
+
+// Customize label text by `use()`
+lbl2.children[0].text = "Coins: 100";
 
 // Update label text example
 let score = 0;
