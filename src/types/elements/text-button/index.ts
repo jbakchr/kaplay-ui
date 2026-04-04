@@ -5,6 +5,7 @@ import {
   PosComp,
   AnchorComp,
   AreaComp,
+  ColorComp,
 } from "kaplay";
 
 export type TextButtonElement = GameObj<
@@ -13,6 +14,7 @@ export type TextButtonElement = GameObj<
   | PosComp
   | AnchorComp
   | AreaComp
+  | ColorComp
   | {
       setSize(w: number, h: number): void;
     }
@@ -26,4 +28,5 @@ export interface TextButtonOptions {
   posY?: number;
   txtSize?: number;
   outline?: number;
+  btnColor?: [r: number, g: number, b: number];
 }
