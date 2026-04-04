@@ -9,5 +9,13 @@ import {
 } from "kaplay";
 
 export type ButtonComponent = GameObj<
-  RectComp | ColorComp | OutlineComp | PosComp | AnchorComp | AreaComp
+  | RectComp
+  | PosComp
+  | ColorComp
+  | OutlineComp
+  | AnchorComp
+  | AreaComp
+  | {
+      setSize(w: number, h: number): void;
+    }
 >;

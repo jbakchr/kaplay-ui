@@ -8,7 +8,14 @@ import {
 } from "kaplay";
 
 export type TextButtonElement = GameObj<
-  RectComp | OutlineComp | PosComp | AnchorComp | AreaComp
+  | RectComp
+  | OutlineComp
+  | PosComp
+  | AnchorComp
+  | AreaComp
+  | {
+      setSize(w: number, h: number): void;
+    }
 >;
 
 export interface TextButtonOptions {
@@ -19,8 +26,4 @@ export interface TextButtonOptions {
   posY?: number;
   txtSize?: number;
   outline?: number;
-  // Add more options later, for example:
-  // fontSize?: number;
-  // textColor?: string;
-  // align?: "left" | "center" | "right";
 }

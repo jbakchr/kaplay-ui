@@ -12,7 +12,7 @@ export function getCenterPos(
 export function setChildPosition(
   k: KAPLAYCtx,
   parentObj: GameObj<RectComp | PosComp | AnchorComp>,
-  childObj: GameObj<RectComp | PosComp | AnchorComp>,
+  childObj: GameObj<RectComp | PosComp | AnchorComp | any>,
   cX: number,
   cY: number,
 ): void {
