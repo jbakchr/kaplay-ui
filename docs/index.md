@@ -83,11 +83,12 @@ _More components are being added soon as the plugin grows._ 🎉
 
 ## 📚 Documentation
 
-_Soon_ .. you can find more details here:
+You can find more details here:
 
+- [x] 🔌 **[plugin API](api/plugin)** — _How the plugin integrates into KAPLAY_
+- [x] 🔘 **[Components API](api/components)** — _All UI components and their options_
 - [x] 📄 **[faq.md](https://jbakchr.github.io/kaplay-ui/faq)** — _Questions and answers_
 - [ ] 🧠 **design-decisions** — _The Whys?_
-- [ ] 🔘 **API Pages** — _The What & How?_
 - [ ] 🧪 **Examples** — _Learn by doing!_
 - [ ] 🪧 **Demos** — _See it in action .._
 
