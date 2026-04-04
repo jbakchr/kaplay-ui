@@ -47,7 +47,7 @@ For full option details and defaults, see:
 
 ---
 
-# 🟨 `k.addLabel(text, options?)`
+## 🟨 `k.addLabel(text, options?)`
 
 Creates a lightweight text element ideal for HUDs and overlays.
 
