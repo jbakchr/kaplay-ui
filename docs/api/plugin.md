@@ -79,7 +79,7 @@ For full option details and defaults, see:
 
 ---
 
-## 📦 More Plugin Additions Coming Soon
+## 📦 More Plugin Coming Soon
 
 Future versions of KAPLAY‑UI will extend the plugin with:
 
