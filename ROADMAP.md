@@ -49,6 +49,23 @@ A lightweight text-based UI element for HUDs, tooltips, titles, and more added v
 
 With these default parameters a dark label of size 160 x 96 with am opacity of `0.7`gets displayed of the screen when adding a label.
 
+##### ✨ **Automatic Internal Text Centering (Implemented)**
+
+The Label now **automatically keeps its internal text centered**, even when the **label’s anchor is changed by the user** (e.g.  
+`lbl.use(k.anchor("center"))`).
+
+This is fully implemented and ensures:
+
+- Changing the label’s anchor never breaks internal layout
+- Text remains visually centered at all times
+- No extra work is required from the user
+
+Internally:
+
+- The text GameObj detects anchor changes
+- Recalculates its position to remain centered
+- Always matches the label’s dimensions for consistent layout
+
 ---
 
 ## 📌 Planned for v1.0.0
