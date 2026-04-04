@@ -94,14 +94,16 @@ You can find more details here:
 - [x] 📄 **[faq.md](https://jbakchr.github.io/kaplay-ui/faq)**  
        — _Questions and answers_
 
-- [ ] 🧠 **design-decisions**  
-       — _The Whys?_
+_And soon also:_
 
 - [ ] 🧪 **Examples**  
        — _Learn by doing!_
 
 - [ ] 🪧 **Demos**  
        — _See it in action .._
+
+- [ ] 🧠 **design-decisions**  
+       — _The Whys?_
 
 ---
 
