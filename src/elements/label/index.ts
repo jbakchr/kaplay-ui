@@ -2,8 +2,9 @@ import { KAPLAYCtx } from "kaplay";
 
 import { makeLabel } from "../../components/label";
 import { makeText } from "../../components";
-import { getCenterPos } from "../../helpers";
+import { getCenterPos, setChildPosition } from "../../helpers";
 import { LabelComponent, LabelOptions } from "../../types";
+import { isLayoutChange } from "../../helpers/layout-utils";
 
 export function createLabel(
   k: KAPLAYCtx,
@@ -21,6 +22,15 @@ export function createLabel(
   // Add label
   lbl.add(lblTxt);
   k.add(lbl);
+
+  // Re-position text on layout-related changes
+  lbl.onUse((id) => {
+    if (isLayoutChange(id)) {
+      const { cX, cY } = getCenterPos(lbl);
+      console.log(cX, cY);
+      setChildPosition(k, lbl, lblTxt, cX, cY);
+    }
+  });
 
   return lbl;
 }
