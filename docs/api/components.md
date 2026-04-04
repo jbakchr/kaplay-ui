@@ -1,4 +1,4 @@
-# UI Components
+# 🧱 UI Components
 
 KAPLAY‑UI provides a small set of lightweight, game‑ready UI components.
 
@@ -6,7 +6,7 @@ All components behave like native KAPLAY objects, integrating naturally with sce
 
 ---
 
-## 🟦 TextButton
+## 🔤 TextButton
 
 A clickable button with centered text.
 
@@ -59,7 +59,7 @@ play.onClick(() => {
 
 ---
 
-## 🟨 Label
+## 🏷️ Label
 
 A small, fast text element ideal for HUDs, overlays, and lightweight UI.
 
