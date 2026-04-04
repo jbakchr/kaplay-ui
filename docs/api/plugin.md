@@ -43,7 +43,7 @@ const btn = k.addTextButton("Play");
 A `TextButton` game object.
 
 For full option details and defaults, see:
-➡️ **./components.md#textbutton**
+➡️ **[./components.md#textbutton](https://jbakchr.github.io/kaplay-ui/api/components.md#textbutton)**
 
 ---
 
@@ -67,7 +67,7 @@ const lbl = k.addLabel("Score: 0");
 A `Label` game object.
 
 For full option details and defaults, see:
-➡️ **./components.md#label**
+➡️ **[./components.md#label](<(https://jbakchr.github.io/kaplay-ui/api/components.md#label)>)**
 
 ---
 
