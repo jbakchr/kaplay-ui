@@ -64,9 +64,7 @@ Create an interactive button with centered text and built‑in outline & area de
 ```ts
 const tb = k.addTextButton("Play");
 
-tb.onClick(() => {
-  console.log("Let's play!");
-});
+tb.onClick(() => k.go("game"));
 ```
 
 ### 🏷️ Label
@@ -75,6 +73,8 @@ A small, flexible text element — perfect for HUDs.
 
 ```ts
 const lbl = k.addLabel("Score: 0");
+
+lbl.children[0].text = "Score: 1";
 ```
 
 _More components are being added soon as the plugin grows._ 🎉
@@ -85,12 +85,23 @@ _More components are being added soon as the plugin grows._ 🎉
 
 You can find more details here:
 
-- [x] 🔌 **[plugin API](api/plugin)** — _How the plugin integrates into KAPLAY_
-- [x] 🔘 **[Components API](api/components)** — _All UI components and their options_
-- [x] 📄 **[faq.md](https://jbakchr.github.io/kaplay-ui/faq)** — _Questions and answers_
-- [ ] 🧠 **design-decisions** — _The Whys?_
-- [ ] 🧪 **Examples** — _Learn by doing!_
-- [ ] 🪧 **Demos** — _See it in action .._
+- [x] 🔌 **[plugin API](api/plugin)**  
+       — _How the plugin integrates into KAPLAY_
+
+- [x] 🧱 **[Components API](api/components)**  
+       — _All UI components and their options_
+
+- [x] 📄 **[faq.md](https://jbakchr.github.io/kaplay-ui/faq)**  
+       — _Questions and answers_
+
+- [ ] 🧠 **design-decisions**  
+       — _The Whys?_
+
+- [ ] 🧪 **Examples**  
+       — _Learn by doing!_
+
+- [ ] 🪧 **Demos**  
+       — _See it in action .._
 
 ---
 
