@@ -1,11 +1,12 @@
 import { Anchor, KAPLAYCtx } from "kaplay";
 
-import { TextButtonOptions, TextComponent } from "../../types";
+import { TextComponent } from "../../types";
+import { TextOptions } from "../../types/elements/text";
 
 export function makeText(
   k: KAPLAYCtx,
   txt: string,
-  opts: TextButtonOptions,
+  opts: TextOptions,
   posX: number,
   posY: number,
   anchor: Anchor,
