@@ -27,7 +27,6 @@ export function createLabel(
   lbl.onUse((id) => {
     if (isLayoutChange(id)) {
       const { cX, cY } = getCenterPos(lbl);
-      console.log(cX, cY);
       setChildPosition(k, lbl, lblTxt, cX, cY);
     }
   });
