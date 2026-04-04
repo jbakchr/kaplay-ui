@@ -14,7 +14,7 @@ Perfect for menus, HUDs, mobile UI, prototypes, and small-to-medium games.
 
 ---
 
-## 🚀 Why KAPLAY UI?
+## 🚀 Why KAPLAY-UI?
 
 - 🧩 Works exactly like native KAPLAY
 - 🎛️ Easy, declarative API
@@ -57,7 +57,7 @@ _**That’s it** — you’re ready to build UI!_
 
 ## 🧱 Core Components
 
-### 🔤 Text Button
+### 🔤 [Text Button](https://jbakchr.github.io/kaplay-ui/api/components#-textbutton)
 
 Create an interactive button with centered text and built‑in outline & area detection.
 
@@ -67,7 +67,7 @@ const tb = k.addTextButton("Play");
 tb.onClick(() => k.go("game"));
 ```
 
-### 🏷️ Label
+### 🏷️ [Label](https://jbakchr.github.io/kaplay-ui/api/components#-label)
 
 A small, flexible text element — perfect for HUDs.
 
