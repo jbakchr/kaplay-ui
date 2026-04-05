@@ -1,7 +1,12 @@
 import { Anchor, KAPLAYCtx } from "kaplay";
 
-import { ButtonComponent, TextButtonOptions, KaplayRGB } from "../types";
-import { getCenterPos, setChildPosition, applyColor } from "../helpers";
+import { ButtonComponent, TextButtonOptions } from "../types";
+import {
+  getCenterPos,
+  setChildPosition,
+  applyColor,
+  applyOutlineColor,
+} from "../helpers";
 
 export function makeButton(
   k: KAPLAYCtx,
@@ -47,23 +52,4 @@ export function makeButton(
   applyOutlineColor(k, button, outline, outlineColor);
 
   return button;
-}
-
-function applyOutlineColor(
-  k: KAPLAYCtx,
-  obj: any,
-  outline: number,
-  color: KaplayRGB,
-) {
-  if (typeof color === "string") {
-    // hex string — good
-    obj.use(k.outline(outline, k.rgb(color)));
-    return;
-  }
-
-  if (Array.isArray(color)) {
-    // [r,g,b] tuple — good
-    obj.use(k.outline(outline, k.rgb(color[0], color[1], color[2])));
-    return;
-  }
 }

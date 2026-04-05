@@ -1,6 +1,6 @@
 import { KAPLAYCtx } from "kaplay";
 
-import { KaplayColor } from "../types";
+import { KaplayColor, KaplayRGB } from "../types";
 
 export function applyColor(k: KAPLAYCtx, obj: any, c: KaplayColor) {
   if (Array.isArray(c)) {
@@ -23,4 +23,23 @@ export function applyColor(k: KAPLAYCtx, obj: any, c: KaplayColor) {
 
   // ✅ TS sees exactly "Color"
   obj.use(k.color(c));
+}
+
+export function applyOutlineColor(
+  k: KAPLAYCtx,
+  obj: any,
+  outline: number,
+  color: KaplayRGB,
+) {
+  if (typeof color === "string") {
+    // hex string — good
+    obj.use(k.outline(outline, k.rgb(color)));
+    return;
+  }
+
+  if (Array.isArray(color)) {
+    // [r,g,b] tuple — good
+    obj.use(k.outline(outline, k.rgb(color[0], color[1], color[2])));
+    return;
+  }
 }
