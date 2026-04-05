@@ -1,16 +1,8 @@
-import {
-  GameObj,
-  RectComp,
-  OutlineComp,
-  PosComp,
-  AnchorComp,
-  AreaComp,
-} from "kaplay";
+import { GameObj, RectComp, PosComp, AnchorComp, AreaComp } from "kaplay";
 
 export type ButtonComponent = GameObj<
   | RectComp
   | PosComp
-  | OutlineComp
   | AnchorComp
   | AreaComp
   | {

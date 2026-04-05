@@ -30,7 +30,6 @@ export function makeButton(
   const button = k.make([
     k.rect(width, height, { radius }),
     k.pos(posX, posY),
-    k.outline(outline, k.rgb(92, 91, 91)),
     k.anchor(anchor),
     k.area(),
     {
