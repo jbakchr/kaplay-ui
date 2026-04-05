@@ -1,6 +1,6 @@
 import { Anchor, KAPLAYCtx } from "kaplay";
 
-import { TextButtonOptions } from "../types";
+import { ButtonComponent, TextButtonOptions } from "../types";
 import { getCenterPos, setChildPosition } from "../helpers";
 
 import { KaplayColor } from "../types";
@@ -9,7 +9,7 @@ export function makeButton(
   k: KAPLAYCtx,
   opts: TextButtonOptions,
   anchor: Anchor,
-) {
+): ButtonComponent {
   // Extract opts with defaults
   const { width, height, radius, posX, posY, outline, btnColor } = {
     width: 150,

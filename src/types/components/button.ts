@@ -1,7 +1,6 @@
 import {
   GameObj,
   RectComp,
-  ColorComp,
   OutlineComp,
   PosComp,
   AnchorComp,
@@ -11,7 +10,6 @@ import {
 export type ButtonComponent = GameObj<
   | RectComp
   | PosComp
-  | ColorComp
   | OutlineComp
   | AnchorComp
   | AreaComp
