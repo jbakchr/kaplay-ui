@@ -8,6 +8,7 @@ const k = kaplay({
   background: [200, 213, 107],
 });
 
-const txtBtn = k.addTextButton("Hello", {
-  btnColor: [100, 100, 100],
+const txtBtn = k.addTextButton("Quit", {
+  outlineColor: [0, 0, 0],
+  outline: 6, // ✅ thickness
 });

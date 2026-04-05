@@ -26,6 +26,10 @@ export type KaplayColor =
   | { r: number; g: number; b: number }
   | import("kaplay").Color;
 
+export type KaplayRGB =
+  | string // "#ff00aa"
+  | [number, number, number]; // [r, g, b]
+
 export interface TextButtonOptions {
   width?: number;
   height?: number;
@@ -35,4 +39,5 @@ export interface TextButtonOptions {
   txtSize?: number;
   outline?: number;
   btnColor?: KaplayColor;
+  outlineColor?: KaplayRGB; // ✅ new
 }
