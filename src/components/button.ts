@@ -1,9 +1,9 @@
 import { Anchor, KAPLAYCtx } from "kaplay";
 
-import { TextButtonOptions } from "../../types";
-import { getCenterPos, setChildPosition } from "../../helpers";
+import { TextButtonOptions } from "../types";
+import { getCenterPos, setChildPosition } from "../helpers";
 
-import { KaplayColor } from "../../types";
+import { KaplayColor } from "../types";
 
 export function makeButton(
   k: KAPLAYCtx,

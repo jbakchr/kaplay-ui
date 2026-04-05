@@ -1,6 +1,6 @@
 import { KAPLAYCtx } from "kaplay";
 
-import { LabelComponent, LabelOptions } from "../../types";
+import { LabelComponent, LabelOptions } from "../types";
 
 export function makeLabel(k: KAPLAYCtx, opts: LabelOptions): LabelComponent {
   const { width, height, posX, posY, opacity } = {

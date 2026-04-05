@@ -1,10 +1,10 @@
 import { KAPLAYCtx } from "kaplay";
 
-import { makeLabel } from "../../components/label";
-import { makeText } from "../../components";
-import { getCenterPos, setChildPosition } from "../../helpers";
-import { LabelComponent, LabelOptions } from "../../types";
-import { isLayoutChange } from "../../helpers/layout-utils";
+import { makeLabel } from "../components/label";
+import { makeText } from "../components";
+import { getCenterPos, setChildPosition } from "../helpers";
+import { LabelComponent, LabelOptions } from "../types";
+import { isLayoutChange } from "../helpers/layout-utils";
 
 export function createLabel(
   k: KAPLAYCtx,

@@ -1,7 +1,7 @@
 import { Anchor, KAPLAYCtx } from "kaplay";
 
-import { TextComponent } from "../../types";
-import { TextOptions } from "../../types/elements/text";
+import { TextComponent } from "../types";
+import { TextOptions } from "../types/elements/text";
 
 export function makeText(
   k: KAPLAYCtx,

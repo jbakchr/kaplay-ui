@@ -1,14 +1,14 @@
 import { KAPLAYCtx } from "kaplay";
 
 // Types
-import { TextButtonOptions } from "../../types";
+import { TextButtonOptions } from "../types";
 
 // Components
-import { makeButton, makeText } from "../../components/";
+import { makeButton, makeText } from "../components";
 
 // Helpers
-import { getCenterPos, setChildPosition } from "../../helpers";
-import { isLayoutChange } from "../../helpers/layout-utils";
+import { getCenterPos, setChildPosition } from "../helpers";
+import { isLayoutChange } from "../helpers/layout-utils";
 
 export function createTextButton(
   k: KAPLAYCtx,
