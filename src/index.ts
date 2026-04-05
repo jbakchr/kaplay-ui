@@ -1,12 +1,7 @@
 import type { KAPLAYCtx } from "kaplay";
 
 // Types
-import {
-  LabelComponent,
-  LabelOptions,
-  TextButtonElement,
-  TextButtonOptions,
-} from "./types";
+import { LabelComponent, LabelOptions, TextButtonOptions } from "./types";
 
 // Text Button
 import { createLabel, createTextButton } from "./elements";
@@ -79,8 +74,6 @@ export default function kaplayUI(k: KAPLAYCtx): {
    * @param {TextButtonOptions} [opts={}]
    *   Optional configuration object used to customize the button.
    *
-   * @returns {TextButtonElement}
-   *   A KAPLAY Game Object representing the button with centered text.
    *
    * @example
    * // Basic usage (uses default width/height)
@@ -95,7 +88,7 @@ export default function kaplayUI(k: KAPLAYCtx): {
    * // Override only one dimension
    * const tallBtn = addTextButton("Options", { radius: 2 });
    */
-  addTextButton(txt: string, opts?: TextButtonOptions): TextButtonElement;
+  addTextButton(txt: string, opts?: TextButtonOptions): any;
   /**
    * # Label
    * Creates a simple text container with a background and layout box.
@@ -143,10 +136,8 @@ export default function kaplayUI(k: KAPLAYCtx): {
   addLabel(txt: string, opts?: LabelOptions): LabelComponent;
 } {
   return {
-    addTextButton: (
-      txt: string,
-      opts: TextButtonOptions = {},
-    ): TextButtonElement => createTextButton(k, txt, opts),
+    addTextButton: (txt: string, opts: TextButtonOptions = {}) =>
+      createTextButton(k, txt, opts),
     addLabel: (txt, opts: LabelOptions = {}): LabelComponent =>
       createLabel(k, txt, opts),
   };

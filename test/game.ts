@@ -1,4 +1,4 @@
-import kaplay, { Color } from "kaplay";
+import kaplay from "kaplay";
 import kaplayUI from "../src/index";
 
 // Init kaplay
@@ -8,6 +8,6 @@ const k = kaplay({
   background: [200, 213, 107],
 });
 
-const txtBtn = k.addTextButton("Hello", { btnColor: [200, 150, 100] });
-
-console.log(txtBtn);
+const txtBtn = k.addTextButton("Hello", {
+  btnColor: [100, 100, 100],
+});

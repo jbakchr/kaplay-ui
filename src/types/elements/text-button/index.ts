@@ -20,6 +20,12 @@ export type TextButtonElement = GameObj<
     }
 >;
 
+export type KaplayColor =
+  | string
+  | [number, number, number]
+  | { r: number; g: number; b: number }
+  | import("kaplay").Color;
+
 export interface TextButtonOptions {
   width?: number;
   height?: number;
@@ -28,5 +34,5 @@ export interface TextButtonOptions {
   posY?: number;
   txtSize?: number;
   outline?: number;
-  btnColor?: [r: number, g: number, b: number];
+  btnColor?: KaplayColor;
 }
