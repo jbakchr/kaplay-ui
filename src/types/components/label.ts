@@ -13,5 +13,8 @@ export type LabelComponent = GameObj<
   | PosComp
   | OpacityComp
   | AnchorComp
-  | { setSize(w: number, h: number): void }
+  | {
+      setSize(w: number, h: number): void;
+      setPosition(x: number, y: number): void;
+    }
 >;

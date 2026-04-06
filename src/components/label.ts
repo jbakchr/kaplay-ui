@@ -29,6 +29,11 @@ export function makeLabel(k: KAPLAYCtx, opts: LabelOptions): LabelComponent {
 
         setChildPosition(k, label, label.children[0], cX, cY);
       },
+      setPosition(x: number, y: number) {
+        // Change label position
+        label.pos.x = x;
+        label.pos.y = y;
+      },
     },
   ]);
 

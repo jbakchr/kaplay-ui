@@ -18,6 +18,6 @@ const lbl = k.addLabel("Hello World!", {
 k.wait(2, () => {
   lbl.setSize(300, 150); // ✅ change label size
   k.wait(2, () => {
-    lbl.use(k.anchor("center")); // ✅ change label anchor
+    lbl.setPosition(100, 100); // ✅ change label position
   });
 });
