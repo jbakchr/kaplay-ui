@@ -1,7 +1,7 @@
 import { KAPLAYCtx } from "kaplay";
 
 // Types
-import { TextButtonOptions } from "../types";
+import { ButtonComponent, TextButtonOptions } from "../types";
 
 // Components
 import { makeButton, makeText } from "../components";
@@ -14,7 +14,7 @@ export function createTextButton(
   k: KAPLAYCtx,
   txt: string,
   opts: TextButtonOptions,
-) {
+): ButtonComponent {
   // Make button
   const btn = makeButton(k, opts, "topleft");
 

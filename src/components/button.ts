@@ -44,6 +44,11 @@ export function makeButton(
         // Set button text to center of button
         setChildPosition(k, button, button.children[0], cX, cY);
       },
+      setPosition(x: number, y: number) {
+        // Change button position
+        button.pos.x = x;
+        button.pos.y = y;
+      },
     },
   ]);
 
