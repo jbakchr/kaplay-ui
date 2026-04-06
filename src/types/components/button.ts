@@ -9,6 +9,6 @@ export type ButtonComponent = GameObj<
       setSize(w: number, h: number): void;
       setPosition(x: number, y: number): void;
       setRadius(r: number): void;
-      setOuline(t: number): void;
+      setOutline(t: number): void;
     }
 >;
