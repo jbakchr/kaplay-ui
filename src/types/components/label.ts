@@ -7,6 +7,7 @@ export type LabelComponent = GameObj<
   | AnchorComp
   | {
       setSize(w: number, h: number): void;
+      setRadius(r: number): void;
       setPosition(x: number, y: number): void;
       setOpacity(o: number): void;
     }

@@ -30,6 +30,10 @@ export function makeLabel(k: KAPLAYCtx, opts: LabelOptions): LabelComponent {
 
         setChildPosition(k, label, label.children[0], cX, cY);
       },
+      setRadius(r: number) {
+        // Change label border radius
+        label.radius = r;
+      },
       setPosition(x: number, y: number) {
         // Change label position
         label.pos.x = x;

@@ -23,6 +23,7 @@ k.wait(2, () => {
     lbl.setPosition(100, 100); // ✅ change label position
     k.wait(2, () => {
       lbl.setOpacity(0.4); // ✅ change label opacity
+      lbl.setRadius(20); // ✅ change label border radius
     });
   });
 });
