@@ -14,7 +14,7 @@ const lbl = k.addLabel("Hello World!", {
   posX: 250,
   posY: 250,
   opacity: 0.8,
-  lblColor: [255, 0, 0],
+  lblColor: [0, 0, 0],
 });
 
 k.wait(2, () => {

@@ -4,9 +4,10 @@ import { LabelComponent, LabelOptions } from "../types";
 import { applyColor, getCenterPos, setChildPosition } from "../helpers";
 
 export function makeLabel(k: KAPLAYCtx, opts: LabelOptions): LabelComponent {
-  const { width, height, posX, posY, opacity, lblColor } = {
+  const { width, height, radius, posX, posY, opacity, lblColor } = {
     width: 160,
     height: 96,
+    radius: 0,
     posX: 0,
     posY: 0,
     opacity: 0.7,
@@ -15,9 +16,8 @@ export function makeLabel(k: KAPLAYCtx, opts: LabelOptions): LabelComponent {
   };
 
   const label = k.make([
-    k.rect(width, height),
+    k.rect(width, height, { radius }),
     k.pos(posX, posY),
-    // k.color(0, 0, 0),
     k.opacity(opacity),
     k.anchor("topleft"),
     {

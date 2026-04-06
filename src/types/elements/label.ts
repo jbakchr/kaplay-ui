@@ -23,6 +23,7 @@ export type LabelElement = GameObj<
 export interface LabelOptions {
   width?: number;
   height?: number;
+  radius?: number;
   posX?: number;
   posY?: number;
   opacity?: number;
