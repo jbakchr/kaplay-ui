@@ -1,15 +1,7 @@
-import {
-  GameObj,
-  RectComp,
-  ColorComp,
-  PosComp,
-  OpacityComp,
-  AnchorComp,
-} from "kaplay";
+import { GameObj, RectComp, PosComp, OpacityComp, AnchorComp } from "kaplay";
 
 export type LabelComponent = GameObj<
   | RectComp
-  | ColorComp
   | PosComp
   | OpacityComp
   | AnchorComp

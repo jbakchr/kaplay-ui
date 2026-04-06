@@ -1,22 +1,23 @@
 import { KAPLAYCtx } from "kaplay";
 
 import { LabelComponent, LabelOptions } from "../types";
-import { getCenterPos, setChildPosition } from "../helpers";
+import { applyColor, getCenterPos, setChildPosition } from "../helpers";
 
 export function makeLabel(k: KAPLAYCtx, opts: LabelOptions): LabelComponent {
-  const { width, height, posX, posY, opacity } = {
+  const { width, height, posX, posY, opacity, lblColor } = {
     width: 160,
     height: 96,
     posX: 0,
     posY: 0,
     opacity: 0.7,
+    lblColor: [0, 0, 0] as [number, number, number],
     ...opts,
   };
 
   const label = k.make([
     k.rect(width, height),
     k.pos(posX, posY),
-    k.color(0, 0, 0),
+    // k.color(0, 0, 0),
     k.opacity(opacity),
     k.anchor("topleft"),
     {
@@ -40,6 +41,8 @@ export function makeLabel(k: KAPLAYCtx, opts: LabelOptions): LabelComponent {
       },
     },
   ]);
+
+  applyColor(k, label, lblColor);
 
   return label;
 }
