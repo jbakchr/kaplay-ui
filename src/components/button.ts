@@ -53,6 +53,10 @@ export function makeButton(
         // Change button border radius
         button.radius = r;
       },
+      setOuline(t: number) {
+        // Change button outline thickness
+        applyOutlineColor(k, button, t, outlineColor);
+      },
     },
   ]);
 
