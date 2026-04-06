@@ -17,4 +17,5 @@ const txtBtn = k.addTextButton("Quit", {
 
 k.wait(2, () => {
   txtBtn.setButtonText("Exit"); // ✅ change button text
+  txtBtn.setButtonTextSize(60); // ✅ change button text size´
 });

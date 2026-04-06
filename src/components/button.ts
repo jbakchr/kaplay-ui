@@ -62,6 +62,11 @@ export function makeButton(
         const btnTxt = button.children[0];
         btnTxt.text = txt;
       },
+      setButtonTextSize(size: number) {
+        // Change button text size
+        const btnTxt = button.children[0];
+        btnTxt.textSize = size;
+      },
     },
   ]);
 
