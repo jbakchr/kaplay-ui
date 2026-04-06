@@ -1,7 +1,12 @@
 import type { KAPLAYCtx } from "kaplay";
 
 // Types
-import { LabelComponent, LabelOptions, TextButtonOptions } from "./types";
+import {
+  ButtonComponent,
+  LabelComponent,
+  LabelOptions,
+  TextButtonOptions,
+} from "./types";
 
 // Text Button
 import { createLabel, createTextButton } from "./elements";
@@ -88,7 +93,7 @@ export default function kaplayUI(k: KAPLAYCtx): {
    * // Override only one dimension
    * const tallBtn = addTextButton("Options", { radius: 2 });
    */
-  addTextButton(txt: string, opts?: TextButtonOptions): any;
+  addTextButton(txt: string, opts?: TextButtonOptions): ButtonComponent;
   /**
    * # Label
    * Creates a simple text container with a background and layout box.
@@ -136,9 +141,11 @@ export default function kaplayUI(k: KAPLAYCtx): {
   addLabel(txt: string, opts?: LabelOptions): LabelComponent;
 } {
   return {
-    addTextButton: (txt: string, opts: TextButtonOptions = {}) =>
-      createTextButton(k, txt, opts),
-    addLabel: (txt, opts: LabelOptions = {}): LabelComponent =>
+    addTextButton: (
+      txt: string,
+      opts: TextButtonOptions = {},
+    ): ButtonComponent => createTextButton(k, txt, opts),
+    addLabel: (txt: string, opts: LabelOptions = {}): LabelComponent =>
       createLabel(k, txt, opts),
   };
 }

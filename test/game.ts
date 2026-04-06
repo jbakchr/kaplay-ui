@@ -12,3 +12,5 @@ const txtBtn = k.addTextButton("Quit", {
   outlineColor: [0, 0, 0],
   outline: 6, // ✅ thickness
 });
+
+txtBtn.setSize(200, 80);
