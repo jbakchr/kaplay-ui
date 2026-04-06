@@ -8,14 +8,16 @@ const k = kaplay({
   background: [200, 213, 107],
 });
 
-const txtBtn = k.addTextButton("Quit", {
-  posX: 200,
-  posY: 150,
-  outlineColor: [0, 0, 0],
-  outline: 6, // ✅ thickness
+const lbl = k.addLabel("Hello World!", {
+  width: 200,
+  height: 100,
+  posX: 250,
+  posY: 250,
 });
 
 k.wait(2, () => {
-  txtBtn.setButtonText("Exit"); // ✅ change button text
-  txtBtn.setButtonTextSize(60); // ✅ change button text size´
+  lbl.setSize(300, 150); // ✅ change label size
+  k.wait(2, () => {
+    lbl.use(k.anchor("center")); // ✅ change label anchor
+  });
 });

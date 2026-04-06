@@ -8,5 +8,10 @@ import {
 } from "kaplay";
 
 export type LabelComponent = GameObj<
-  RectComp | ColorComp | PosComp | OpacityComp | AnchorComp
+  | RectComp
+  | ColorComp
+  | PosComp
+  | OpacityComp
+  | AnchorComp
+  | { setSize(w: number, h: number): void }
 >;
