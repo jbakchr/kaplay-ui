@@ -15,6 +15,6 @@ const txtBtn = k.addTextButton("Quit", {
 
 k.wait(2, () => {
   console.log("Changing button size and position...");
-  txtBtn.setSize(300, 120); // ✅ change size
   txtBtn.setPosition(200, 150); // ✅ change position
+  txtBtn.setRadius(0); // ✅ change border radius
 });

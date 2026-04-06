@@ -14,13 +14,13 @@ export function makeButton(
   anchor: Anchor,
 ): ButtonComponent {
   // Extract opts with defaults
-  const { width, height, radius, posX, posY, outline, btnColor, outlineColor } =
+  const { width, height, posX, posY, radius, outline, btnColor, outlineColor } =
     {
       width: 150,
       height: 60,
-      radius: 10,
       posX: 0,
       posY: 0,
+      radius: 10,
       outline: 3,
       btnColor: [200, 200, 200] as [number, number, number],
       outlineColor: "#5c5b5b",
@@ -48,6 +48,10 @@ export function makeButton(
         // Change button position
         button.pos.x = x;
         button.pos.y = y;
+      },
+      setRadius(r: number) {
+        // Change button border radius
+        button.radius = r;
       },
     },
   ]);
