@@ -16,5 +16,6 @@ export type LabelComponent = GameObj<
   | {
       setSize(w: number, h: number): void;
       setPosition(x: number, y: number): void;
+      setOpacity(o: number): void;
     }
 >;

@@ -34,6 +34,10 @@ export function makeLabel(k: KAPLAYCtx, opts: LabelOptions): LabelComponent {
         label.pos.x = x;
         label.pos.y = y;
       },
+      setOpacity(o: number) {
+        // Change label opacity
+        label.opacity = o;
+      },
     },
   ]);
 

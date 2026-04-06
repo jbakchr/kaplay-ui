@@ -19,5 +19,8 @@ k.wait(2, () => {
   lbl.setSize(300, 150); // ✅ change label size
   k.wait(2, () => {
     lbl.setPosition(100, 100); // ✅ change label position
+    k.wait(2, () => {
+      lbl.setOpacity(0.4); // ✅ change label opacity
+    });
   });
 });
