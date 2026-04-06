@@ -16,6 +16,5 @@ const txtBtn = k.addTextButton("Quit", {
 });
 
 k.wait(2, () => {
-  console.log("Changing button size and position...");
-  txtBtn.setOutline(1);
+  txtBtn.setButtonText("Exit"); // ✅ change button text
 });

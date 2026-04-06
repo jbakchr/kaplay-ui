@@ -57,6 +57,11 @@ export function makeButton(
         // Change button outline thickness
         applyOutlineColor(k, button, t, outlineColor);
       },
+      setButtonText(txt: string) {
+        // Change button text
+        const btnTxt = button.children[0];
+        btnTxt.text = txt;
+      },
     },
   ]);
 

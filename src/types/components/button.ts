@@ -10,5 +10,6 @@ export type ButtonComponent = GameObj<
       setPosition(x: number, y: number): void;
       setRadius(r: number): void;
       setOutline(t: number): void;
+      setButtonText(txt: string): void;
     }
 >;
