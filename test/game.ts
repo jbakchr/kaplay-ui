@@ -8,15 +8,24 @@ const k = kaplay({
   background: [200, 213, 107],
 });
 
-const btn = k.addTextButton("Start", {
+// const btn = k.addTextButton("Start", {
+//   posX: 100,
+//   posY: 100,
+// });
+
+// btn.setButtonColor("#7b5480"); // ✅ change button color
+// btn.setButtonOutlineColor([100, 100, 100]); // ✅ change button outline color
+
+// k.wait(2, () => {
+//   btn.setAnchor("bot"); // ✅ change button anchor
+//   btn.setButtonTextColor([255, 0, 0]); // ✅ change button text color
+// });
+
+const label = k.addLabel("Hello!", {
   posX: 100,
-  posY: 100,
+  posY: 200,
 });
 
-btn.setButtonColor("#7b5480"); // ✅ change button color
-btn.setButtonOutlineColor([100, 100, 100]); // ✅ change button outline color
-
 k.wait(2, () => {
-  btn.setAnchor("bot"); // ✅ change button anchor
-  btn.setButtonTextColor([255, 0, 0]); // ✅ change button text color
+  label.setLabelColor([255, 0, 0]); // ✅ change label color
 });

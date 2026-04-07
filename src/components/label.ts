@@ -1,6 +1,6 @@
 import { KAPLAYCtx } from "kaplay";
 
-import { LabelComponent, LabelOptions } from "../types";
+import { KaplayColor, LabelComponent, LabelOptions } from "../types";
 import { applyColor, getCenterPos, setChildPosition } from "../helpers";
 
 export function makeLabel(k: KAPLAYCtx, opts: LabelOptions): LabelComponent {
@@ -42,6 +42,10 @@ export function makeLabel(k: KAPLAYCtx, opts: LabelOptions): LabelComponent {
       setOpacity(o: number) {
         // Change label opacity
         label.opacity = o;
+      },
+      setLabelColor(c: KaplayColor) {
+        // Change label color
+        applyColor(k, label, c);
       },
     },
   ]);
