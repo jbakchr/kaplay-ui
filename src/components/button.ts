@@ -1,6 +1,11 @@
 import { Anchor, KAPLAYCtx } from "kaplay";
 
-import { ButtonComponent, KaplayColor, TextButtonOptions } from "../types";
+import {
+  ButtonComponent,
+  KaplayColor,
+  KaplayRGB,
+  TextButtonOptions,
+} from "../types";
 import {
   getCenterPos,
   setChildPosition,
@@ -70,6 +75,10 @@ export function makeButton(
       setButtonColor(color: KaplayColor) {
         // Change button color
         applyColor(k, button, color);
+      },
+      setButtonOutlineColor(color: KaplayRGB) {
+        // Change button outline color
+        applyOutlineColor(k, button, outline, color);
       },
     },
   ]);
