@@ -80,6 +80,16 @@ export function makeButton(
         // Change button outline color
         applyOutlineColor(k, button, outline, color);
       },
+      setAnchor(a: Anchor) {
+        // Change button anchor
+        button.anchor = a;
+
+        // Get button center position
+        const { cX, cY } = getCenterPos(button);
+
+        // Set button text to center of button
+        setChildPosition(k, button, button.children[0], cX, cY);
+      },
     },
   ]);
 

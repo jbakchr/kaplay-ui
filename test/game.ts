@@ -16,6 +16,10 @@ const btn = k.addTextButton("Start", {
 btn.setButtonColor("#7b5480"); // ✅ change button color
 btn.setButtonOutlineColor([100, 100, 100]); // ✅ change button outline color
 
+k.wait(2, () => {
+  btn.setAnchor("bot"); // ✅ change button anchor
+});
+
 // const lbl = k.addLabel("Hello World!", {
 //   width: 200,
 //   height: 100,
