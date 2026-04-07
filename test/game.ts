@@ -18,6 +18,7 @@ btn.setButtonOutlineColor([100, 100, 100]); // ✅ change button outline color
 
 k.wait(2, () => {
   btn.setAnchor("bot"); // ✅ change button anchor
+  btn.setButtonTextColor([255, 0, 0]); // ✅ change button text color
 });
 
 // const lbl = k.addLabel("Hello World!", {

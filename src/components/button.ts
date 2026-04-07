@@ -90,6 +90,11 @@ export function makeButton(
         // Set button text to center of button
         setChildPosition(k, button, button.children[0], cX, cY);
       },
+      setButtonTextColor(color: KaplayColor) {
+        // Change button text color
+        const btnTxt = button.children[0];
+        applyColor(k, btnTxt, color);
+      },
     },
   ]);
 

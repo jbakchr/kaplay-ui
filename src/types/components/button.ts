@@ -23,5 +23,6 @@ export type ButtonComponent = GameObj<
       setButtonColor(color: KaplayColor): void;
       setButtonOutlineColor(color: KaplayRGB): void;
       setAnchor(a: Anchor): void;
+      setButtonTextColor(color: KaplayColor): void;
     }
 >;
