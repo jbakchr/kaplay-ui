@@ -15,12 +15,18 @@ export function createTextButton(
   txt: string,
   opts: TextButtonOptions,
 ): ButtonComponent {
+  // Defaults
+  const txtBtnOpts = {
+    txtColor: [0, 0, 0] as [number, number, number],
+    ...opts,
+  } as TextButtonOptions;
+
   // Make button
-  const btn = makeButton(k, opts, "topleft");
+  const btn = makeButton(k, txtBtnOpts, "topleft");
 
   // Make centered text
   const { cX, cY } = getCenterPos(btn);
-  const btnTxt = makeText(k, txt, opts, cX, cY, "center");
+  const btnTxt = makeText(k, txt, txtBtnOpts, cX, cY, "center");
 
   // Add text button
   btn.add(btnTxt);

@@ -11,7 +11,6 @@ const k = kaplay({
 const btn = k.addTextButton("Start", {
   posX: 100,
   posY: 100,
-  txtColor: [255, 255, 255],
 });
 
 // const lbl = k.addLabel("Hello World!", {
