@@ -1,4 +1,11 @@
-import { GameObj, RectComp, PosComp, OpacityComp, AnchorComp } from "kaplay";
+import {
+  GameObj,
+  RectComp,
+  PosComp,
+  OpacityComp,
+  AnchorComp,
+  Anchor,
+} from "kaplay";
 import { KaplayColor } from "../helpers";
 
 export type LabelComponent = GameObj<
@@ -15,5 +22,6 @@ export type LabelComponent = GameObj<
       setLabelText(txt: string): void;
       setLabelTextColor(c: KaplayColor): void;
       setLabelTextSize(size: number): void;
+      setLabelAnchor(anchor: Anchor): void;
     }
 >;

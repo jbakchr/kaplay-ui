@@ -1,4 +1,4 @@
-import { KAPLAYCtx } from "kaplay";
+import { KAPLAYCtx, Anchor } from "kaplay";
 
 import { KaplayColor, LabelComponent, LabelOptions } from "../types";
 import { applyColor, getCenterPos, setChildPosition } from "../helpers";
@@ -61,6 +61,13 @@ export function makeLabel(k: KAPLAYCtx, opts: LabelOptions): LabelComponent {
         // Change label text size
         const lblTxt = label.children[0];
         lblTxt.textSize = size;
+      },
+      setLabelAnchor(anchor: Anchor) {
+        // Change label anchor
+        label.anchor = anchor;
+
+        const { cX, cY } = getCenterPos(label);
+        setChildPosition(k, label, label.children[0], cX, cY);
       },
     },
   ]);

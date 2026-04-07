@@ -31,4 +31,5 @@ k.wait(2, () => {
   label.setLabelText("Goodbye!"); // ✅ change label text
   label.setLabelTextColor([0, 0, 255]); // ✅ change label text color
   label.setLabelTextSize(30); // ✅ change label text size
+  label.setLabelAnchor("botleft"); // ✅ change label anchor
 });
