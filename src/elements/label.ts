@@ -19,7 +19,7 @@ export function createLabel(
   // Make label
   const lbl = makeLabel(k, lblOpts);
 
-  // Make Text - use white text for label text
+  // Make Text
   const { cX, cY } = getCenterPos(lbl);
   const lblTxt = makeText(k, txt, lblOpts, cX, cY, "center");
 
