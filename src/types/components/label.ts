@@ -14,5 +14,6 @@ export type LabelComponent = GameObj<
       setLabelColor(c: KaplayColor): void;
       setLabelText(txt: string): void;
       setLabelTextColor(c: KaplayColor): void;
+      setLabelTextSize(size: number): void;
     }
 >;

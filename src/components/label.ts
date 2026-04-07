@@ -57,6 +57,11 @@ export function makeLabel(k: KAPLAYCtx, opts: LabelOptions): LabelComponent {
         const lblTxt = label.children[0];
         applyColor(k, lblTxt, c);
       },
+      setLabelTextSize(size: number) {
+        // Change label text size
+        const lblTxt = label.children[0];
+        lblTxt.textSize = size;
+      },
     },
   ]);
 
