@@ -13,6 +13,8 @@ const btn = k.addTextButton("Start", {
   posY: 100,
 });
 
+const lbl = k.addLabel("Hello");
+
 // const lbl = k.addLabel("Hello World!", {
 //   width: 200,
 //   height: 100,

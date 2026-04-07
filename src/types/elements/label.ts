@@ -29,4 +29,5 @@ export interface LabelOptions {
   opacity?: number;
   txtSize?: number;
   lblColor?: KaplayColor;
+  txtColor?: KaplayColor;
 }

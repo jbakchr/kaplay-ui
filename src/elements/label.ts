@@ -3,7 +3,7 @@ import { KAPLAYCtx } from "kaplay";
 import { makeLabel } from "../components/label";
 import { makeText } from "../components";
 import { getCenterPos, setChildPosition } from "../helpers";
-import { LabelComponent, LabelOptions } from "../types";
+import { KaplayColor, LabelComponent, LabelOptions } from "../types";
 import { isLayoutChange } from "../helpers/layout-utils";
 
 export function createLabel(
@@ -11,13 +11,17 @@ export function createLabel(
   txt: string,
   opts: LabelOptions,
 ): LabelComponent {
+  const lblOpts = {
+    txtColor: [255, 255, 255] as KaplayColor,
+    ...opts,
+  } as LabelOptions;
+
   // Make label
-  const lbl = makeLabel(k, opts);
+  const lbl = makeLabel(k, lblOpts);
 
   // Make Text - use white text for label text
   const { cX, cY } = getCenterPos(lbl);
-  const lblTxt = makeText(k, txt, opts, cX, cY, "center");
-  lblTxt.use(k.color(255, 255, 255));
+  const lblTxt = makeText(k, txt, lblOpts, cX, cY, "center");
 
   // Add label
   lbl.add(lblTxt);
