@@ -8,10 +8,10 @@ const k = kaplay({
   background: [200, 213, 107],
 });
 
-// const btn = k.addTextButton("Start", {
-//   posX: 100,
-//   posY: 100,
-// });
+const btn = k.addTextButton("Start", {
+  posX: 100,
+  posY: 100,
+});
 
 // btn.setButtonColor("#7b5480"); // ✅ change button color
 // btn.setButtonOutlineColor([100, 100, 100]); // ✅ change button outline color
