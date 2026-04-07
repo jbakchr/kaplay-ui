@@ -52,6 +52,11 @@ export function makeLabel(k: KAPLAYCtx, opts: LabelOptions): LabelComponent {
         const lblTxt = label.children[0];
         lblTxt.text = txt;
       },
+      setLabelTextColor(c: KaplayColor) {
+        // Change label text color
+        const lblTxt = label.children[0];
+        applyColor(k, lblTxt, c);
+      },
     },
   ]);
 

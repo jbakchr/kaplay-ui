@@ -29,4 +29,5 @@ const label = k.addLabel("Hello!", {
 k.wait(2, () => {
   label.setLabelColor([255, 0, 0]); // ✅ change label color
   label.setLabelText("Goodbye!"); // ✅ change label text
+  label.setLabelTextColor([0, 0, 255]); // ✅ change label text color
 });
