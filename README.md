@@ -17,6 +17,19 @@ For now it helps you build Game Objects like text buttons and labels — without
 
 ---
 
+## ✨ _What this plugin currently provides_
+
+When installed, this plugin extends the KAPLAY context (`k`) with:
+
+- `k.addTextButton()` – interactive buttons with centered text
+- `k.addLabel()` – lightweight, non-interactive text labels
+
+Each helper returns a regular KAPLAY game object enhanced with
+**convenience methods** for changing size, position, colors, text, and more
+after creation.
+
+---
+
 ## 📦 Installation
 
 ### Prerelease (new v1 work)
@@ -29,11 +42,9 @@ This gives you the latest `1.0.0‑alpha.*` builds.
 
 ---
 
-## 🚀 Usage (_1.0.0-alpha.\*_)
+## 🚀 Quick start (_1.0.0-alpha.\*_)
 
-**Kaplay UI** exports a plugin for adding UI Game Objects.
-
-The `kaplayUI` plugin is exported from the package root:
+The **Kaplay-UI** plugin is exported as `kaplayUI` from the package root:
 
 ```ts
 import kaplay from "kaplay";
@@ -47,147 +58,144 @@ const k = kaplay({
 You now have access to the UI helpers via your `k` instance:
 
 ```ts
-const btn = k.addTextButton("Play");
-const label = k.addLabel("Score: 0");
+const btn = k.addTextButton("Start");
+btn.onClick(() => {
+  k.go("game");
+});
+
+const lbl = k.addLabel("Score: 0");
+lbl.setLabelText("Score: 1");
 ```
 
 ---
 
 ## 🧩 Game Objects (_**1.0.0‑alpha.\***_)
 
-### 🔤 **Text Button** (`addTextButton()`)
+### 🔤 Text Button — `addTextButton()`
 
-Creates a button-like GameObj with centered text and some convenient defaults.
-
-#### _**Signature**_
+Creates a clickable button with centered text and default visuals.
 
 ```ts
-addTextButton(
-  txt: string,
-  opts?: object
-): GameObj
+const btn = k.addTextButton("Start", {
+  width: 200,
+  height: 80,
+});
 ```
 
-#### _**Default `opts` parameter values**_
-
-| Parameter | Default |
-| --------- | :------ |
-| `width`   | `200`   |
-| `height`  | `100`   |
-| `radius`  | `10`    |
-| `posX`    | `0`     |
-| `posY`    | `0`     |
-| `outline` | `3`     |
-| `txtSize` | `22`    |
-
-#### _**Default styling**_
-
-| Comps                       | Values          |
-| --------------------------- | :-------------- |
-| `button base anchor`        | `"topleft"`     |
-| `button base color`         | `200, 200, 200` |
-| `button base outline color` | `92, 91, 91`    |
-| `button text anchor`        | `"center"`      |
-| `button text color`         | `0, 0, 0`       |
-
-#### _**Examples**_
+Buttons support runtime updates such as:
 
 ```ts
-// Basic button
-const btn1 = k.addTextButton("Play!");
+btn.setSize(300, 100);
+btn.setButtonColor([255, 120, 120]);
+btn.setButtonText("Go!");
+btn.setButtonTextSize(24);
+```
 
-// Customize button by opts
-const btn2 = k.addTextButton("Play!", { posX: 300, posY: 200 });
+Perfect for menus, dialogs, and in‑game actions.
 
-// Customize button base by `use()`
-const btn3 = k.addTextButton("Play!");
-btn3.use(k.color(100, 50, 60));
+---
 
-// Customize button text by `use()`
-const btn4 = k.addTextButton("Play!");
-btn4.children[0].text = "Go back";
+### 🏷️ Label — `addLabel()`
 
-// Add interactivity
-btn4.onClick(() => {
-  k.go("start");
+Creates a lightweight background + text container for HUD elements or titles.
+
+```ts
+const label = k.addLabel("Score: 0");
+```
+
+Update it dynamically:
+
+```ts
+label.setLabelText("Score: 10");
+label.setLabelTextColor([255, 255, 0]);
+label.setOpacity(0.9);
+```
+
+Ideal for HUDs, counters, status text, and overlays.
+
+---
+
+## 🎨 Customization
+
+kaplay-ui is designed to be **customized imperatively**, without hiding
+or abstracting away KAPLAY’s core APIs.
+
+### ✅ Option-based customization (at creation)
+
+Both helpers accept an optional `opts` object for common configuration:
+
+```ts
+const btn = k.addTextButton("Options", {
+  width: 250,
+  height: 70,
+  posX: 100,
+  posY: 200,
+  radius: 8,
 });
 ```
 
 ---
 
-### 🏷️ **Label** (`addLabel()`)
+### ✅ Runtime customization (after creation)
 
-A lightweight text-based UI element — ideal for HUD counters, tooltips, status text, or titles.
-
-#### _**Signature**_
+Each UI element exposes helper methods for updating its appearance and layout:
 
 ```ts
-addLabel(
-    txt: string,
-    opts?: object
-)
+btn.setPosition(150, 220);
+btn.setButtonColor([80, 160, 255]);
+btn.setButtonTextColor([255, 255, 255]);
 ```
 
-#### _**Default `opts` values**_
+This makes it easy to animate, react to state changes, or reuse UI elements.
 
-| Parameter | Default |
-| --------- | ------- |
-| `width`   | `160`   |
-| `height`  | `96`    |
-| `posX`    | `0`     |
-| `posY`    | `0`     |
-| `opacity` | `0.7`   |
-| `txtSize` | `22`    |
+---
 
-#### _**Default styling**_
+### ✅ Full KAPLAY access
 
-| Comps               | Values          |
-| ------------------- | :-------------- |
-| `label base color`  | `0, 0,0 `       |
-| `label base anchor` | `"topleft"`     |
-| `label text color`  | `255, 255, 255` |
-| `label text anchor` | `"center"`      |
-
-#### _**Examples**_
+UI elements are **regular KAPLAY game objects**, so you can still use all
+standard KAPLAY features:
 
 ```ts
-// Basic label
-const lbl1 = k.addLabel("Score: 0");
-
-// Customize label by opts
-const lbl2 = k.addLabel("Start", { width: 100, height: 50 });
-
-// Customize label base by `use()`
-const lbl3 = k.addLabel("Start");
-lbl3.use(k.color(120, 120, 120));
-
-// Customize label text by `use()`
-const lbl4 = k.addLabel("Start");
-lbl4.children[0].use(k.color(255, 0, 0));
-
-// Update label text example
-let score = 0;
-const scoreLabel = k.addLabel(`Score: ${score}`);
-
-k.wait(2, () => {
-  score++;
-  scoreLabel.children[0].text = `Score: ${score}`;
-});
+btn.use(k.opacity(0.8));
+btn.onHover(() => btn.setScale(1.1));
+label.use(k.rotate(5));
 ```
 
-#### _**Common use cases**_
+kaplay-ui never locks you into a restricted UI model.
 
-- HUD overlays
-- Score counters
-- Time and health displays
-- UI section headings
-- Tooltips and indicators
+---
+
+## 🧠 Design philosophy
+
+kaplay-ui is intentionally simple:
+
+- ✅ No retained UI trees
+- ✅ No layout engine
+- ✅ No reactive framework
+- ✅ Just KAPLAY game objects + helpers
+
+You stay in control of how and when UI updates happen.
+
+---
+
+## 📚 Documentation
+
+- Full API documentation is available via **JSDocs**
+- All helpers are strongly typed and editor-friendly
+- Hover over methods in your editor to explore options
 
 ---
 
 ## 🛣️ Roadmap
 
-_See evolving roadmap at: https://github.com/jbakchr/kaplay-ui/blob/v1/ROADMAP.md_
+Future components may include:
+
+- Toggles
+- Sliders
+- Panels / containers
+
+See the roadmap here:  
+👉 <https://github.com/jbakchr/kaplay-ui/blob/v1/ROADMAP.md>
 
 ---
 
