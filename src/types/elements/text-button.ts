@@ -31,5 +31,6 @@ export interface TextButtonOptions {
   txtSize?: number;
   outline?: number;
   btnColor?: KaplayColor;
-  outlineColor?: KaplayRGB; // ✅ new
+  outlineColor?: KaplayRGB;
+  txtColor?: KaplayColor;
 }

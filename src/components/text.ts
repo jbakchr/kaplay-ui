@@ -2,6 +2,7 @@ import { Anchor, KAPLAYCtx } from "kaplay";
 
 import { TextComponent } from "../types";
 import { TextOptions } from "../types/elements/text";
+import { applyColor } from "../helpers";
 
 export function makeText(
   k: KAPLAYCtx,
@@ -11,17 +12,19 @@ export function makeText(
   posY: number,
   anchor: Anchor,
 ): TextComponent {
-  const { txtSize } = {
+  const { txtSize, txtColor } = {
     txtSize: 22,
+    txtColor: [0, 0, 0] as [number, number, number],
     ...opts,
   };
 
   const text = k.make([
     k.text(txt, { size: txtSize }),
-    k.color(0, 0, 0),
     k.pos(posX, posY),
     k.anchor(anchor),
   ]);
+
+  applyColor(k, text, txtColor);
 
   return text;
 }

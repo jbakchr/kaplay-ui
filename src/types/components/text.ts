@@ -1,5 +1,3 @@
-import { GameObj, TextComp, ColorComp, PosComp, AnchorComp } from "kaplay";
+import { GameObj, TextComp, PosComp, AnchorComp } from "kaplay";
 
-export type TextComponent = GameObj<
-  TextComp | ColorComp | PosComp | AnchorComp
->;
+export type TextComponent = GameObj<TextComp | PosComp | AnchorComp>;
