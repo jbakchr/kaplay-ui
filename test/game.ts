@@ -13,7 +13,7 @@ const btn = k.addTextButton("Start", {
   posY: 100,
 });
 
-const lbl = k.addLabel("Hello");
+btn.setButtonColor("#7b5480"); // ✅ change button color
 
 // const lbl = k.addLabel("Hello World!", {
 //   width: 200,

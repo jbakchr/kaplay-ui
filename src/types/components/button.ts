@@ -1,4 +1,5 @@
 import { GameObj, RectComp, PosComp, AnchorComp, AreaComp } from "kaplay";
+import { KaplayColor } from "../helpers";
 
 export type ButtonComponent = GameObj<
   | RectComp
@@ -12,5 +13,6 @@ export type ButtonComponent = GameObj<
       setOutline(t: number): void;
       setButtonText(txt: string): void;
       setButtonTextSize(size: number): void;
+      setButtonColor(color: KaplayColor): void;
     }
 >;

@@ -1,6 +1,6 @@
 import { Anchor, KAPLAYCtx } from "kaplay";
 
-import { ButtonComponent, TextButtonOptions } from "../types";
+import { ButtonComponent, KaplayColor, TextButtonOptions } from "../types";
 import {
   getCenterPos,
   setChildPosition,
@@ -66,6 +66,10 @@ export function makeButton(
         // Change button text size
         const btnTxt = button.children[0];
         btnTxt.textSize = size;
+      },
+      setButtonColor(color: KaplayColor) {
+        // Change button color
+        applyColor(k, button, color);
       },
     },
   ]);
