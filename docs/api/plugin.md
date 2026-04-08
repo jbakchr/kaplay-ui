@@ -1,6 +1,7 @@
 # Plugin API
 
-The KAPLAY‑UI plugin extends your `kaplay()` instance with a small set of UI‑focused helper methods.  
+The KAPLAY‑UI plugin extends your `kaplay()` instance with a small set of UI‑focused helper methods.
+
 Once added, the plugin injects new functions on your KAPLAY context for creating UI components.
 
 ---
@@ -18,12 +19,12 @@ const k = kaplay({
 
 After this, your `k` instance includes:
 
-- `k.addTextButton(text, options?)`
-- `k.addLabel(text, options?)`
+- `k.addTextButton(text, opts?)`
+- `k.addLabel(text, opts?)`
 
 ---
 
-## 🟦 `k.addTextButton(text, options?)`
+## 🟦 `k.addTextButton(txt, opts?)`
 
 Creates a clickable UI button with built‑in hitbox, outline, and text alignment.
 
@@ -60,7 +61,7 @@ For full option details and defaults, see:
 
 ---
 
-## 🟨 `k.addLabel(text, options?)`
+## 🟨 `k.addLabel(txt, opts?)`
 
 Creates a lightweight text element ideal for HUDs and overlays.
 
@@ -70,10 +71,23 @@ const lbl = k.addLabel("Score: 0");
 
 ### Parameters
 
-| Name    | Type              | Description         |
-| ------- | ----------------- | ------------------- |
-| text    | string            | The displayed text. |
-| options | object (optional) | Styling options.    |
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>txt</td>
+    <td>string</td>
+    <td>The displayed text</td>
+  </tr>
+  <tr>
+    <td>opts</td>
+    <td>object (optional)</td>
+    <td>Styling options.</td>
+  </tr>
+</table>
 
 ### Returns
 
