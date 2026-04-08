@@ -148,14 +148,16 @@ k.addLabel(txt: string, opts?: {});
 
 All fields are optional. Defaults are shown below.
 
-| Option  | Type   | Default |
-| ------- | ------ | ------- |
-| widht   | number | 160     |
-| height  | number | 96      |
-| posX    | number | 0       |
-| posY    | number | 0       |
-| opacity | number | 0.7     |
-| txtSize | number | 22      |
+| Option   | Type                     | Default         |
+| -------- | ------------------------ | --------------- |
+| widht    | number                   | 160             |
+| height   | number                   | 96              |
+| posX     | number                   | 0               |
+| posY     | number                   | 0               |
+| opacity  | number                   | 0.7             |
+| txtSize  | number                   | 22              |
+| lblColor | [number, number, number] | [0, 0, 0]       |
+| txtColor | [number, number, number] | [255, 255, 255] |
 
 ---
 
@@ -163,9 +165,7 @@ All fields are optional. Defaults are shown below.
 
 | Style             | Value     |
 | ----------------- | --------- |
-| label base color  | 0, 0, 0   |
-| label base anchor | "topleft" |
-| label text color  | 0, 0, 0   |
+| label anchor      | "topleft" |
 | label text anchor | "center"  |
 
 ---
