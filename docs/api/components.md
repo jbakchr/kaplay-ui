@@ -117,9 +117,16 @@ btn2.setButtonColor([255, 100, 100]);
 btn2.setButtonText("Go!");
 
 // Visual-only updates
-const btn3 = addTextButton("Options", { radius: 2 });
+const btn3 = addTextButton("Options", {
+  radius: 2,
+});
 btn3.setButtonOutlineColor([0, 0, 0]);
 btn3.setButtonTextSize(24);
+
+// Layout adjustment after creation
+const hudLabel = addLabel("Paused");
+hudLabel.setSize(200, 60);
+hudLabel.setLabelAnchor("center");
 ```
 
 ---
@@ -212,7 +219,26 @@ The returned `LabelComponent` exposes helper methods that allow the label to be 
 ### Example
 
 ```ts
-const score = k.addLabel("Score: 0");
+// Basic usage
+const lbl = addLabel("Score: 0");
+lbl.setPosition(20, 20);
+
+// Dynamic text updates (e.g. score counter)
+let score = 0;
+const scoreLbl = addLabel(`Score: ${score}`);
+
+k.wait(2, () => {
+  score++;
+  scoreLbl.setLabelText(`Score: ${score}`);
+});
+
+// Runtime appearance updates
+const title = addLabel("Game Over", {
+  txtSize: 36,
+});
+title.setLabelColor([40, 40, 40]);
+title.setLabelTextColor([255, 80, 80]);
+title.setOpacity(0.9);
 ```
 
 ---
