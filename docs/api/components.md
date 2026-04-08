@@ -14,33 +14,86 @@ A clickable button with centered text.
 const btn = k.addTextButton("Play");
 ```
 
+### Signature
+
+The `addTextButton` method takes a required `string` and an optional `object`.
+
+```ts
+k.addTextButton(txt: string, opts?: {});
+```
+
 ### Options
 
 All fields are optional. Defaults are shown below.
 
-| Option  | Type   | Default |
-| ------- | ------ | ------- |
-| width   | number | 200     |
-| height  | number | 100     |
-| posX    | number | 0       |
-| posY    | number | 0       |
-| radius  | number | 10      |
-| outline | number | 3       |
-| txtSize | number | 22      |
+| Option       | Type                    | Default         |
+| ------------ | ----------------------- | --------------- |
+| width        | number                  | 150             |
+| height       | number                  | 60              |
+| posX         | number                  | 0               |
+| posY         | number                  | 0               |
+| radius       | number                  | 10              |
+| outline      | number                  | 3               |
+| txtSize      | number                  | 22              |
+| btnColor     | [number, number, nuber] | [200, 200, 200] |
+| outlineColor | string                  | #5c5b5b         |
+| txtColor     | [number, number, nuber] | [0, 0, 0]       |
 
 ### Default Styling
 
 These are the built‑in visual defaults applied automatically.
 
-| Style              | Value         |
-| ------------------ | ------------- |
-| base anchor        | "topleft"     |
-| base color         | 200, 200, 200 |
-| base outline color | 92, 91, 91    |
-| text anchor        | "center"      |
-| text color         | 0, 0, 0       |
+The **button object** is created with:
 
-### Example
+- `k.anchor("topleft")`
+- `k.area()`
+
+The **button text** is created with:
+
+- `k.anchor("center")`
+
+### Text Button Instance Methods
+
+The returned `ButtonComponent` exposes the following mutator methods,
+allowing the button to be updated after creation:
+
+#### Layout & Geometry
+
+- `setSize(w: number, h: number): void`  
+  _Update the button width and height._
+
+- `setPosition(x: number, y: number): void`  
+  _Move the button to a new position._
+
+- `setAnchor(a: Anchor): void`  
+  _Change the anchor used for positioning._
+
+- `setRadius(r: number): void`  
+  _Update the corner radius._
+
+- `setOutline(t: number): void`  
+  _Set the outline thickness._
+
+#### Text
+
+- `setButtonText(txt: string): void`  
+  _Replace the button label._
+
+- `setButtonTextSize(size: number): void`  
+  _Change the font size of the button text._
+
+- `setButtonTextColor(color: KaplayColor): void`  
+  _Update the text color._
+
+#### Colors
+
+- `setButtonColor(color: KaplayColor): void`  
+  _Change the button fill color._
+
+- `setButtonOutlineColor(color: KaplayRGB): void`  
+  _Change the outline stroke color._
+
+### Examples
 
 ```ts
 // Basic text button
