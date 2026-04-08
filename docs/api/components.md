@@ -106,18 +106,20 @@ allowing the button to be updated after creation:
 ### Examples
 
 ```ts
-// Basic text button
-const play = k.addTextButton("Play", { radius: 0 });
+// Basic usage
+const btn1 = addTextButton("Play");
+btn1.onClick(() => k.go("game"));
 
-// Example of customizing button color
-play.use(k.color(100, 100, 100));
+// Runtime mutation
+const btn2 = addTextButton("Start");
+btn2.setSize(300, 120);
+btn2.setButtonColor([255, 100, 100]);
+btn2.setButtonText("Go!");
 
-// Example of customizing button text
-play.children[0].text = "Go!";
-
-play.onClick(() => {
-  k.go("game");
-});
+// Visual-only updates
+const btn3 = addTextButton("Options", { radius: 2 });
+btn3.setButtonOutlineColor([0, 0, 0]);
+btn3.setButtonTextSize(24);
 ```
 
 ---
@@ -130,6 +132,18 @@ A small, fast text element ideal for HUDs, overlays, and lightweight UI.
 const score = k.addLabel("Score: 0");
 ```
 
+---
+
+### Signature
+
+The `addLabel` method takes a required `string` and an optional `object`.
+
+```ts
+k.addLabel(txt: string, opts?: {});
+```
+
+---
+
 ### Options
 
 All fields are optional. Defaults are shown below.
@@ -141,6 +155,9 @@ All fields are optional. Defaults are shown below.
 | posX    | number | 0       |
 | posY    | number | 0       |
 | opacity | number | 0.7     |
+| txtSize | number | 22      |
+
+---
 
 ### Default Styling
 
@@ -150,6 +167,47 @@ All fields are optional. Defaults are shown below.
 | label base anchor | "topleft" |
 | label text color  | 0, 0, 0   |
 | label text anchor | "center"  |
+
+---
+
+### Label Instance Methods
+
+The returned `LabelComponent` exposes helper methods that allow the label to be updated dynamically at runtime.
+
+#### Layout & Geometry
+
+- `setSize(w: number, h: number): void`  
+  _Update the label width and height._
+
+- `setPosition(x: number, y: number): void`  
+  _Move the label to a new position._
+
+- `setRadius(r: number): void`  
+  _Update the background corner radius._
+
+- `setLabelAnchor(anchor: Anchor): void`  
+  _Change the anchor used for positioning the label._
+
+#### Appearance
+
+- `setOpacity(o: number): void`  
+  _Set label background opacity (0–1)._
+
+- `setLabelColor(c: KaplayColor): void`  
+  _Change the background color of the label._
+
+#### Text
+
+- `setLabelText(txt: string): void`  
+  _Replace the label text._
+
+- `setLabelTextSize(size: number): void`  
+  _Change the font size of the label text._
+
+- `setLabelTextColor(c: KaplayColor): void`  
+  _Update the label text color._
+
+---
 
 ### Example
 
