@@ -122,11 +122,6 @@ const btn3 = addTextButton("Options", {
 });
 btn3.setButtonOutlineColor([0, 0, 0]);
 btn3.setButtonTextSize(24);
-
-// Layout adjustment after creation
-const hudLabel = addLabel("Paused");
-hudLabel.setSize(200, 60);
-hudLabel.setLabelAnchor("center");
 ```
 
 ---
@@ -239,6 +234,11 @@ const title = addLabel("Game Over", {
 title.setLabelColor([40, 40, 40]);
 title.setLabelTextColor([255, 80, 80]);
 title.setOpacity(0.9);
+
+// Layout adjustment after creation
+const hudLabel = addLabel("Paused");
+hudLabel.setSize(200, 60);
+hudLabel.setLabelAnchor("center");
 ```
 
 ---
