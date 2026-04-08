@@ -74,7 +74,7 @@ A small, flexible text element — perfect for HUDs.
 ```ts
 const lbl = k.addLabel("Score: 0");
 
-lbl.children[0].text = "Score: 1";
+lbl.setLabelText("Score: 1");
 ```
 
 _More components are being added soon as the plugin grows._ 🎉
