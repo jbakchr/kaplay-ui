@@ -217,3 +217,35 @@ a:hover {
   color: var(--text-box-black);
   transform: translateY(-2px);
 }
+
+/* --------------------------------------------------
+ API Tables (Parameters)
+-------------------------------------------------- */
+.page-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2rem 0 2rem 0;
+  background: var(--bg-box);
+  border-radius: 10px;
+  overflow: hidden; /* ensures rounded corners clip */
+}
+
+.page-content th,
+.page-content td {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #3a3a3a;
+  text-align: left;
+  vertical-align: top;
+}
+
+.page-content th {
+  background: #2f2f2f;
+  color: var(--kaplay-yellow);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.page-content td {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
