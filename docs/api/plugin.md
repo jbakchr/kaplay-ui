@@ -19,8 +19,8 @@ const k = kaplay({
 
 After this, your `k` instance includes:
 
-- `k.addTextButton(text, opts?)`
-- `k.addLabel(text, opts?)`
+- `k.addTextButton(txt, opts?)`
+- `k.addLabel(txt, opts?)`
 
 ---
 
