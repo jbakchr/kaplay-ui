@@ -33,10 +33,23 @@ const btn = k.addTextButton("Play");
 
 ### Parameters
 
-| Name    | Type              | Description                 |
-| ------- | ----------------- | --------------------------- |
-| text    | string            | The button label.           |
-| options | object (optional) | Styling & behavior options. |
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>txt</td>
+    <td>string</td>
+    <td>The button label</td>
+  </tr>
+  <tr>
+    <td>opts</td>
+    <td>object (optional)</td>
+    <td>Styling & behavior options</td>
+  </tr>
+</table>
 
 ### Returns
 
