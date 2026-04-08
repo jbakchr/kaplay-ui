@@ -187,7 +187,6 @@ export default function kaplayUI(k: KAPLAYCtx): {
    * optionsBtn.setButtonTextSize(24);
    */
   addTextButton(txt: string, opts?: TextButtonOptions): ButtonComponent;
-
   /**
    * # Label
    * Creates a simple text container with a background and layout box.

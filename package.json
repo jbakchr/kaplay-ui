@@ -3,10 +3,22 @@
   "version": "1.0.0-alpha.14",
   "description": "UI components for KAPLAY",
   "type": "module",
-  "main": "src/index.ts",
+  "main": "./dist/uiplugin.js",
+  "types": "./dist/uiplugin.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/uiplugin.js",
+      "require": "./dist/uiplugin.umd.cjs",
+      "types": "./dist/uiplugin.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build"
+    "build": "vite build",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
