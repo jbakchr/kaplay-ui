@@ -272,6 +272,12 @@ export default function kaplayUI(k: KAPLAYCtx): {
    * ---
    *
    * @example
+   * // Basic usage
+   * const label = addLabel("Score: 0");
+   * label.setPosition(20, 20);
+   *
+   * @example
+   * // Dynamic text updates (e.g. score counter)
    * let score = 0;
    * const scoreLabel = addLabel(`Score: ${score}`);
    *
@@ -284,7 +290,14 @@ export default function kaplayUI(k: KAPLAYCtx): {
    * // Runtime appearance updates
    * const title = addLabel("Game Over", { txtSize: 36 });
    * title.setLabelColor([40, 40, 40]);
+   * title.setLabelTextColor([255, 80, 80]);
    * title.setOpacity(0.9);
+   *
+   * @example
+   * // Layout adjustment after creation
+   * const hudLabel = addLabel("Paused");
+   * hudLabel.setSize(200, 60);
+   * hudLabel.setLabelAnchor("center");
    */
   addLabel(txt: string, opts?: LabelOptions): LabelComponent;
 } {
