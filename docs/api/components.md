@@ -14,6 +14,8 @@ A clickable button with centered text.
 const btn = k.addTextButton("Play");
 ```
 
+---
+
 ### Signature
 
 The `addTextButton` method takes a required `string` and an optional `object`.
@@ -21,6 +23,8 @@ The `addTextButton` method takes a required `string` and an optional `object`.
 ```ts
 k.addTextButton(txt: string, opts?: {});
 ```
+
+---
 
 ### Options
 
@@ -39,6 +43,8 @@ All fields are optional. Defaults are shown below.
 | outlineColor | string                  | #5c5b5b         |
 | txtColor     | [number, number, nuber] | [0, 0, 0]       |
 
+---
+
 ### Default Styling
 
 These are the built‑in visual defaults applied automatically.
@@ -51,6 +57,8 @@ The **button object** is created with:
 The **button text** is created with:
 
 - `k.anchor("center")`
+
+---
 
 ### Text Button Instance Methods
 
@@ -92,6 +100,8 @@ allowing the button to be updated after creation:
 
 - `setButtonOutlineColor(color: KaplayRGB): void`  
   _Change the outline stroke color._
+
+---
 
 ### Examples
 
