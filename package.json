@@ -1,6 +1,6 @@
 {
   "name": "kaplay-ui",
-  "version": "1.0.0-alpha.15",
+  "version": "1.0.0-alpha.16",
   "description": "UI components for KAPLAY",
   "type": "module",
   "main": "./dist/uiplugin.js",
