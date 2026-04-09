@@ -10,5 +10,12 @@ export default defineConfig({
       fileName: "uiplugin",
     },
   },
-  plugins: [dts({ rollupTypes: true, tsconfigPath: "./tsconfig.json" })],
+  plugins: [
+    dts({
+      entryRoot: "src",
+      insertTypesEntry: true,
+      rollupTypes: false,
+      include: ["src/**/*.ts", "src/**/*.d.ts"],
+    }),
+  ],
 });
