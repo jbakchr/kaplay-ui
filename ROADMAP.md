@@ -78,7 +78,7 @@ A rectangle-based UI container.
 - Background fill, outline, radius.
 - _May **possibly** act as an optional parent/container for children._
 
-### 2. **Image Button**
+### 2. **Icon Button**
 
 A button variant using a sprite texture.
 

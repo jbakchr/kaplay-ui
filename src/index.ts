@@ -7,9 +7,10 @@ import {
   LabelComponent,
   LabelOptions,
   TextButtonOptions,
+  IconButtonOptions,
 } from "./types";
 
-import { createLabel, createTextButton } from "./elements";
+import { createLabel, createTextButton, createIconButton } from "./elements";
 
 export default function kaplayUI(k: KAPLAYCtx) {
   return {
@@ -19,6 +20,10 @@ export default function kaplayUI(k: KAPLAYCtx) {
 
     addLabel(txt: string, opts: LabelOptions = {}): LabelComponent {
       return createLabel(k, txt, opts);
+    },
+
+    addIconButton(icon: string, opts: IconButtonOptions = {}) {
+      return createIconButton(k, icon, opts);
     },
   };
 }
