@@ -8,6 +8,17 @@ import {
 } from "kaplay";
 import { KaplayColor, KaplayRGB } from "../helpers";
 
+export interface ButtonOptions {
+  width?: number;
+  height?: number;
+  radius?: number;
+  posX?: number;
+  posY?: number;
+  outline?: number;
+  btnColor?: KaplayColor;
+  outlineColor?: KaplayRGB;
+}
+
 export type ButtonComponent = GameObj<
   | RectComp
   | PosComp

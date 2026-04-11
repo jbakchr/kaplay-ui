@@ -2,9 +2,9 @@ import { Anchor, KAPLAYCtx } from "kaplay";
 
 import {
   ButtonComponent,
+  ButtonOptions,
   KaplayColor,
   KaplayRGB,
-  TextButtonOptions,
 } from "../types";
 import {
   getCenterPos,
@@ -15,7 +15,7 @@ import {
 
 export function makeButton(
   k: KAPLAYCtx,
-  opts: TextButtonOptions,
+  opts: ButtonOptions,
   anchor: Anchor,
 ): ButtonComponent {
   // Extract opts with defaults

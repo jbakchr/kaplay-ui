@@ -8,7 +8,8 @@ import {
   ColorComp,
 } from "kaplay";
 
-import { KaplayColor, KaplayRGB } from "../helpers";
+import { KaplayColor } from "../helpers";
+import { ButtonOptions } from "../components";
 
 export type TextButtonElement = GameObj<
   | RectComp
@@ -22,15 +23,7 @@ export type TextButtonElement = GameObj<
     }
 >;
 
-export interface TextButtonOptions {
-  width?: number;
-  height?: number;
-  radius?: number;
-  posX?: number;
-  posY?: number;
+export interface TextButtonOptions extends ButtonOptions {
   txtSize?: number;
-  outline?: number;
-  btnColor?: KaplayColor;
-  outlineColor?: KaplayRGB;
   txtColor?: KaplayColor;
 }

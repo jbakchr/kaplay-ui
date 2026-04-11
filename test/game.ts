@@ -8,15 +8,15 @@ const k = kaplay({
   background: [200, 213, 107],
 });
 
-// const btn = k.addTextButton("Start", {
-//   posX: 100,
-//   posY: 100,
-// });
+const btn = k.addTextButton("Start", {
+  posX: 100,
+  posY: 100,
+});
 
-k.loadSprite("icon", "apple.png");
+// k.loadSprite("icon", "apple.png");
 
-const iconBtn = k.addIconButton("icon");
-iconBtn.setPosition(100, 200);
+// const iconBtn = k.addIconButton("icon");
+// iconBtn.setPosition(100, 200);
 
 // btn.setButtonColor("#7b5480"); // ✅ change button color
 // btn.setButtonOutlineColor([100, 100, 100]); // ✅ change button outline color
